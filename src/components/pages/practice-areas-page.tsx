@@ -247,6 +247,33 @@ export function PracticeAreasPage() {
     setModalOpen(true);
   };
 
+  const practiceCounters = [
+    {
+      icon: <TrendingUp size={40} />,
+      value: 11,
+      suffix: "+",
+      label: t.counter.yearsExperience,
+    },
+    {
+      icon: <Award size={40} />,
+      value: 70,
+      suffix: "+",
+      label: t.counter.casesWon,
+    },
+    {
+      icon: <Eye size={40} />,
+      value: 700,
+      suffix: "+",
+      label: t.counter.successRate,
+    },
+    {
+      icon: <Users size={40} />,
+      value: 8,
+      suffix: "+",
+      label: t.counter.expertLawyers,
+    },
+  ];
+
   return (
     <div className="overflow-x-hidden max-w-full">
       {/* Practice Area Detail Modal */}
@@ -330,44 +357,35 @@ export function PracticeAreasPage() {
       />
 
       {/* Stats Counter Section */}
-      <section className="py-10 md:py-14 bg-charcoal-dark relative overflow-hidden">
+      <section className="py-12 md:py-16 lg:py-20 bg-charcoal relative overflow-hidden">
+        {/* Decorative gold lines */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gold/20" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gold/20" />
-        <div className="max-w-7xl mx-auto px-4">
+        {/* Subtle pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #D4AF37 1px, transparent 1px)",
+            backgroundSize: "25px 25px",
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:flex items-center justify-between gap-6 md:gap-0">
-            <CounterItem
-              icon={<Award size={28} className="md:w-[40px] md:h-[40px]" />}
-              value={1500}
-              suffix="+"
-              label={t.counter.casesWon}
-              delay={0}
-            />
-            <div className="hidden md:block w-px h-16 bg-gold/20" />
-            <CounterItem
-              icon={
-                <TrendingUp size={28} className="md:w-[40px] md:h-[40px]" />
-              }
-              value={25}
-              suffix="+"
-              label={t.counter.yearsExperience}
-              delay={200}
-            />
-            <div className="hidden md:block w-px h-16 bg-gold/20" />
-            <CounterItem
-              icon={<Eye size={28} className="md:w-[40px] md:h-[40px]" />}
-              value={98}
-              suffix="%"
-              label={t.counter.successRate}
-              delay={400}
-            />
-            <div className="hidden md:block w-px h-16 bg-gold/20" />
-            <CounterItem
-              icon={<Users size={28} className="md:w-[40px] md:h-[40px]" />}
-              value={50}
-              suffix="+"
-              label={t.counter.expertLawyers}
-              delay={600}
-            />
+            {practiceCounters.map((counter, index) => (
+              <React.Fragment key={counter.label}>
+                <CounterItem
+                  icon={counter.icon}
+                  value={counter.value}
+                  suffix={counter.suffix}
+                  label={counter.label}
+                  delay={index * 200}
+                />
+                {index < practiceCounters.length - 1 && (
+                  <div className="hidden md:block w-px h-16 bg-gold/20" />
+                )}
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </section>

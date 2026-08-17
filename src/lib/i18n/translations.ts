@@ -56,43 +56,128 @@ export const translations = {
     practiceAreas: {
       subtitle: "Practice Areas",
       title: "Our Practice Areas",
+      intro:
+        "We combine legal knowledge with an understanding of the Iraqi market, business environment, and relevant regulatory frameworks to give our clients clear insight and practical solutions that help them make sound decisions and manage their business and investments efficiently. We draw on experience, insight, and innovation in addressing legal requirements and the most complex matters.",
       viewAll: "View All Sections",
+      showMore: "Show More",
+      showLess: "Show Less",
       items: [
         {
           title: "Legal Consultations",
           desc: "Accurate legal advice for a wide range of matters and disputes.",
+          fullDescription:
+            "Our legal advisory services provide comprehensive guidance for individuals and businesses facing complex legal challenges. With decades of combined experience, our attorneys offer strategic counsel that helps clients navigate intricate legal landscapes with confidence and clarity. Whether you are dealing with a personal matter or a corporate dispute, our team ensures that your rights are protected at every stage of the process. We take pride in delivering personalized attention to each case, ensuring that no detail is overlooked and every legal avenue is thoroughly explored.",
+          services: [
+            "Personal legal consultations",
+            "Corporate legal strategy",
+            "Legal document review",
+            "Regulatory compliance guidance",
+            "Pre-litigation risk assessment",
+          ],
         },
         {
           title: "Foreign Company Registration",
           desc: "Professional handling of foreign company registration procedures.",
+          fullDescription:
+            "Our litigation team has successfully represented thousands of clients in state and federal courts. We combine aggressive advocacy with meticulous preparation to achieve the best possible outcomes for our clients. From pre-trial negotiations to courtroom arguments, our attorneys bring unparalleled dedication and expertise to every case. We understand that litigation can be stressful and overwhelming, which is why we maintain open communication with our clients throughout the entire process, ensuring they are informed and empowered at every step.",
+          services: [
+            "Civil and commercial litigation",
+            "Class action lawsuits",
+            "Appellate advocacy",
+            "Alternative dispute resolution",
+            "Trial preparation and strategy",
+          ],
         },
         {
           title: "Litigation",
           desc: "Legal representation before all courts and judicial authorities.",
+          fullDescription:
+            "When legal disputes escalate to formal lawsuits, having experienced representation is crucial. Our firm has a proven track record of success in managing complex lawsuits from filing through resolution. We employ a strategic approach that considers both the legal merits and the practical implications of each case. Our attorneys work closely with clients to develop tailored strategies that align with their goals, whether that means pursuing a favorable settlement or taking a case to trial to protect their interests.",
+          services: [
+            "Personal injury lawsuits",
+            "Breach of contract claims",
+            "Property dispute litigation",
+            "Employment lawsuits",
+            "Medical malpractice claims",
+          ],
         },
         {
           title: "Labor and Social Security Law",
           desc: "Legal solutions for labor, employment, and social security matters.",
+          fullDescription:
+            "In today's complex business environment, having trusted legal counsel is essential for success. Our business law practice provides comprehensive legal services to companies of all sizes, from startups to established corporations. We assist with entity formation, contract drafting and negotiation, mergers and acquisitions, and ongoing corporate governance matters. Our attorneys understand the unique challenges that businesses face and provide practical, solution-oriented advice that helps our clients achieve their commercial objectives while minimizing legal risk.",
+          services: [
+            "Business formation and structuring",
+            "Contract drafting and negotiation",
+            "Mergers and acquisitions",
+            "Corporate compliance and governance",
+            "Intellectual property protection",
+          ],
         },
         {
           title: "Foreign and Local Organization Registration",
           desc: "Efficient establishment and registration of organizations.",
+          fullDescription:
+            "Facing criminal charges is one of the most stressful experiences a person can endure. Our criminal defense attorneys are dedicated to protecting the rights, freedom, and reputation of every client we represent. We provide aggressive defense strategies backed by thorough investigation and deep knowledge of criminal law. From minor infractions to serious felony charges, we approach every case with the same level of commitment and determination. Our team has secured favorable outcomes in thousands of criminal cases, including acquittals, reduced charges, and alternative sentencing arrangements.",
+          services: [
+            "Felony and misdemeanor defense",
+            "DUI/DWI representation",
+            "White-collar crime defense",
+            "Drug offense defense",
+            "Expungement and record sealing",
+          ],
         },
         {
           title: "Disputes",
           desc: "Effective resolution of legal and commercial disputes.",
+          fullDescription:
+            "Legal disputes can arise in any area of life, from business disagreements to neighborhood conflicts. Our dispute resolution team is skilled in both negotiation and litigation, helping clients find efficient and effective solutions to their conflicts. We prioritize resolving disputes through mediation and negotiation when possible, saving clients time and expense. However, when litigation is necessary, our attorneys are formidable advocates who will fight tirelessly to protect your interests in court.",
+          services: [
+            "Mediation and arbitration",
+            "Contract dispute resolution",
+            "Neighbor and property disputes",
+            "Consumer disputes",
+            "Employment conflict resolution",
+          ],
         },
         {
           title: "Investment Affairs",
           desc: "Completion of transactions and investment approvals at the National Investment Commission.",
+          fullDescription:
+            "Protecting your intellectual property is vital in today's knowledge-based economy. Our copyright practice helps creators, artists, writers, and businesses secure and defend their creative works. We assist with copyright registration, licensing agreements, and enforcement actions against infringement. Our attorneys stay at the forefront of evolving copyright law, including digital and online issues, to provide cutting-edge counsel. Whether you need to protect a single work or manage an extensive portfolio, we deliver strategic advice that safeguards your creative assets.",
+          services: [
+            "Copyright registration and filing",
+            "Licensing and transfer agreements",
+            "Infringement litigation",
+            "Fair use analysis",
+            "Digital rights management",
+          ],
         },
         {
           title: "Commercial Contract Drafting",
           desc: "Precise drafting and review of commercial contracts.",
+          fullDescription:
+            "Our criminal law practice encompasses a wide range of criminal matters, providing comprehensive defense for individuals charged with offenses at both the state and federal levels. We understand the profound impact that criminal charges can have on your life, career, and family, which is why we approach every case with compassion and determination. Our attorneys have extensive courtroom experience and deep knowledge of criminal statutes, precedents, and procedural rules. We conduct thorough investigations, challenge evidence, and build strong defense strategies designed to achieve the best possible outcome.",
+          services: [
+            "State and federal criminal defense",
+            "Appeals and post-conviction relief",
+            "Juvenile defense",
+            "Bail and bond hearings",
+            "Criminal investigation representation",
+          ],
         },
         {
           title: "Legal Partnerships",
           desc: "Local and international legal partnerships.",
+          fullDescription:
+            "Our legal partnership services provide coordinated, reliable counsel for clients managing cross-border transactions, regulatory requirements, and complex legal matters. We work closely with trusted legal professionals to deliver clear guidance and practical representation tailored to each client's needs.",
+          services: [
+            "Legal representation coordination",
+            "Cross-border transaction support",
+            "Regulatory and compliance guidance",
+            "Contract and document review",
+            "Ongoing legal counsel",
+          ],
         },
       ],
       learnMore: "Learn More",
@@ -101,6 +186,7 @@ export const translations = {
     howItWorks: {
       subtitle: "How It Works",
       title: "3 Easy Steps to Get Legal Help",
+      intro: "",
       items: [
         {
           title: "Request a Consultation",
@@ -920,7 +1006,7 @@ export const translations = {
   ar: {
     // Header
     header: {
-      logo: "د. براء عبدالحكيم خليل",
+      logo: "شركة الرماح لخدمات المحاماة",
       freeConsultation: "استشارة قانونية",
       home: "الرئيسية",
       about: "من نحن",
@@ -932,7 +1018,7 @@ export const translations = {
     // Hero
     hero: {
       badge: "احصل على استشارة قانونية",
-      name: "د. براء عبدالحكيم خليل",
+      name: "شركة الرماح لخدمات المحاماة",
       subtitles: [
         "محامي العدالة الجنائية",
         "مستشار قانوني موثوق",
@@ -953,52 +1039,104 @@ export const translations = {
     },
     // Counter Stats
     counter: {
-      casesWon: "قضايا ربحت",
-      yearsExperience: "سنوات خبرة",
-      successRate: "نسبة النجاح",
+      casesWon: "شركة ومؤسسة محلية وأجنبية",
+      yearsExperience: "عاماً من الخبرة",
+      successRate: "شركة ومؤسسة محلية وأجنبية",
       expertLawyers: "محامون خبراء",
     },
     // Practice Areas
     practiceAreas: {
       subtitle: "مجالات الممارسة",
-      title: "مجالات ممارستنا",
+      title: "خبرة قانونية تفهم اعمالك",
+      intro:
+        "نجمع بين المعرفة القانونية وفهم السوق العراقي وبيئة الأعمال والأطر التنظيمية ذات الصلة لنقدم لعملائنا رؤية واضحة وحلولاً عملية تساعدهم على اتخاذ قرارات مدروسة وإدارة أعمالهم واستثماراتهم بكفاءة. ونعتمد في ذلك على الخبرة والبصيرة والابتكار في التعامل مع المتطلبات القانونية والمسائل الأكثر تعقيداً.",
       viewAll: "عرض جميع الأقسام",
+      showMore: "عرض المزيد",
+      showLess: "عرض أقل",
       items: [
         {
-          title: "استشارات قانونية",
-          desc: "استشارات قانونية دقيقة لمختلف القضايا.",
+          title: "الاستشارات القانونية",
+          desc: "استشارات قانونية متخصصة تستند إلى دراسة دقيقة للوقائع والأطر القانونية.",
+          fullDescription:
+            "نقدم استشارات قانونية متخصصة للأفراد والشركات والمؤسسات تستند إلى دراسة دقيقة للوقائع وفهم الأطر القانونية والتنظيمية وبيئة الأعمال بما يساعد عملاءنا على اتخاذ قرارات مدروسة واستباق المخاطر ومعالجة المسائل القانونية بكفاءة ووضوح.",
         },
         {
-          title: "تسجيل الشركات الأجنبية",
-          desc: "إجراءات تسجيل الشركات الأجنبية باحترافية.",
+          title: "الشركات والأعمال التجارية",
+          desc: "تأسيس الشركات وتنظيم هياكلها القانونية ودعم نموها المستمر.",
+          fullDescription:
+            "نتولى تأسيس وتسجيل الشركات الوطنية وتنظيم هياكلها القانونية وشؤون الشركاء والمساهمين وإعداد القرارات والتعديلات وتقديم المشورة القانونية المستمرة بما يدعم أعمالها ونموها ويحمي مصالحها.",
         },
         {
-          title: "الدعاوى القضائية",
-          desc: "تمثيل قانوني أمام جميع المحاكم.",
+          title: "الاستثمار الأجنبي والأعمال عبر الحدود",
+          desc: "مرافقة الشركات والمستثمرين الأجانب في دخول السوق العراقي بثقة.",
+          fullDescription:
+            "نرافق الشركات والمستثمرين الأجانب في دخول السوق العراقي ونوفر لهم المعرفة القانونية والتنظيمية اللازمة لفهم بيئة الأعمال وممارسة نشاطهم بثقة بدءاً من فتح وتسجيل فروع ومكاتب الشركات الأجنبية وهيكلة الاستثمارات وصولاً إلى التراخيص والموافقات والمتطلبات التنظيمية ودعم المعاملات والاستثمارات العابرة للحدود.",
         },
         {
-          title: "قانون العمل والضمان الاجتماعي",
-          desc: "حلول قانونية لقضايا العمل والضمان.",
+          title: "النفط والغاز والطاقة",
+          desc: "دعم قانوني متخصص لقطاعات النفط والغاز والطاقة وعقودها.",
+          fullDescription:
+            "نقدم الدعم القانوني للشركات والمستثمرين العاملين في قطاعات النفط والغاز والطاقة من خلال فهم البيئة القانونية والتنظيمية التي تحكم هذه القطاعات ومراجعة وصياغة العقود والاتفاقيات ودعم المشاريع والمعاملات التجارية والتعامل مع المتطلبات والتراخيص والجهات ذات العلاقة بما يسهم في حماية المصالح وإدارة المخاطر القانونية.",
         },
         {
-          title: "تسجيل المنظمات الأجنبية والمحلية",
-          desc: "تأسيس وتسجيل المنظمات بكفاءة عالية.",
+          title: "العقود والصفقات التجارية",
+          desc: "صياغة ومراجعة والتفاوض بشأن العقود والصفقات التجارية والاستثمارية.",
+          fullDescription:
+            "نقدم الدعم القانوني في إعداد وصياغة ومراجعة والتفاوض بشأن العقود والاتفاقيات المدنية والتجارية والاستثمارية ونحرص على فهم طبيعة الصفقة وأهدافها قبل صياغة إطارها القانوني بما يحقق التوازن بين حماية المصالح واستمرارية الأعمال والحد من المخاطر المحتملة.",
         },
         {
-          title: "النزاعات",
-          desc: "حل النزاعات القانونية والتجارية بفعالية.",
+          title: "المشاريع والاستثمارات",
+          desc: "مرافقة المشاريع من مراحلها الأولى وحتى استكمال تراخيصها وموافقاتها.",
+          fullDescription:
+            "نرافق المشاريع منذ مراحلها الأولى ونقدم المشورة بشأن هيكلتها القانونية والتعاقدية واستكمال الموافقات والتراخيص وتنظيم العلاقات بين المستثمرين والشركاء والمطورين والمتعاقدين بما يوفر أساساً قانونياً واضحاً يدعم تنفيذ المشروع واستدامته.",
         },
         {
-          title: "شؤون الاستثمار",
-          desc: "انجار المعاملات والموافقات الاستثمارية في الهيئة الوطنية للاستثمار.",
+          title: "التقاضي وتسوية المنازعات",
+          desc: "تمثيل قانوني في المنازعات المدنية والتجارية والإدارية أمام المحاكم.",
+          fullDescription:
+            "نمثل عملاءنا في المنازعات المدنية والتجارية والإدارية والعمالية والجزائية أمام المحاكم والجهات القضائية والتحقيقية المختصة ونعتمد في إدارة النزاع على بناء استراتيجية قانونية تستند إلى دراسة الوقائع وتحليل الأدلة وتقييم المخاطر وتحديد المسار القانوني الأكثر ملاءمة لحماية حقوق ومصالح العميل.",
         },
         {
-          title: "صياغة العقود التجارية",
-          desc: "صياغة ومراجعة العقود التجارية بدقة.",
+          title: "العقارات والتطوير العقاري",
+          desc: "مشورة قانونية في المعاملات والمشاريع العقارية والسكنية والتجارية.",
+          fullDescription:
+            "نقدم المشورة القانونية في المعاملات والمشاريع العقارية والسكنية والتجارية والاستثمارية بما يشمل دراسة الملكية والتصرفات العقارية وإعداد ومراجعة عقود البيع والإيجار والاستثمار والتطوير وتنظيم العلاقات القانونية بين المستثمرين والمطورين والمتعاقدين ومتابعة الإجراءات ذات الصلة أمام الجهات المختصة.",
         },
         {
-          title: "شراكات قانونية",
-          desc: "شراكة قانونية ودولية",
+          title: "العمل والضمان الاجتماعي",
+          desc: "تنظيم علاقات العمل والامتثال لمتطلبات العمل والضمان الاجتماعي.",
+          fullDescription:
+            "ندعم الشركات وأصحاب الأعمال في تنظيم علاقاتهم مع العاملين وإعداد ومراجعة عقود وسياسات العمل وتقديم المشورة بشأن الالتزامات القانونية والامتثال لمتطلبات العمل والضمان الاجتماعي وتمثيلهم في المنازعات والإجراءات المرتبطة بها.",
+        },
+        {
+          title: "الإقامة وإجازات العمل وسمات الدخول",
+          desc: "دعم قانوني للإقامة وإجازات العمل وسمات الدخول للكوادر الأجنبية.",
+          fullDescription:
+            "نقدم الدعم القانوني للشركات والمستثمرين والعاملين الأجانب في العراق بشأن متطلبات الإقامة وإجازات العمل وسمات الدخول ومتابعة الإجراءات والموافقات اللازمة أمام الجهات المختصة بما يضمن تنظيم وجود وممارسة عمل الكوادر الأجنبية وفقاً للأطر القانونية والتنظيمية النافذة.",
+        },
+        {
+          title: "التراخيص والامتثال التنظيمي",
+          desc: "استكمال التراخيص والموافقات والامتثال للأطر التنظيمية النافذة.",
+          fullDescription:
+            "نساعد الشركات والمستثمرين على فهم الأطر القانونية والتنظيمية التي تحكم أنشطتهم واستكمال التراخيص والموافقات والإجازات اللازمة ومتابعة الإجراءات أمام الوزارات والهيئات والجهات المختصة بما يدعم استمرارية أعمالهم ويحد من المخاطر القانونية والتنظيمية.",
+        },
+        {
+          title: "الشؤون الضريبية والمالية",
+          desc: "دعم قانوني في الشؤون الضريبية والمالية والامتثال الضريبي.",
+          fullDescription:
+            "نقدم الدعم القانوني في الشؤون الضريبية والمالية المرتبطة بأعمال الشركات والمستثمرين بما يشمل إجراءات التحاسب الضريبي وتنظيم الموقف الضريبي ومتابعة المعاملات والاعتراضات والمتطلبات ذات الصلة أمام الهيئة العامة للضرائب والجهات المختصة بما يعزز الامتثال ويحمي مصالح العميل.",
+        },
+        {
+          title: "القطاع الصحي والمكاتب العلمية",
+          desc: "دعم قانوني للمكاتب العلمية وشركات الأدوية والمستلزمات الطبية.",
+          fullDescription:
+            "نقدم الدعم القانوني للشركات والمكاتب العلمية العاملة في قطاعات الأدوية والمستلزمات والأجهزة الطبية بما يشمل إجراءات التأسيس والتسجيل والتراخيص والموافقات وتنظيم العلاقات التعاقدية والامتثال للمتطلبات القانونية والتنظيمية ومتابعة الإجراءات أمام الجهات والنقابات والمؤسسات المختصة.",
+        },
+        {
+          title: "الملكية الفكرية وحماية العلامات التجارية",
+          desc: "حماية العلامات التجارية والحقوق الفكرية وتسجيلها ومتابعة الاعتراضات.",
+          fullDescription:
+            "نقدم الدعم القانوني لحماية الحقوق والأصول الفكرية والتجارية لعملائنا بما يشمل تسجيل العلامات التجارية وتجديدها ومتابعة الاعتراضات والإجراءات القانونية المرتبطة بها والتصدي لحالات التعدي بما يسهم في حماية الهوية التجارية والقيمة المعنوية للأعمال.",
         },
       ],
       learnMore: "اعرف المزيد",
@@ -1006,22 +1144,49 @@ export const translations = {
     // How It Works
     howItWorks: {
       subtitle: "كيف تعمل",
-      title: "3 خطوات سهلة للحصول على مساعدة قانونية",
+      title: "آلية العمل وإدارة التكليفات القانونية",
+      intro:
+        "تعتمد شركة الرماح آلية عمل مؤسسية ومنظمة لإدارة التكليفات القانونية للشركات والمؤسسات تجمع بين التخصص القانوني والتنظيم الإداري واستخدام الأنظمة الإلكترونية الحديثة بما يضمن دقة المتابعة واستمرارية التوثيق ووضوح التواصل مع العميل في جميع مراحل العمل.",
       items: [
         {
-          title: "طلب استشارة",
-          subtitle: "أرسل تفاصيل قضيتك",
-          btnText: "أرسل الطلب",
+          title: "تقديم التكليف",
+          subtitle:
+            "تُرسل الطلبات والاستشارات والتكليفات القانونية عبر البريد الإلكتروني المخصص مع إرفاق المستندات والمعلومات ذات الصلة بما يضمن توثيق الطلب وإحالته إلى الفريق المختص.",
         },
         {
-          title: "حجز موعد",
-          subtitle: "سنحقق في قضيتك",
-          btnText: "اعرف المزيد",
+          title: "التسجيل والتصنيف",
+          subtitle:
+            "يُسجل كل تكليف ضمن النظام الإلكتروني الداخلي لشركة الرماح ويُنشأ له سجل خاص يتضمن موضوعه ومستنداته وإجراءاته ومواعيده مع تصنيفه بحسب طبيعة العمل ودرجة الأولوية.",
         },
         {
-          title: "عرض السعر",
-          subtitle: "احصل على عرض يناسب قضيتك",
-          btnText: "شاهد النتائج",
+          title: "المراجعة والإسناد",
+          subtitle:
+            "تتم مراجعة التكليف وتحديد نطاق العمل والمتطلبات القانونية ثم إسناده إلى المحامي أو فريق العمل المختص مع تحديد المسؤول المباشر عن إدارة الملف ومتابعته.",
+        },
+        {
+          title: "التقييم وخطة العمل",
+          subtitle:
+            "يدرس الفريق المختص المركز القانوني والخيارات المتاحة والمخاطر والمتطلبات ذات الصلة ويحدد مسار العمل والإجراءات اللازمة وفق طبيعة التكليف وأهداف العميل.",
+        },
+        {
+          title: "التنفيذ والمتابعة",
+          subtitle:
+            "تتم المباشرة بالإجراءات القانونية والقضائية والإدارية المطلوبة مع متابعة المواعيد والمخاطبات والمستجدات وتحديث سجل الملف إلكترونيا بصورة مستمرة.",
+        },
+        {
+          title: "التقارير والتواصل",
+          subtitle:
+            "تُعد تقارير دورية عن سير العمل تتضمن الإجراءات المنجزة والموقف الحالي لكل تكليف والخطوات التالية والملاحظات الجوهرية ويتم إرسالها إلى العميل عبر البريد الإلكتروني المعتمد بما يضمن وضوح سير العمل واستمرارية التواصل.",
+        },
+        {
+          title: "التوثيق والأرشفة",
+          subtitle:
+            "تُحفظ المستندات والمراسلات والتقارير وسجلات الإجراءات إلكترونيا ضمن النظام الداخلي لشركة الرماح وفق تنظيم خاص بكل عميل وملف بما يضمن سهولة الرجوع إلى تاريخ التكليف ومتابعة تطوراته.",
+        },
+        {
+          title: "استكمال التكليف",
+          subtitle:
+            "عند استكمال نطاق العمل يتم توثيق النتيجة والإجراءات المنجزة وإرسال التقرير أو المخرجات النهائية إلى العميل مع بيان أي إجراءات أو متطلبات لاحقة عند الاقتضاء.",
         },
       ],
     },
@@ -1052,7 +1217,7 @@ export const translations = {
     attorneyQuote: {
       quote:
         "العدالة ليست مفهوماً سلبياً — بل تتطلب مناصرين متفانين على استعداد للقتال بلا كلل من أجل حقوق كل فرد، بغض النظر عن الظروف.",
-      name: "د. براء عبدالحكيم خليل",
+      name: "شركة الرماح لخدمات المحاماة والاستشارات القانونية ",
       title: "شريك أول، محامي العدالة الجنائية",
     },
     // Testimonials
@@ -1176,29 +1341,33 @@ export const translations = {
       subtitle: "إجابات قانونية",
       items: [
         {
-          title: "متى أحتاج إلى استشارة قانونية؟",
+          title:
+            "متى تكون الفرصة الاستثمارية في العراق فرصة تستحق الدخول، ومتى يكون عدم الدخول هو القرار الأفضل؟",
           description:
-            "تحتاج إلى استشارة قانونية قبل توقيع العقود، أو الرد على التبليغات الرسمية، أو إقامة دعوى، أو الإدلاء بأقوال، أو اتخاذ قرار قد يؤثر في حقوقك أو التزاماتك التجارية.",
+            "ليس كل مشروع متاح فرصة مناسبة لكل مستثمر. قيمة القرار تبدأ من معرفة ما إذا كان النشاط والهيكل القانوني والمتطلبات التنظيمية والعقود والالتزامات والمخاطر تتوافق فعلاً مع أهداف المستثمر وقدرته على إدارتها.\n\nدور شركة الرماح ليس دفع العميل نحو الاستثمار، بل مساعدته على رؤية الصورة القانونية بوضوح كافٍ لاتخاذ قراره بثقة.",
         },
         {
-          title: "هل يمكن للمكتب تمثيلي أمام المحكمة؟",
+          title: "هل تعرف ما الذي تشتريه فعلاً عندما تشتري شركة؟",
           description:
-            "نعم. يتولى المكتب الدعاوى القضائية، والقضايا الجنائية، ونزاعات الشركات، والقضايا العقارية، وتمثيل الموكلين أمام المحاكم والجهات الرسمية المختصة.",
+            "شراء الأسهم لا يعني شراء الأصول والفرص فقط، بل قد يعني الدخول في تاريخ قانوني كامل من العقود والالتزامات والديون والضمانات والنزاعات والمخاطر التي نشأت قبل وصول المستثمر.\n\nلذلك لا تسأل شركة الرماح فقط عن قيمة ما سيملكه العميل بعد الصفقة، بل تبحث أيضاً عمّا قد ينتقل إليه معها من مسؤوليات.\n\nأحياناً أخطر ما تشتريه في الصفقة هو الشيء الذي لم يظهر في سعرها.",
         },
         {
-          title: "هل تحتاج الشركات إلى دعم قانوني مستمر؟",
+          title:
+            "إذا كان القرار يحتاج توقيع شخص واحد، فلماذا قد يحتاج حماية شركة كاملة؟",
           description:
-            "الدعم القانوني المستمر يساعد الشركات على مراجعة العقود، وإدارة الامتثال، ومعالجة النزاعات مبكراً، وتجهيز المستندات الرسمية، وتقليل المخاطر قبل وصولها إلى المحكمة.",
+            "لأن توقيع المدير قد يرتب التزاماً على الشركة يمتد سنوات ويتجاوز مدة وجوده في منصبه.\n\nلهذا يجب أن تتناسب صلاحية اتخاذ القرار مع حجمه وآثاره، وأن تُحاط القرارات الجوهرية بمستويات مناسبة من الاعتماد والتوثيق.\n\nقد يستغرق التوقيع ثانية، لكن أثره قد يعيش أطول ممن وقّعه.",
         },
         {
-          title: "ما المستندات المهمة في نزاع عقاري أو تعاقدي؟",
+          title:
+            "إذا وجدت فرصة استثمارية ممتازة في العراق، فكيف تعرف أن الوقت المناسب لدخولها هو الآن؟",
           description:
-            "تشمل المستندات المهمة العقود، وسندات الملكية، والوصولات، والمراسلات، والتبليغات، وأوراق المحكمة، وملفات الشركات، والصور، وأي دليل يوضح حقوق والتزامات الأطراف.",
+            "الفرصة لا تتحدد بجاذبية القطاع وحدها. توقيت الدخول يرتبط بجاهزية المستثمر والهيكل القانوني والتراخيص والعقود والتمويل والشركاء والقدرة على بدء التشغيل ضمن المسار المطلوب.\n\nتساعد شركة الرماح المستثمر على فهم المتطلبات القانونية والتنظيمية التي تسبق الدخول، حتى يكون توقيت القرار مبنياً على الجاهزية لا على جاذبية الفرصة وحدها.\n\nفالفرصة الجيدة في التوقيت الخطأ قد تصبح قراراً مكلفاً.",
         },
         {
-          title: "هل يمكن حل النزاع دون دعوى قضائية؟",
+          title:
+            "هل تعرف ما الذي سيجعل المستثمر القادم يثق بشركتك قبل أن يلتقي بك؟",
           description:
-            "يمكن حل كثير من النزاعات من خلال التفاوض، أو الإنذارات القانونية، أو التسوية، أو الوساطة. وإذا لم تكن هذه الخيارات مناسبة، فقد يكون التقاضي هو الإجراء الأفضل.",
+            "وضوح الملكية، وانتظام السجلات والعقود والتراخيص والحوكمة والبيانات القانونية، يعطي المستثمر صورة عن مستوى المؤسسة قبل أن تبدأ المفاوضات الجدية.\n\nالثقة في الأعمال لا تُبنى بالكلام وحده، بل بما تستطيع الشركة إثباته عندما تُفحص.",
         },
       ],
     },
@@ -1232,8 +1401,8 @@ export const translations = {
         breadcrumb: { home: "الرئيسية", current: "من نحن" },
       },
       vision: {
-        subtitle: "رؤيتنا",
-        title: "رؤيتنا للعدالة",
+        subtitle: "شراكات تتجاوز الحدود",
+        title: "",
         description:
           "نؤمن أن كل شخص يستحق الوصول إلى تمثيل قانوني عالي الجودة، بغض النظر عن خلفيته أو ظروفه. رؤيتنا هي خلق مجتمع أكثر عدالة حيث يعمل القانون كدرع للضعفاء، وليس سلاحاً للأقوياء.",
         stats: [
@@ -1244,11 +1413,11 @@ export const translations = {
       },
       quote: {
         text: "القانون ليس مجرد مجموعة من القواعد — إنه الأساس الذي نبني عليه مجتمعاً عادلاً ومنصفاً.",
-        author: "د. براء عبدالحكيم خليل، الشريك المؤسس",
+        author: "شركة الرماح لخدمات المحاماة والاستشارات القانونية ، الشريك المؤسس",
       },
       mission: {
         subtitle: "مهمتنا",
-        title: "ماذا نمثل",
+        title: "",
         description:
           "مهمتنا هي تقديم تمثيل قانوني استثنائي يحدث فرقاً حقيقياً في حياة عملائنا. نحن ملتزمون بالتمسك بأعلى معايير الأخلاقيات المهنية مع تحقيق نتائج تفوق التوقعات.",
         services: [
@@ -1539,7 +1708,7 @@ export const translations = {
             "تعرف على حقوقك الدستورية عند مواجهة تهم جنائية وكيف يمكن للمحامي ذوي الخبرة المساعدة في حمايتها.",
           category: "القانون الجنائي",
           date: "15 يناير 2026",
-          author: "د. براء عبدالحكيم خليل",
+          author: "شركة الرماح لخدمات المحاماة والاستشارات القانونية ",
           readTime: "5 دقائق قراءة",
           content:
             "عند مواجهة تهم جنائية، فهم حقوقك الدستورية هو الخطوة الأولى والأكثر أهمية في حماية نفسك. يوفر دستور الولايات المتحدة عدة حمايات أساسية تنطبق على كل شخص متهم بجريمة.\n\n## حقك في الصمت\nيحميك التعديل الخامس من الإجبار على أن تكون شاهداً ضد نفسك. مارس هذا الحق بأدب ولكن بحزم — ببساطة اذكر أنك ترغب في التحدث مع محامٍ قبل الإجابة على أي أسئلة.\n\n## حقك في التمثيل القانوني\nيضمن التعديل السادس حقك في وجود محامٍ أثناء أي استجواب. إذا لم تستطع تحمل تكاليف محامٍ، سيتم تعيين واحد لك.\n\n## حماية حقوقك\nإذا كنت أو أحد أحبائك يواجه تهم جنائية، من الضروري استشارة محامي دفاع جنائي ذي خبرة في أقرب وقت ممكن.",

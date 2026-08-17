@@ -17,12 +17,10 @@ import {
   Briefcase,
   Shield,
   Copyright,
-  Landmark,
   Phone,
   Mail,
   ArrowRight,
   Send,
-  Search,
   Crosshair,
   Eye,
   ChevronLeft,
@@ -31,7 +29,6 @@ import {
   Award,
   Users,
   TrendingUp,
-  MessageSquare,
   CheckCircle,
   Plus,
   Minus,
@@ -44,7 +41,16 @@ import {
   Linkedin,
   Check,
   MessageCircle,
-  Handshake,
+  Globe,
+  Flame,
+  Building2,
+  Plane,
+  Stethoscope,
+  FileText,
+  ClipboardList,
+  ClipboardCheck,
+  PlayCircle,
+  Archive,
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AppointmentForm } from "../thelaw/appointment-form";
@@ -53,121 +59,35 @@ import { useLanguage } from "@/lib/i18n/language-context";
 
 /* ===== Non-translatable data (icons, images, long descriptions/services for modals) ===== */
 
+const PRACTICE_AREAS_PREVIEW_COUNT = 9;
+
 const PRACTICE_AREA_ICONS = [
-  BookOpen,
-  Gavel,
-  Scale,
-  Briefcase,
-  Shield,
-  MessageSquare,
-  Copyright,
-  Landmark,
-  Handshake,
+  BookOpen, // Legal Consultations
+  Briefcase, // Companies & Commercial Business
+  Globe, // Foreign Investment & Cross-Border Business
+  Flame, // Oil, Gas & Energy
+  FileText, // Contracts & Commercial Deals
+  TrendingUp, // Projects & Investments
+  Gavel, // Litigation & Dispute Resolution
+  Building2, // Real Estate & Development
+  Users, // Labor & Social Security
+  Plane, // Residency, Work Permits & Visas
+  Shield, // Licensing & Regulatory Compliance
+  DollarSign, // Tax & Financial Affairs
+  Stethoscope, // Health Sector & Scientific Offices
+  Copyright, // Intellectual Property & Trademarks
 ];
 
-const PRACTICE_AREA_DETAILS = [
-  {
-    description:
-      "Our legal advisory services provide comprehensive guidance for individuals and businesses facing complex legal challenges. With decades of combined experience, our attorneys offer strategic counsel that helps clients navigate intricate legal landscapes with confidence and clarity. Whether you are dealing with a personal matter or a corporate dispute, our team ensures that your rights are protected at every stage of the process. We take pride in delivering personalized attention to each case, ensuring that no detail is overlooked and every legal avenue is thoroughly explored.",
-    services: [
-      "Personal legal consultations",
-      "Corporate legal strategy",
-      "Legal document review",
-      "Regulatory compliance guidance",
-      "Pre-litigation risk assessment",
-    ],
-  },
-  {
-    description:
-      "Our litigation team has successfully represented thousands of clients in state and federal courts. We combine aggressive advocacy with meticulous preparation to achieve the best possible outcomes for our clients. From pre-trial negotiations to courtroom arguments, our attorneys bring unparalleled dedication and expertise to every case. We understand that litigation can be stressful and overwhelming, which is why we maintain open communication with our clients throughout the entire process, ensuring they are informed and empowered at every step.",
-    services: [
-      "Civil and commercial litigation",
-      "Class action lawsuits",
-      "Appellate advocacy",
-      "Alternative dispute resolution",
-      "Trial preparation and strategy",
-    ],
-  },
-  {
-    description:
-      "When legal disputes escalate to formal lawsuits, having experienced representation is crucial. Our firm has a proven track record of success in managing complex lawsuits from filing through resolution. We employ a strategic approach that considers both the legal merits and the practical implications of each case. Our attorneys work closely with clients to develop tailored strategies that align with their goals, whether that means pursuing a favorable settlement or taking a case to trial to protect their interests.",
-    services: [
-      "Personal injury lawsuits",
-      "Breach of contract claims",
-      "Property dispute litigation",
-      "Employment lawsuits",
-      "Medical malpractice claims",
-    ],
-  },
-  {
-    description:
-      "In today's complex business environment, having trusted legal counsel is essential for success. Our business law practice provides comprehensive legal services to companies of all sizes, from startups to established corporations. We assist with entity formation, contract drafting and negotiation, mergers and acquisitions, and ongoing corporate governance matters. Our attorneys understand the unique challenges that businesses face and provide practical, solution-oriented advice that helps our clients achieve their commercial objectives while minimizing legal risk.",
-    services: [
-      "Business formation and structuring",
-      "Contract drafting and negotiation",
-      "Mergers and acquisitions",
-      "Corporate compliance and governance",
-      "Intellectual property protection",
-    ],
-  },
-  {
-    description:
-      "Facing criminal charges is one of the most stressful experiences a person can endure. Our criminal defense attorneys are dedicated to protecting the rights, freedom, and reputation of every client we represent. We provide aggressive defense strategies backed by thorough investigation and deep knowledge of criminal law. From minor infractions to serious felony charges, we approach every case with the same level of commitment and determination. Our team has secured favorable outcomes in thousands of criminal cases, including acquittals, reduced charges, and alternative sentencing arrangements.",
-    services: [
-      "Felony and misdemeanor defense",
-      "DUI/DWI representation",
-      "White-collar crime defense",
-      "Drug offense defense",
-      "Expungement and record sealing",
-    ],
-  },
-  {
-    description:
-      "Legal disputes can arise in any area of life, from business disagreements to neighborhood conflicts. Our dispute resolution team is skilled in both negotiation and litigation, helping clients find efficient and effective solutions to their conflicts. We prioritize resolving disputes through mediation and negotiation when possible, saving clients time and expense. However, when litigation is necessary, our attorneys are formidable advocates who will fight tirelessly to protect your interests in court.",
-    services: [
-      "Mediation and arbitration",
-      "Contract dispute resolution",
-      "Neighbor and property disputes",
-      "Consumer disputes",
-      "Employment conflict resolution",
-    ],
-  },
-  {
-    description:
-      "Protecting your intellectual property is vital in today's knowledge-based economy. Our copyright practice helps creators, artists, writers, and businesses secure and defend their creative works. We assist with copyright registration, licensing agreements, and enforcement actions against infringement. Our attorneys stay at the forefront of evolving copyright law, including digital and online issues, to provide cutting-edge counsel. Whether you need to protect a single work or manage an extensive portfolio, we deliver strategic advice that safeguards your creative assets.",
-    services: [
-      "Copyright registration and filing",
-      "Licensing and transfer agreements",
-      "Infringement litigation",
-      "Fair use analysis",
-      "Digital rights management",
-    ],
-  },
-  {
-    description:
-      "Our criminal law practice encompasses a wide range of criminal matters, providing comprehensive defense for individuals charged with offenses at both the state and federal levels. We understand the profound impact that criminal charges can have on your life, career, and family, which is why we approach every case with compassion and determination. Our attorneys have extensive courtroom experience and deep knowledge of criminal statutes, precedents, and procedural rules. We conduct thorough investigations, challenge evidence, and build strong defense strategies designed to achieve the best possible outcome.",
-    services: [
-      "State and federal criminal defense",
-      "Appeals and post-conviction relief",
-      "Juvenile defense",
-      "Bail and bond hearings",
-      "Criminal investigation representation",
-    ],
-  },
-  {
-    description:
-      "Our legal partnership services provide coordinated, reliable counsel for clients managing cross-border transactions, regulatory requirements, and complex legal matters. We work closely with trusted legal professionals to deliver clear guidance and practical representation tailored to each client's needs.",
-    services: [
-      "Legal representation coordination",
-      "Cross-border transaction support",
-      "Regulatory and compliance guidance",
-      "Contract and document review",
-      "Ongoing legal counsel",
-    ],
-  },
+const HOW_IT_WORKS_ICONS = [
+  Send, // Submitting the assignment
+  ClipboardList, // Registration & classification
+  ClipboardCheck, // Review & assignment
+  Crosshair, // Assessment & work plan
+  PlayCircle, // Execution & follow-up
+  MessageCircle, // Reports & communication
+  Archive, // Documentation & archiving
+  CheckCircle, // Completion
 ];
-
-const HOW_IT_WORKS_ICONS = [Send, Search, Crosshair];
 
 const CASE_IMAGES = [
   "/images/blog-1.png",
@@ -837,14 +757,14 @@ function HowWeCanHelpAccordion() {
               id={`accordion-content-${index}`}
               className={`overflow-hidden transition-all duration-300 ${
                 openIndex === index
-                  ? "max-h-96 opacity-100"
+                  ? "max-h-[640px] opacity-100"
                   : "max-h-0 opacity-0"
               }`}
               role="region"
               aria-labelledby={`accordion-trigger-${index}`}
             >
               <div className="px-6 pb-5 pt-0">
-                <p className="text-medium-gray dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-medium-gray dark:text-gray-300 text-sm leading-relaxed whitespace-pre-line">
                   {item.description}
                 </p>
               </div>
@@ -932,6 +852,7 @@ export function HomePage() {
     number | null
   >(null);
   const [practiceAreaModalOpen, setPracticeAreaModalOpen] = useState(false);
+  const [showAllPracticeAreas, setShowAllPracticeAreas] = useState(false);
   const [heroSlide, setHeroSlide] = useState(0);
   const [typedName, setTypedName] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -1001,7 +922,7 @@ export function HomePage() {
 
   const selectedPracticeArea =
     selectedPracticeAreaIndex !== null
-      ? PRACTICE_AREA_DETAILS[selectedPracticeAreaIndex]
+      ? t.practiceAreas.items[selectedPracticeAreaIndex]
       : null;
   const selectedPracticeAreaIcon =
     selectedPracticeAreaIndex !== null
@@ -1055,29 +976,35 @@ export function HomePage() {
               {/* Description */}
               <div>
                 <p className="text-medium-gray dark:text-gray-300 leading-relaxed text-sm">
-                  {selectedPracticeArea.description}
+                  {selectedPracticeArea.fullDescription}
                 </p>
               </div>
 
               {/* Key Services */}
-              <div>
-                <h3
-                  className="text-lg font-bold text-charcoal dark:text-white mb-4"
-                  style={{ fontFamily: "var(--font-playfair), serif" }}
-                >
-                  Key Services
-                </h3>
-                <div className="space-y-2.5">
-                  {selectedPracticeArea.services.map((service) => (
-                    <div key={service} className="flex items-center gap-3">
-                      <CheckCircle size={18} className="text-gold shrink-0" />
-                      <span className="text-charcoal dark:text-gray-300 text-sm">
-                        {service}
-                      </span>
+              {selectedPracticeArea.services &&
+                selectedPracticeArea.services.length > 0 && (
+                  <div>
+                    <h3
+                      className="text-lg font-bold text-charcoal dark:text-white mb-4"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
+                      Key Services
+                    </h3>
+                    <div className="space-y-2.5">
+                      {selectedPracticeArea.services.map((service) => (
+                        <div key={service} className="flex items-center gap-3">
+                          <CheckCircle
+                            size={18}
+                            className="text-gold shrink-0"
+                          />
+                          <span className="text-charcoal dark:text-gray-300 text-sm">
+                            {service}
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
+                )}
 
               {/* Share Buttons */}
               <PracticeAreaShareButtons title={selectedPracticeAreaTitle} />
@@ -1374,15 +1301,23 @@ export function HomePage() {
               title={t.practiceAreas.title}
               subtitle={t.practiceAreas.subtitle}
             />
+            {t.practiceAreas.intro && (
+              <p className="text-medium-gray dark:text-gray-400 leading-relaxed text-base max-w-3xl mx-auto text-center mb-10 -mt-6">
+                {t.practiceAreas.intro}
+              </p>
+            )}
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.practiceAreas.items.map((area, index) => {
+            {(showAllPracticeAreas
+              ? t.practiceAreas.items
+              : t.practiceAreas.items.slice(0, PRACTICE_AREAS_PREVIEW_COUNT)
+            ).map((area, index) => {
               const Icon = PRACTICE_AREA_ICONS[index] ?? Scale;
 
               return (
                 <AnimatedSection
                   key={index}
-                  delay={index * 100}
+                  delay={(index % PRACTICE_AREAS_PREVIEW_COUNT) * 100}
                   className="h-full"
                 >
                   <div className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300">
@@ -1408,16 +1343,20 @@ export function HomePage() {
               );
             })}
           </div>
-          {/* <AnimatedSection>
-            <div className="text-center mt-10">
-              <button
-                onClick={() => navigate("practice-areas")}
-                className="btn-ripple btn-primary-hover border-2 border-gold text-gold px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-charcoal transition-all"
-              >
-                {t.practiceAreas.viewAll}
-              </button>
-            </div>
-          </AnimatedSection> */}
+          {t.practiceAreas.items.length > PRACTICE_AREAS_PREVIEW_COUNT && (
+            <AnimatedSection>
+              <div className="text-center mt-10">
+                <button
+                  onClick={() => setShowAllPracticeAreas((prev) => !prev)}
+                  className="btn-ripple btn-primary-hover border-2 border-gold text-gold px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-charcoal transition-all"
+                >
+                  {showAllPracticeAreas
+                    ? t.practiceAreas.showLess
+                    : t.practiceAreas.showMore}
+                </button>
+              </div>
+            </AnimatedSection>
+          )}
         </div>
       </section>
 
@@ -1436,50 +1375,68 @@ export function HomePage() {
               title={t.howItWorks.title}
               subtitle={t.howItWorks.subtitle}
             />
+            {t.howItWorks.intro && (
+              <p className="text-medium-gray dark:text-gray-400 leading-relaxed text-base max-w-3xl mx-auto text-center mb-10 -mt-6">
+                {t.howItWorks.intro}
+              </p>
+            )}
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Connecting arrows between steps (desktop only) */}
-            <div className="hidden md:flex absolute top-1/3 left-[33.33%] -translate-x-1/2 z-20 text-gold">
-              <div className="relative">
-                <div className="w-12 h-px bg-gold" />
-                <ArrowRight
-                  size={16}
-                  className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
-                />
-              </div>
-            </div>
-            <div className="hidden md:flex absolute top-1/3 left-[66.66%] -translate-x-1/2 z-20 text-gold">
-              <div className="relative">
-                <div className="w-12 h-px bg-gold" />
-                <ArrowRight
-                  size={16}
-                  className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
-                />
-              </div>
-            </div>
-
-            {HOW_IT_WORKS_ICONS.map((Icon, index) => (
-              <AnimatedSection key={index} delay={index * 200}>
-                <div className="text-center bg-white dark:bg-charcoal p-5 md:p-6 rounded-lg border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative">
-                  {/* Step number */}
-                  <div
-                    className="absolute top-4 right-4 text-6xl font-bold text-light-gray dark:text-gray-700"
-                    style={{ fontFamily: "var(--font-playfair), serif" }}
-                  >
-                    0{index + 1}
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-8 relative ${
+              t.howItWorks.items.length <= 3
+                ? "md:grid-cols-3"
+                : "lg:grid-cols-4"
+            }`}
+          >
+            {/* Connecting arrows between steps (desktop only, 3-step layout) */}
+            {t.howItWorks.items.length <= 3 && (
+              <>
+                <div className="hidden md:flex absolute top-1/3 left-[33.33%] -translate-x-1/2 z-20 text-gold">
+                  <div className="relative">
+                    <div className="w-12 h-px bg-gold" />
+                    <ArrowRight
+                      size={16}
+                      className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
+                    />
                   </div>
-                  <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border-2 border-gold text-gold rounded-full">
-                    <Icon size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2">
-                    {t.howItWorks.items[index].title}
-                  </h3>
-                  <p className="text-medium-gray dark:text-gray-300 text-sm">
-                    {t.howItWorks.items[index].subtitle}
-                  </p>
                 </div>
-              </AnimatedSection>
-            ))}
+                <div className="hidden md:flex absolute top-1/3 left-[66.66%] -translate-x-1/2 z-20 text-gold">
+                  <div className="relative">
+                    <div className="w-12 h-px bg-gold" />
+                    <ArrowRight
+                      size={16}
+                      className={`absolute -top-2 ${isRTL ? "-left-2 rotate-180" : "-right-2"}`}
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+
+            {t.howItWorks.items.map((item, index) => {
+              const Icon = HOW_IT_WORKS_ICONS[index] ?? Send;
+              return (
+                <AnimatedSection key={index} delay={index * 150}>
+                  <div className="text-center bg-white dark:bg-charcoal p-5 md:p-6 rounded-lg border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow relative h-full">
+                    {/* Step number */}
+                    <div
+                      className="absolute top-4 right-4 text-6xl font-bold text-light-gray dark:text-gray-700"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
+                      0{index + 1}
+                    </div>
+                    <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border-2 border-gold text-gold rounded-full">
+                      <Icon size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-charcoal dark:text-white mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-medium-gray dark:text-gray-300 text-sm">
+                      {item.subtitle}
+                    </p>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
