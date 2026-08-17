@@ -30,11 +30,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "D.Baraa A. Khaleel - Criminal Justice Attorney",
-    template: "%s | D.Baraa A. Khaleel",
+    default: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
+    template: "%s | Alremah Company for Legal Services and Consultancy",
   },
   description:
-    "D.Baraa A. Khaleel - Experienced Criminal Justice Attorney providing aggressive legal representation in criminal defense, personal injury, family law, business disputes, and more. Over 25 years of dedicated service with a 98% success rate. Legal Consultation available 24/7.",
+    "Alremah Company for Legal Services and Consultancy - Experienced Criminal Justice Attorney providing aggressive legal representation in criminal defense, personal injury, family law, business disputes, and more. Over 25 years of dedicated service with a 98% success rate. Legal Consultation available 24/7.",
   keywords: [
     "law firm",
     "criminal defense attorney",
@@ -49,21 +49,21 @@ export const metadata: Metadata = {
     "litigation",
     "civil rights",
   ],
-  authors: [{ name: "D.Baraa A. Khaleel" }],
-  creator: "D.Baraa A. Khaleel",
-  publisher: "D.Baraa A. Khaleel",
+  authors: [{ name: "Alremah Company for Legal Services and Consultancy" }],
+  creator: "Alremah Company for Legal Services and Consultancy",
+  publisher: "Alremah Company for Legal Services and Consultancy",
   metadataBase: new URL("https://thelawfirm.com"),
   openGraph: {
-    title: "D.Baraa A. Khaleel - Criminal Justice Attorney",
+    title: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
     description:
       "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate. Legal Consultation available 24/7.",
     type: "website",
-    siteName: "D.Baraa A. Khaleel",
+    siteName: "Alremah Company for Legal Services and Consultancy",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "D.Baraa A. Khaleel - Criminal Justice Attorney",
+    title: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
     description:
       "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate.",
   },

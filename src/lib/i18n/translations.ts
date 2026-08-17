@@ -14,7 +14,7 @@ export const translations = {
   en: {
     // Header
     header: {
-      logo: "Dr. Baraa Abdulhakim Khalil",
+      logo: "Alremah Company for Legal Services and Consultancy",
       freeConsultation: "Legal Consultation",
       home: "Home",
       about: "About Us",
@@ -26,7 +26,7 @@ export const translations = {
     // Hero
     hero: {
       badge: "Get a Legal Consultation",
-      name: "Dr. Baraa Abdulhakim Khalil",
+      name: "Alremah Company for Legal Services and Consultancy",
       subtitles: [
         "Criminal Justice Attorney",
         "Trusted Legal Advisor",
@@ -49,7 +49,7 @@ export const translations = {
     counter: {
       casesWon: "Cases Won",
       yearsExperience: "Years Experience",
-      successRate: "Success Rate",
+      successRate: "Local & Foreign Companies and Institutions",
       expertLawyers: "Expert Lawyers",
     },
     // Practice Areas
@@ -233,7 +233,7 @@ export const translations = {
     attorneyQuote: {
       quote:
         "Justice is not a passive concept — it requires dedicated advocates who are willing to fight tirelessly for the rights of every individual, regardless of the circumstances.",
-      name: "Dr. Baraa Abdulhakim Khalil",
+      name: "Alremah Company for Legal Services and Consultancy",
       title: "Senior Partner, Criminal Justice Attorney",
     },
     // Testimonials
@@ -425,7 +425,7 @@ export const translations = {
       },
       quote: {
         text: "The law is not merely a set of rules — it is the foundation upon which we build a fair and equitable society.",
-        author: "Dr. Baraa Abdulhakim Khalil, Founding Partner",
+        author: "Alremah Company for Legal Services and Consultancy, Founding Partner",
       },
       mission: {
         subtitle: "Our Mission",
@@ -449,7 +449,7 @@ export const translations = {
             year: "1998",
             title: "Founded",
             description:
-              "D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
+              "Alremah Company for Legal Services and Consultancy was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
           },
           {
             year: "2003",
@@ -668,7 +668,7 @@ export const translations = {
         title: "General Questions",
         items: [
           {
-            q: "What legal services does Dr. Baraa A. Khaleel provide?",
+            q: "What legal services does Alremah Company for Legal Services and Consultancy provide?",
             a: "The office provides legal consultations, litigation, representation for companies and individuals before the courts, commercial law services, criminal defense, dispute resolution, intellectual property matters, company registration, contract review, and property disputes.",
           },
           {
@@ -765,7 +765,7 @@ export const translations = {
             "Learn about your constitutional rights when facing criminal charges and how an experienced attorney can help protect them.",
           category: "Criminal Law",
           date: "January 15, 2026",
-          author: "Dr. Baraa Abdulhakim Khalil",
+          author: "Alremah Company for Legal Services and Consultancy",
           readTime: "5 min read",
           content:
             "When facing criminal charges, understanding your constitutional rights is the first and most important step in protecting yourself. The United States Constitution provides several core safeguards that apply to every person accused of a crime.\n\n## Your Right to Remain Silent\nThe Fifth Amendment protects you from being compelled to testify against yourself. Exercise this right politely but firmly by stating that you want to speak with an attorney before answering any questions.\n\n## Your Right to Legal Representation\nThe Sixth Amendment guarantees your right to have a lawyer present during questioning. If you cannot afford one, counsel will be appointed for you.\n\n## Protecting Your Rights\nIf you or someone close to you is facing criminal charges, speak with an experienced criminal defense attorney as early as possible.",
@@ -1612,7 +1612,7 @@ export const translations = {
         title: "أسئلة عامة",
         items: [
           {
-            q: "ما هي الخدمات القانونية التي يقدمها مكتب الدكتور براء عبد الحكيم خليل؟",
+            q: "ما هي الخدمات القانونية التي يقدمها مكتب شركة الرماح لخدمات المحاماة والاستشارات القانونية؟",
             a: "يقدم المكتب الاستشارات القانونية، والدعاوى القضائية، وتمثيل الشركات والأفراد أمام المحاكم، وقضايا القانون التجاري، والدفاع الجنائي، وتسوية النزاعات، وحقوق الملكية الفكرية، وتسجيل الشركات، ومراجعة العقود، والنزاعات العقارية.",
           },
           {

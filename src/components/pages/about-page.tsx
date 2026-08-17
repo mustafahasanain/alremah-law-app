@@ -254,7 +254,7 @@ export function AboutPage() {
             year: "1998",
             title: "Founded",
             description:
-              "D.Baraa A. Khaleel was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
+              "Alremah Company for Legal Services and Consultancy was established with a commitment to justice and client advocacy, starting with a small office and a team of three dedicated attorneys.",
           },
           {
             year: "2003",
@@ -296,14 +296,15 @@ export function AboutPage() {
           "الرماح لخدمات المحاماة والاستشارات القانونية شركة قانونية عراقية تقدم خدماتها للشركات والمؤسسات والمستثمرين المحليين والدوليين وتجمع بين المعرفة العميقة بالبيئة القانونية العراقية وفهم متقدم لمتطلبات الأعمال والاستثمار عبر الحدود. \n\n" + 
           "نعمل إلى جانب عملائنا في إدارة المسائل القانونية المعقدة ودعم الصفقات والاستثمارات والمشاريع الكبرى مع حضور متخصص في قطاعات الشركات والاستثمار الأجنبي والنفط والغاز. ونقدم حلولاً قانونية عملية تستند إلى فهم أهداف الأعمال وإدارة المخاطر وحماية المصالح في مختلف مراحل المشروع والاستثمار.",
         ],
-        imageAlt: "د. براء عبد الحكيم خليل",
+        imageAlt: "شركة الرماح لخدمات المحاماة والاستشارات القانونية",
       }
     : {
-        title: "About Me",
-        subtitle: "Personal Profile",
+        title: "",
+        subtitle: "About Us",
         description:
-          "I am Dr. Baraa Abdulhakeem Khaleel, an attorney and legal consultant focused on providing clear, practical legal solutions for individuals and businesses. My work starts with understanding each case in detail, explaining the available legal options transparently, and building an organized legal path that protects my clients' interests before official authorities and courts.",
-        imageAlt: "Dr. Baraa Abdulhakeem Khaleel",
+          "Alremah Company for Legal Services and Consultancy is an Iraqi law firm serving companies, institutions, and local and international investors, combining deep knowledge of the Iraqi legal environment with an advanced understanding of cross-border business and investment requirements.\n\n" +
+          "We work alongside our clients in managing complex legal matters and supporting major deals, investments, and projects, with specialized experience in the corporate, foreign investment, and oil and gas sectors. We provide practical legal solutions grounded in a clear understanding of business objectives, risk management, and the protection of interests at every stage of a project or investment.",
+        imageAlt: "Alremah Company for Legal Services and Consultancy",
       };
   const [profileModalOpen, setProfileModalOpen] = useState(false);
 
@@ -562,8 +563,8 @@ export function AboutPage() {
               <div className="relative max-w-md mx-auto lg:mx-0">
                 <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                 <img
-                  src="/images/lawyer-hero-new.png"
-                  alt={aboutMe.imageAlt}
+                  src="/images/lawyer-image-placeholder.svg"
+                  alt="Add a lawyer profile image"
                   loading="lazy"
                   className="relative z-10 w-full max-h-[520px] object-cover object-top shadow-xl"
                 />
@@ -627,14 +628,14 @@ export function AboutPage() {
                 <div className="relative">
                   <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
                   <img
-                    src="/images/lawyer-hero-new.png"
-                    alt="D.Baraa A. Khaleel"
+                    src="/images/lawyer-image-placeholder.svg"
+                    alt="Add a lawyer profile image"
                     loading="lazy"
                     className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
                   />
                   <div className="absolute bottom-6 left-0 right-0 z-20 bg-charcoal/80 py-3 text-center">
                     <p className="text-white font-semibold">
-                      D.Baraa A. Khaleel
+                      Alremah Company for Legal Services and Consultancy
                     </p>
                     <p className="text-gold text-sm">
                       Criminal Justice Attorney
