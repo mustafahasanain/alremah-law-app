@@ -57,8 +57,8 @@ export function ContactPage() {
     {
       name: "Baghdad",
       address: "بغداد, المنصور, شارع مطعم الساعة",
-      phone: "07802233000",
-      email: "info@baraa-alsamraie.com",
+      phone: "+964 774 646 4606",
+      email: "info@alremah.com",
       hours: "Mon-Fri: 9:00 - 16:30",
       mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
       lat: "34.0407",
@@ -320,11 +320,11 @@ export function ContactPage() {
                           24/7 Emergency Line
                         </p>
                         <a
-                          href="tel:07802233000"
+                          href="tel:+964 774 646 4606"
                           dir="ltr"
                           className="phone-ltr text-gold text-xl font-bold hover:text-gold-light transition-colors"
                         >
-                          07802233000
+                          +964 774 646 4606
                         </a>
                       </div>
                     </div>

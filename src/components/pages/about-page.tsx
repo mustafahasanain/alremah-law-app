@@ -64,7 +64,7 @@ const TEAM_MEMBERS = [
       "American Bar Association - Litigation Section",
     ],
     email: "m.brown@thelawfirm.com",
-    phone: "07802233000",
+    phone: "+964 774 646 4606",
   },
   {
     name: "Jane Doe",
@@ -89,7 +89,7 @@ const TEAM_MEMBERS = [
       "Certified E-Discovery Specialist",
     ],
     email: "j.doe@thelawfirm.com",
-    phone: "07802233000",
+    phone: "+964 774 646 4606",
   },
   {
     name: "Alex Darayov",
@@ -114,7 +114,7 @@ const TEAM_MEMBERS = [
       "Baghdad Bar Association",
     ],
     email: "a.darayov@thelawfirm.com",
-    phone: "07802233000",
+    phone: "+964 774 646 4606",
   },
 ];
 

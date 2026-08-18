@@ -1209,11 +1209,11 @@ export function HomePage() {
                 />
                 <span className="font-medium">{t.hero.callFree}:</span>
                 <a
-                  href="tel:07802233000"
+                  href="tel:+964 774 646 4606"
                   className="text-gold font-semibold hover:text-gold-light transition-colors ml-2 md:ml-4 min-h-[44px] flex items-center"
                 >
                   <span dir="ltr" className="phone-ltr">
-                    07802233000
+                    +964 774 646 4606
                   </span>
                 </a>
               </div> */}

@@ -630,8 +630,8 @@ export const translations = {
       contact: {
         title: "Contact Info",
         address: "Baghdad, Al-Mansour, Clock Restaurant Street",
-        phone: "07802233000",
-        email: "info@baraa-alsamraie.com",
+        phone: "+964 774 646 4606",
+        email: "info@alremah.com",
       },
     },
     // FAQ Page
@@ -833,8 +833,8 @@ export const translations = {
         breadcrumb: { home: "Home", current: "Contact Us" },
       },
       info: {
-        phone: { title: "Phone", number: "07802233000" },
-        email: { title: "Email", address: "info@baraa-alsamraie.com" },
+        phone: { title: "Phone", number: "+964 774 646 4606" },
+        email: { title: "Email", address: "info@alremah.com" },
         address: {
           title: "Address",
           full: "Baghdad, Al-Mansour, Clock Restaurant Street",
@@ -938,9 +938,9 @@ export const translations = {
         addressLabel: "Address:",
         address: "Baghdad, Al-Mansour, Clock Restaurant Street",
         telLabel: "Tel:",
-        phone: "07802233000",
+        phone: "+964 774 646 4606",
         emailLabel: "Email:",
-        email: "info@baraa-alsamraie.com",
+        email: "info@alremah.com",
       },
       quickLinks: {
         title: "Quick Links",
@@ -1575,8 +1575,8 @@ export const translations = {
       contact: {
         title: "معلومات الاتصال",
         address: "بغداد, المنصور, شارع مطعم الساعة",
-        phone: "07802233000",
-        email: "info@baraa-alsamraie.com",
+        phone: "+964 774 646 4606",
+        email: "info@alremah.com",
       },
     },
     // FAQ Page
@@ -1776,7 +1776,7 @@ export const translations = {
         breadcrumb: { home: "الرئيسية", current: "اتصل بنا" },
       },
       info: {
-        phone: { title: "الهاتف", number: "07802233000" },
+        phone: { title: "الهاتف", number: "+964 774 646 4606" },
         email: { title: "البريد الإلكتروني", address: "info@yoursite.com" },
         address: { title: "العنوان", full: "بغداد, المنصور, شارع مطعم الساعة" },
       },
@@ -1878,9 +1878,9 @@ export const translations = {
         addressLabel: "العنوان:",
         address: "بغداد, المنصور, شارع مطعم الساعة",
         telLabel: "هاتف:",
-        phone: "07802233000",
+        phone: "+964 774 646 4606",
         emailLabel: "بريد إلكتروني:",
-        email: "info@baraa-alsamraie.com",
+        email: "info@alremah.com",
       },
       quickLinks: {
         title: "روابط سريعة",

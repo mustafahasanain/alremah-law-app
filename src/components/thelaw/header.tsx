@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import { useRouter, type PageName } from './router';
 import { useLanguage } from '@/lib/i18n/language-context';
 import { Menu, X, Phone, Mail, Facebook } from 'lucide-react';
@@ -69,16 +70,16 @@ export function Header() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
-              <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
+              <a href="mailto:info@alremah.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
             </div>
             <span className="text-gray-400">|</span>
-            <a href="tel:07802233000" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
+            <a href="tel:+964 774 646 4606" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Phone size={12} />
-              <span dir="ltr" className="phone-ltr">07802233000</span>
+              <span dir="ltr" className="phone-ltr">+964 774 646 4606</span>
             </a>
-            <a href="mailto:info@baraa-alsamraie.com" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
+            <a href="mailto:info@alremah.com" className="flex items-center gap-1 text-gray-300 hover:text-gold transition-colors">
               <Mail size={12} />
-              info@baraa-alsamraie.com
+              info@alremah.com
             </a>
           </div>
           <button
@@ -95,9 +96,13 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-4">
           {/* Logo */}
           <button onClick={() => handleNavigate('home')} className="flex items-center gap-1 cursor-pointer">
-            <span className="text-xl md:text-2xl font-semibold text-charcoal dark:text-white tracking-wider" style={{ fontFamily: isRTL ? 'var(--font-arabic), sans-serif' : 'var(--font-playfair), serif' }}>
-              {t.header.logo}
-            </span>
+            <Image 
+              src="/images/logo.jpg" 
+              alt="Alremah Law Services" 
+              width={180} 
+              height={60}
+              className="h-12 w-auto"
+            />
           </button>
 
           {/* Desktop Nav - hidden on mobile/tablet, shown on lg+ */}
@@ -180,13 +185,13 @@ export function Header() {
           <div className="px-5 py-3 border-b border-border-gray dark:border-gray-700 bg-light-gray/50 dark:bg-charcoal/30">
             <div className="flex items-center gap-3 py-1.5">
                 <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
-              <a href="mailto:info@baraa-alsamraie.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
+              <a href="mailto:info@alremah.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
             </div>
-            <a href="tel:07802233000" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
-              <Phone size={14} className="text-gold" /> <span dir="ltr" className="phone-ltr">07802233000</span>
+            <a href="tel:+964 774 646 4606" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
+              <Phone size={14} className="text-gold" /> <span dir="ltr" className="phone-ltr">+964 774 646 4606</span>
             </a>
-            <a href="mailto:info@baraa-alsamraie.com" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
-              <Mail size={14} className="text-gold" /> info@baraa-alsamraie.com
+            <a href="mailto:info@alremah.com" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
+              <Mail size={14} className="text-gold" /> info@alremah.com
             </a>
           </div>
 
