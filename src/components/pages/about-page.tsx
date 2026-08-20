@@ -118,6 +118,76 @@ const TEAM_MEMBERS = [
   },
 ];
 
+/*
+ * Team / lawyers grid shown in the "Our Team" section below.
+ * To edit a team member later:
+ *   - image: path to the photo file in /public/lawyers (see public/lawyers/ for available images)
+ *   - name.en / name.ar: displayed name in English / Arabic
+ *   - description.en / description.ar: displayed description in English / Arabic
+ * The correct language is picked automatically based on the site's current language.
+ */
+const TEAM_GRID = [
+  {
+    image: "/lawyers/lawyer-6.png",
+    name: { en: "Lawyer Mustafa Jawad Kadhim", ar: "المحامي مصطفى جواد كاظم" },
+    description: {
+      en: "Specializes in all legal and real estate services.",
+      ar: "مختص في الخدمات القانونية والعقارية كافة.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-7.png",
+    name: { en: "Lawyer Jinan Omar", ar: "المحامية جنان عمر" },
+    description: {
+      en: "Specializes in corporate general budgets, tax accounting, matters related to the General Commission for Taxes, and its branches.",
+      ar: "مختصة في الميزانيات العامة للشركات والتحاسب الضريبي والهيئة العامة للضرائب والفروع.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-5.jpeg",
+    name: {
+      en: "Lawyer Anmar Abdul Jabbar Abbas",
+      ar: "المحامي انمار عبد الجبار عباس",
+    },
+    description: {
+      en: "Specializes in criminal court cases.",
+      ar: "مختص في المحاكم الجزائية.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-3.png",
+    name: { en: "Lawyer Shams Hameed Alwan", ar: "المحامية شمس حميد علوان" },
+    description: {
+      en: "Specializes in the registration of local and foreign companies.",
+      ar: "مختصة في تسجيل الشركات الوطنية والأجنبية.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-4.jpg",
+    name: { en: "Mr. Alaa Hussein Fadhil", ar: "السيد علاء حسين فاضل" },
+    description: {
+      en: "Founder and Chief Executive Officer of Al-Rimah Company.",
+      ar: "المؤسس والمدير التنفيذي لشركة الرماح.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-2.jpeg",
+    name: { en: "Lawyer Noor Ghassan Shaalan", ar: "المحامية نور غسان شعلان" },
+    description: {
+      en: "Specializes in labor court cases, employee registration with the Ministry of Labour, and obtaining entry visas and residency permits for foreign workers.",
+      ar: "مختصة في دعاوى محاكم العمل وتسجيل العمال لدى وزارة العمل ومنح سمات الدخول والإقامات للعاملين الأجانب.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-1.jpeg",
+    name: { en: "Lawyer Haider Alaa Khalaf", ar: "المحامي حيدر علاء خلف" },
+    description: {
+      en: "Specializes in trademark registration, industrial development, matters related to the General Commission of Customs, the Communications and Media Commission, and real estate registration.",
+      ar: "مختص في تسجيل العلامات التجارية والتنمية الصناعية والهيئة العامة للكمارك وهيئة الإعلام والاتصالات، ومختص في التسجيل العقاري.",
+    },
+  },
+];
+
 const LEGAL_SERVICES = [
   {
     title: "Legal Consultation",
@@ -644,6 +714,58 @@ export function AboutPage() {
                 </div>
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="py-12 md:py-16 lg:py-20 bg-charcoal relative overflow-hidden">
+        {/* Decorative gold lines */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gold/20" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gold/20" />
+        {/* Subtle pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle, #D4AF37 1px, transparent 1px)",
+            backgroundSize: "25px 25px",
+          }}
+        />
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <AnimatedSection>
+            <SectionTitle
+              light
+              title={t.about.team.title}
+              subtitle={t.about.team.subtitle}
+            />
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {TEAM_GRID.map((member, index) => (
+              <AnimatedSection key={member.name.en} delay={index * 80}>
+                <div className="group bg-white/5 border border-gold/20 hover:border-gold transition-all overflow-hidden h-full">
+                  <div className="overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={isRTL ? member.name.ar : member.name.en}
+                      loading="lazy"
+                      className="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-5 text-center">
+                    <h3
+                      className="text-white font-bold text-lg mb-2"
+                      style={{ fontFamily: "var(--font-playfair), serif" }}
+                    >
+                      {isRTL ? member.name.ar : member.name.en}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {isRTL ? member.description.ar : member.description.en}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
