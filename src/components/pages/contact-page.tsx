@@ -58,7 +58,7 @@ export function ContactPage() {
       name: "Baghdad",
       address: "بغداد, المنصور, شارع مطعم الساعة",
       phone: "+964 774 646 4606",
-      email: "info@alremah.com",
+      email: "al-remahLawfirm@outlook.com",
       hours: "Mon-Fri: 9:00 - 16:30",
       mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
       lat: "34.0407",

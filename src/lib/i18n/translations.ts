@@ -631,7 +631,7 @@ export const translations = {
         title: "Contact Info",
         address: "Baghdad, Al-Mansour, Clock Restaurant Street",
         phone: "+964 774 646 4606",
-        email: "info@alremah.com",
+        email: "al-remahLawfirm@outlook.com",
       },
     },
     // FAQ Page
@@ -834,7 +834,7 @@ export const translations = {
       },
       info: {
         phone: { title: "Phone", number: "+964 774 646 4606" },
-        email: { title: "Email", address: "info@alremah.com" },
+        email: { title: "Email", address: "al-remahLawfirm@outlook.com" },
         address: {
           title: "Address",
           full: "Baghdad, Al-Mansour, Clock Restaurant Street",
@@ -940,7 +940,7 @@ export const translations = {
         telLabel: "Tel:",
         phone: "+964 774 646 4606",
         emailLabel: "Email:",
-        email: "info@alremah.com",
+        email: "al-remahLawfirm@outlook.com",
       },
       quickLinks: {
         title: "Quick Links",
@@ -1576,7 +1576,7 @@ export const translations = {
         title: "معلومات الاتصال",
         address: "بغداد, المنصور, شارع مطعم الساعة",
         phone: "+964 774 646 4606",
-        email: "info@alremah.com",
+        email: "al-remahLawfirm@outlook.com",
       },
     },
     // FAQ Page
@@ -1880,7 +1880,7 @@ export const translations = {
         telLabel: "هاتف:",
         phone: "+964 774 646 4606",
         emailLabel: "بريد إلكتروني:",
-        email: "info@alremah.com",
+        email: "al-remahLawfirm@outlook.com",
       },
       quickLinks: {
         title: "روابط سريعة",
