@@ -128,7 +128,15 @@ const TEAM_MEMBERS = [
  */
 const TEAM_GRID = [
   {
-    image: "/lawyers/lawyer-6.png",
+    image: "/lawyers/lawyer-4.jpg",
+    name: { en: "Mr. Alaa Hussein Fadhil", ar: "السيد علاء حسين فاضل" },
+    description: {
+      en: "Founder and Chief Executive Officer of Al-Rimah Company.",
+      ar: "المؤسس والمدير التنفيذي لشركة الرماح.",
+    },
+  },
+  {
+    image: "/lawyers/lawyer-6.jpg",
     name: { en: "Lawyer Mustafa Jawad Kadhim", ar: "المحامي مصطفى جواد كاظم" },
     description: {
       en: "Specializes in all legal and real estate services.",
@@ -136,7 +144,7 @@ const TEAM_GRID = [
     },
   },
   {
-    image: "/lawyers/lawyer-7.png",
+    image: "/lawyers/lawyer-7.jpg",
     name: { en: "Lawyer Jinan Omar", ar: "المحامية جنان عمر" },
     description: {
       en: "Specializes in corporate general budgets, tax accounting, matters related to the General Commission for Taxes, and its branches.",
@@ -144,7 +152,7 @@ const TEAM_GRID = [
     },
   },
   {
-    image: "/lawyers/lawyer-5.jpeg",
+    image: "/lawyers/lawyer-5.jpg",
     name: {
       en: "Lawyer Anmar Abdul Jabbar Abbas",
       ar: "المحامي انمار عبد الجبار عباس",
@@ -155,7 +163,7 @@ const TEAM_GRID = [
     },
   },
   {
-    image: "/lawyers/lawyer-3.png",
+    image: "/lawyers/lawyer-3.jpg",
     name: { en: "Lawyer Shams Hameed Alwan", ar: "المحامية شمس حميد علوان" },
     description: {
       en: "Specializes in the registration of local and foreign companies.",
@@ -163,15 +171,7 @@ const TEAM_GRID = [
     },
   },
   {
-    image: "/lawyers/lawyer-4.jpg",
-    name: { en: "Mr. Alaa Hussein Fadhil", ar: "السيد علاء حسين فاضل" },
-    description: {
-      en: "Founder and Chief Executive Officer of Al-Rimah Company.",
-      ar: "المؤسس والمدير التنفيذي لشركة الرماح.",
-    },
-  },
-  {
-    image: "/lawyers/lawyer-2.jpeg",
+    image: "/lawyers/lawyer-2.jpg",
     name: { en: "Lawyer Noor Ghassan Shaalan", ar: "المحامية نور غسان شعلان" },
     description: {
       en: "Specializes in labor court cases, employee registration with the Ministry of Labour, and obtaining entry visas and residency permits for foreign workers.",
@@ -179,7 +179,7 @@ const TEAM_GRID = [
     },
   },
   {
-    image: "/lawyers/lawyer-1.jpeg",
+    image: "/lawyers/lawyer-1.jpg",
     name: { en: "Lawyer Haider Alaa Khalaf", ar: "المحامي حيدر علاء خلف" },
     description: {
       en: "Specializes in trademark registration, industrial development, matters related to the General Commission of Customs, the Communications and Media Commission, and real estate registration.",
@@ -618,7 +618,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* About Me Section */}
+      {/* About Me + Our Vision Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal relative overflow-hidden transition-colors duration-300">
         <div
           className="absolute inset-0 opacity-[0.02] pointer-events-none"
@@ -628,19 +628,8 @@ export function AboutPage() {
           }}
         />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
             <AnimatedSection>
-              <div className="relative max-w-md mx-auto lg:mx-0">
-                <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
-                <img
-                  src="/images/lawyer-image-placeholder.svg"
-                  alt="Add a lawyer profile image"
-                  loading="lazy"
-                  className="relative z-10 w-full max-h-[520px] object-cover object-top shadow-xl"
-                />
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
               <div>
                 <SectionTitle
                   title={aboutMe.title}
@@ -652,24 +641,7 @@ export function AboutPage() {
                 </p>
               </div>
             </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Vision Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark relative overflow-hidden transition-colors duration-300">
-        {/* Subtle background pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.02] pointer-events-none"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, #D4AF37 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
+            <AnimatedSection delay={200}>
               <div>
                 <SectionTitle
                   title={t.about.vision.title}
@@ -690,27 +662,6 @@ export function AboutPage() {
                       />
                     ),
                   )}
-                </div>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className="flex justify-center">
-                <div className="relative">
-                  <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-gold" />
-                  <img
-                    src="/images/lawyer-image-placeholder.svg"
-                    alt="Add a lawyer profile image"
-                    loading="lazy"
-                    className="relative z-10 max-h-[450px] object-cover object-top shadow-xl"
-                  />
-                  <div className="absolute bottom-6 left-0 right-0 z-20 bg-charcoal/80 py-3 text-center">
-                    <p className="text-white font-semibold">
-                      Alremah Company for Legal Services and Consultancy
-                    </p>
-                    <p className="text-gold text-sm">
-                      Criminal Justice Attorney
-                    </p>
-                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -749,7 +700,7 @@ export function AboutPage() {
                       src={member.image}
                       alt={isRTL ? member.name.ar : member.name.en}
                       loading="lazy"
-                      className="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-[26rem] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-5 text-center">
