@@ -362,18 +362,23 @@ export function AboutPage() {
     ? {
         title: "",
         subtitle: "نبذة عنا",
-        description: [ 
-          "الرماح لخدمات المحاماة والاستشارات القانونية شركة قانونية عراقية تقدم خدماتها للشركات والمؤسسات والمستثمرين المحليين والدوليين وتجمع بين المعرفة العميقة بالبيئة القانونية العراقية وفهم متقدم لمتطلبات الأعمال والاستثمار عبر الحدود. \n\n" + 
+        description: [
+          "الرماح لخدمات المحاماة والاستشارات القانونية شركة قانونية عراقية تقدم خدماتها للشركات والمؤسسات والمستثمرين المحليين والدوليين وتجمع بين المعرفة العميقة بالبيئة القانونية العراقية وفهم متقدم لمتطلبات الأعمال والاستثمار عبر الحدود.",
           "نعمل إلى جانب عملائنا في إدارة المسائل القانونية المعقدة ودعم الصفقات والاستثمارات والمشاريع الكبرى مع حضور متخصص في قطاعات الشركات والاستثمار الأجنبي والنفط والغاز. ونقدم حلولاً قانونية عملية تستند إلى فهم أهداف الأعمال وإدارة المخاطر وحماية المصالح في مختلف مراحل المشروع والاستثمار.",
+          "ويمتد نطاق عملنا إلى التعاون مع الشركات الدولية ودعم أعمالها واستثماراتها في العراق إلى جانب بناء علاقات مهنية متكاملة مع شركات المحاماة والمؤسسات القانونية خارج العراق بما يتيح تبادل الخبرات وتنسيق العمل في المسائل متعددة الاختصاصات القضائية.",
+          "ننظر إلى دورنا باعتباره أبعد من تقديم المشورة القانونية فنحن نبني علاقات مهنية طويلة الأمد ونكون إلى جانب عملائنا وشركائنا حيث تلتقي الأعمال بالقانون وحيث تتحول الفرص إلى استثمارات راسخة.",
         ],
         imageAlt: "شركة الرماح لخدمات المحاماة والاستشارات القانونية",
       }
     : {
         title: "",
         subtitle: "About Us",
-        description:
-          "Alremah Company for Legal Services and Consultancy is an Iraqi law firm serving companies, institutions, and local and international investors, combining deep knowledge of the Iraqi legal environment with an advanced understanding of cross-border business and investment requirements.\n\n" +
+        description: [
+          "Alremah Company for Legal Services and Consultancy is an Iraqi law firm serving companies, institutions, and local and international investors, combining deep knowledge of the Iraqi legal environment with an advanced understanding of cross-border business and investment requirements.",
           "We work alongside our clients in managing complex legal matters and supporting major deals, investments, and projects, with specialized experience in the corporate, foreign investment, and oil and gas sectors. We provide practical legal solutions grounded in a clear understanding of business objectives, risk management, and the protection of interests at every stage of a project or investment.",
+          "Our work also extends to collaborating with international companies and supporting their business and investments in Iraq, alongside building integrated professional relationships with law firms and legal institutions outside Iraq, enabling the exchange of expertise and coordinated work on matters spanning multiple jurisdictions.",
+          "We see our role as extending beyond legal advice. We build long-term professional relationships and stand alongside our clients and partners where business meets law, and where opportunities become lasting investments.",
+        ],
         imageAlt: "Alremah Company for Legal Services and Consultancy",
       };
   const [profileModalOpen, setProfileModalOpen] = useState(false);
@@ -628,7 +633,7 @@ export function AboutPage() {
           }}
         />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+          <div className="grid grid-cols-1 gap-10 lg:gap-14">
             <AnimatedSection>
               <div>
                 <SectionTitle
@@ -636,32 +641,21 @@ export function AboutPage() {
                   subtitle={aboutMe.subtitle}
                   className="text-left [&>*]:text-left [&>*]:justify-start"
                 />
-                <p className="text-medium-gray dark:text-gray-300 leading-relaxed text-base md:text-lg">
-                  {aboutMe.description}
-                </p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div>
-                <SectionTitle
-                  title={t.about.vision.title}
-                  subtitle={t.about.vision.subtitle}
-                  className="text-left [&>*]:text-left [&>*]:justify-start"
-                />
-                <p className="text-medium-gray dark:text-gray-300 leading-relaxed mb-8">
-                  {t.about.vision.description}
-                </p>
-                {/* Stats - animated progress bars */}
-                <div className="space-y-5">
-                  {t.about.vision.stats.map(
-                    (stat: { label: string; value: number }) => (
-                      <AnimatedProgressBar
-                        key={stat.label}
-                        value={stat.value}
-                        label={stat.label}
-                      />
-                    ),
-                  )}
+                <div className="space-y-4">
+                  {aboutMe.description.map((paragraph, index) => (
+                    <p
+                      key={index}
+                      className="text-medium-gray dark:text-gray-300 leading-relaxed text-base md:text-lg"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <AnimatedProgressBar
+                    value={t.about.vision.stats[0].value}
+                    label={t.about.vision.stats[0].label}
+                  />
                 </div>
               </div>
             </AnimatedSection>

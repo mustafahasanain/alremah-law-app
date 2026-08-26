@@ -1151,10 +1151,10 @@ export function HomePage() {
         {/* Decorative gold border frame around hero */}
         <div className="absolute inset-2 md:inset-4 lg:inset-8 border border-gold/15 pointer-events-none z-20">
           {/* Corner accents */}
-          <div className="absolute -top-px -left-px w-8 h-8 border-t-2 border-l-2 border-gold/60" />
-          <div className="absolute -top-px -right-px w-8 h-8 border-t-2 border-r-2 border-gold/60" />
-          <div className="absolute -bottom-px -left-px w-8 h-8 border-b-2 border-l-2 border-gold/60" />
-          <div className="absolute -bottom-px -right-px w-8 h-8 border-b-2 border-r-2 border-gold/60" />
+          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold/60" />
+          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold/60" />
+          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold/60" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold/60" />
         </div>
 
         {/* Decorative gold lines top/bottom */}
@@ -1162,9 +1162,9 @@ export function HomePage() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gold/40" />
 
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-16 lg:py-24 relative z-10 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
-            {/* Left content */}
-            <div className="animate-fade-in-up" key={heroSlide}>
+          <div className="grid grid-cols-1 justify-items-center text-center">
+            {/* Content */}
+            <div className="animate-fade-in-up max-w-2xl" key={heroSlide}>
               {/* Gold badge with shimmer pulse */}
               <div className="inline-flex items-center gap-1.5 md:gap-2 gold-gradient text-charcoal px-3 py-1.5 md:px-5 md:py-2 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4 md:mb-6 shimmer-badge animate-pulse-gold">
                 <span className="w-2 h-2 rounded-full bg-charcoal" />
@@ -1172,7 +1172,7 @@ export function HomePage() {
               </div>
 
               {/* Decorative gold line */}
-              <div className="flex items-center gap-3 mb-4 md:mb-6">
+              <div className="flex items-center justify-center gap-3 mb-4 md:mb-6">
                 <span className="gold-line animate-line-expand" />
                 <span className="text-gold text-xs md:text-sm font-semibold uppercase tracking-widest">
                   {heroSubtitles[heroSlide]}
@@ -1192,13 +1192,13 @@ export function HomePage() {
               </h1>
 
               {/* Gold separator */}
-              <div className="flex items-center gap-2 mb-4 md:mb-6">
+              <div className="flex items-center justify-center gap-2 mb-4 md:mb-6">
                 <span className="w-12 h-0.5 bg-gold" />
                 <span className="w-2 h-2 bg-gold rotate-45" />
                 <span className="w-12 h-0.5 bg-gold" />
               </div>
 
-              <p className="text-gray-100 text-base md:text-lg mb-6 md:mb-8 max-w-md leading-relaxed">
+              <p className="text-gray-100 text-base md:text-lg mb-6 md:mb-8 max-w-md mx-auto leading-relaxed">
                 {heroDescriptions[heroSlide]}
               </p>
 
@@ -1218,7 +1218,7 @@ export function HomePage() {
                 </a>
               </div> */}
 
-              <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
                   onClick={() => navigate("contact")}
                   className="bg-gold text-charcoal px-8 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold-light transition-all flex items-center gap-2"
@@ -1229,7 +1229,7 @@ export function HomePage() {
               </div>
 
               {/* Slider dots - functional with auto-cycle */}
-              <div className="flex items-center gap-2 mt-8 md:mt-10">
+              <div className="flex items-center justify-center gap-2 mt-8 md:mt-10">
                 {heroSubtitles.map((_: string, i: number) => (
                   <button
                     key={i}
@@ -1238,28 +1238,6 @@ export function HomePage() {
                     aria-label={`Slide ${i + 1}`}
                   />
                 ))}
-              </div>
-            </div>
-
-            {/* Right - Attorney Image with enhanced gold frame */}
-            <div className="hidden lg:flex justify-end animate-slide-in-right">
-              <div className="relative corner-frame">
-                {/* Gold frame border */}
-                <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold/60" />
-                {/* Corner decorations */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-gold z-20" />
-                <div className="absolute -top-4 -right-4 w-8 h-8 border-t-2 border-r-2 border-gold z-20" />
-                <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-gold z-20" />
-                <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-gold z-20" />
-                {/* Small diamond at top-left corner */}
-                <div className="absolute -top-2 -left-2 w-3 h-3 bg-gold rotate-45 z-30" />
-                {/* Small diamond at bottom-right corner */}
-                <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-gold rotate-45 z-30" />
-                <img
-                  src="/images/lawyer-image-placeholder.svg"
-                  alt="Add a lawyer profile image"
-                  className="relative z-10 max-h-[500px] object-cover shadow-2xl rounded-b-lg"
-                />
               </div>
             </div>
           </div>

@@ -418,7 +418,7 @@ export const translations = {
         description:
           "We believe that every person deserves access to quality legal representation, regardless of their background or circumstances. Our vision is to create a more just society where the law serves as a shield for the vulnerable, not a weapon for the powerful.",
         stats: [
-          { label: "Client Satisfaction", value: 95 },
+          { label: "Client Satisfaction", value: 80 },
           { label: "Case Success Rate", value: 98 },
           { label: "Years of Experience", value: 25 },
         ],
@@ -1006,7 +1006,7 @@ export const translations = {
   ar: {
     // Header
     header: {
-      logo: "شركة الرماح لخدمات المحاماة",
+      logo: "شركة الرماح لخدمات المحاماة والاستشارات القانونية",
       freeConsultation: "استشارة قانونية",
       home: "الرئيسية",
       about: "من نحن",
@@ -1018,7 +1018,7 @@ export const translations = {
     // Hero
     hero: {
       badge: "احصل على استشارة قانونية",
-      name: "شركة الرماح لخدمات المحاماة",
+      name: "شركة الرماح لخدمات المحاماة والاستشارات القانونية",
       subtitles: [
         "محامي العدالة الجنائية",
         "مستشار قانوني موثوق",
@@ -1401,12 +1401,12 @@ export const translations = {
         breadcrumb: { home: "الرئيسية", current: "من نحن" },
       },
       vision: {
-        subtitle: "شراكات تتجاوز الحدود",
+        subtitle: "",
         title: "",
         description:
           "نؤمن أن كل شخص يستحق الوصول إلى تمثيل قانوني عالي الجودة، بغض النظر عن خلفيته أو ظروفه. رؤيتنا هي خلق مجتمع أكثر عدالة حيث يعمل القانون كدرع للضعفاء، وليس سلاحاً للأقوياء.",
         stats: [
-          { label: "رضا العملاء", value: 95 },
+          { label: "رضا العملاء", value: 80 },
           { label: "نسبة نجاح القضايا", value: 98 },
           { label: "سنوات الخبرة", value: 25 },
         ],
