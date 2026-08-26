@@ -22,7 +22,6 @@ import {
   ArrowRight,
   Send,
   Crosshair,
-  Eye,
   ChevronLeft,
   ChevronRight,
   Star,
@@ -120,7 +119,7 @@ const LEGACY_TESTIMONIALS = [
       "John handled my case with the utmost professionalism and care. He was always available to answer my questions and fought tirelessly for my rights.",
     name: "Sarah M.",
     caseType: "Family Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "SM",
     rating: 5,
     date: "2 months ago",
@@ -130,7 +129,7 @@ const LEGACY_TESTIMONIALS = [
       "After my arrest, I was terrified. Alremah Company for Legal Services and Consultancy guided me through every step and achieved the best possible outcome. I can't thank them enough.",
     name: "David R.",
     caseType: "Criminal Defense",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "DR",
     rating: 5,
     date: "3 weeks ago",
@@ -140,7 +139,7 @@ const LEGACY_TESTIMONIALS = [
       "Their business law expertise saved our company from a potentially devastating lawsuit. Highly recommended for any corporate legal needs.",
     name: "Michael T.",
     caseType: "Business Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "MT",
     rating: 5,
     date: "1 month ago",
@@ -150,7 +149,7 @@ const LEGACY_TESTIMONIALS = [
       "When our corporation faced a complex merger dispute, Alremah Company for Legal Services and Consultancy's strategic counsel was invaluable. They navigated the regulatory landscape with precision and secured a favorable outcome that protected our shareholders' interests.",
     name: "Jennifer K.",
     caseType: "Corporate Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "JK",
     rating: 5,
     date: "5 months ago",
@@ -160,7 +159,7 @@ const LEGACY_TESTIMONIALS = [
       "Going through a custody battle was the hardest thing I've ever faced. Their family law team showed genuine compassion while being fierce advocates in court. I got full custody of my children and I'll forever be grateful.",
     name: "Robert L.",
     caseType: "Family Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "RL",
     rating: 5,
     date: "1 week ago",
@@ -170,7 +169,7 @@ const LEGACY_TESTIMONIALS = [
       "After being wrongfully terminated, I didn't know where to turn. Alremah Company for Legal Services and Consultancy took my case on contingency and fought for every dollar I deserved. They truly care about their clients.",
     name: "Amanda P.",
     caseType: "Employment Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "AP",
     rating: 5,
     date: "4 months ago",
@@ -180,7 +179,7 @@ const LEGACY_TESTIMONIALS = [
       "My immigration case was incredibly complex, but this firm navigated every hurdle with expertise. I now have my green card and couldn't be happier. Thank you for changing my life.",
     name: "Carlos V.",
     caseType: "Immigration Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "CV",
     rating: 5,
     date: "6 months ago",
@@ -190,7 +189,7 @@ const LEGACY_TESTIMONIALS = [
       "I was injured in a commercial truck accident and the insurance company offered me almost nothing. Alremah Company for Legal Services and Consultancy secured a $1.2M settlement that covers all my medical needs.",
     name: "Patricia W.",
     caseType: "Personal Injury",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "PW",
     rating: 5,
     date: "2 weeks ago",
@@ -200,7 +199,7 @@ const LEGACY_TESTIMONIALS = [
       "As a small business owner, having reliable legal counsel is essential. This firm has been our go-to for contract reviews, compliance issues, and dispute resolution for over 5 years.",
     name: "Thomas H.",
     caseType: "Business Law",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "TH",
     rating: 5,
     date: "3 months ago",
@@ -210,7 +209,7 @@ const LEGACY_TESTIMONIALS = [
       "The real estate closing on our first home hit unexpected legal complications. The team resolved everything quickly and kept us informed throughout. Professional and thorough.",
     name: "Linda S.",
     caseType: "Real Estate",
-    location: "بغداد, المنصور, شارع مطعم الساعة",
+    location: "الكرادة عرصات الهدية",
     initials: "LS",
     rating: 4,
     date: "8 months ago",
@@ -637,10 +636,10 @@ function CounterStatsSection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gold/20" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gold/20" />
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:flex items-center justify-between gap-6 md:gap-0">
+        <div className="flex items-center justify-between gap-6 md:gap-0">
           <CounterItem
             icon={<Award size={28} className="md:w-[40px] md:h-[40px]" />}
-            value={1500}
+            value={150}
             suffix="+"
             label={t.counter.casesWon}
             delay={0}
@@ -653,14 +652,6 @@ function CounterStatsSection() {
             suffix="+"
             label={t.counter.yearsExperience}
             delay={200}
-          />
-          <div className="hidden md:block w-px h-16 bg-gold/20" />
-          <CounterItem
-            icon={<Eye size={28} className="md:w-[40px] md:h-[40px]" />}
-            value={98}
-            suffix="%"
-            label={t.counter.successRate}
-            delay={400}
           />
           <div className="hidden md:block w-px h-16 bg-gold/20" />
           <CounterItem
@@ -910,7 +901,7 @@ export function HomePage() {
       icon: MapPin,
       label: t.contactPage.info.address.title,
       value: t.contactPage.info.address.full.replace("\n", ", "),
-      href: "https://maps.app.goo.gl/MUkfnMUiTLEBo3W96",
+      href: "https://maps.app.goo.gl/1GyDVEdUCvNWZ2Hz6?g_st=aw",
       subtitle: t.contactPage.addressCard.title,
     },
   ];

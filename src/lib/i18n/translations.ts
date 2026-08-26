@@ -574,6 +574,84 @@ export const translations = {
       subtitle: "What We Do",
       title: "Our Practice Areas",
       viewMore: "Learn More",
+      content: {
+        eyebrow: "Specialized Legal Expertise",
+        title: "Legal Expertise That Understands Your Business",
+        intro:
+          "We combine legal knowledge with an understanding of the Iraqi market, business environment, and relevant regulatory frameworks to provide our clients with clear insight and practical solutions. This enables them to make informed decisions and manage their businesses and investments efficiently. We draw on experience, insight, and innovation to address legal requirements and the most complex issues.",
+        items: [
+          {
+            title: "Legal Advisory",
+            description:
+              "We provide specialized legal advice to individuals, companies, and institutions, based on a careful study of the facts and a thorough understanding of legal and regulatory frameworks and the business environment. Our advice helps clients make informed decisions, anticipate risk, and address legal matters efficiently and clearly.",
+          },
+          {
+            title: "Companies and Commercial Business",
+            description:
+              "We handle the establishment and registration of Iraqi companies, organize their legal structures and partner and shareholder affairs, prepare resolutions and amendments, and provide ongoing legal advice that supports their business, growth, and interests.",
+          },
+          {
+            title: "Foreign Investment and Cross-Border Business",
+            description:
+              "We support foreign companies and investors entering the Iraqi market, providing the legal and regulatory knowledge they need to understand the business environment and operate with confidence. Our work spans opening and registering branches and offices of foreign companies, structuring investments, obtaining licenses and approvals, meeting regulatory requirements, and supporting cross-border transactions and investments.",
+          },
+          {
+            title: "Oil, Gas and Energy",
+            description:
+              "We provide legal support to companies and investors operating in the oil, gas, and energy sectors. Our services include understanding the legal and regulatory environment governing these sectors, drafting and reviewing contracts and agreements, supporting projects and commercial transactions, and dealing with relevant requirements, licenses, and authorities to protect interests and manage legal risk.",
+          },
+          {
+            title: "Contracts and Commercial Transactions",
+            description:
+              "We provide legal support in drafting, preparing, reviewing, and negotiating civil, commercial, and investment contracts and agreements. We seek to understand the nature and objectives of each transaction before establishing its legal framework, balancing the protection of interests, business continuity, and the mitigation of potential risks.",
+          },
+          {
+            title: "Projects and Investments",
+            description:
+              "We support projects from their earliest stages, advising on their legal and contractual structuring, securing the required approvals and licenses, and organizing relationships between investors, partners, developers, and contractors to establish a clear legal foundation for implementation and sustainability.",
+          },
+          {
+            title: "Litigation and Dispute Resolution",
+            description:
+              "We represent clients in civil, commercial, administrative, employment, and criminal disputes before competent courts and judicial and investigative authorities. Our dispute management is guided by a legal strategy built on studying the facts, analyzing evidence, assessing risks, and identifying the most suitable legal route to protect the client's rights and interests.",
+          },
+          {
+            title: "Real Estate and Property Development",
+            description:
+              "We provide legal advice on real estate, residential, commercial, and investment transactions and projects, including title review and property dispositions; drafting and reviewing sale, lease, investment, and development agreements; organizing legal relationships between investors, developers, and contractors; and following related procedures before the competent authorities.",
+          },
+          {
+            title: "Employment and Social Security",
+            description:
+              "We support companies and employers in managing their relationships with employees, drafting and reviewing employment contracts and policies, advising on legal obligations and compliance with employment and social security requirements, and representing them in related disputes and proceedings.",
+          },
+          {
+            title: "Residency, Work Permits and Entry Visas",
+            description:
+              "We provide legal support to companies, investors, and foreign employees in Iraq regarding residency requirements, work permits, and entry visas. We follow the necessary procedures and approvals before competent authorities to ensure the lawful presence and work of foreign personnel under applicable legal and regulatory frameworks.",
+          },
+          {
+            title: "Licensing and Regulatory Compliance",
+            description:
+              "We help companies and investors understand the legal and regulatory frameworks governing their activities, obtain the required licenses, approvals, and permits, and follow procedures before ministries, authorities, and competent bodies. This supports business continuity and reduces legal and regulatory risk.",
+          },
+          {
+            title: "Tax and Financial Affairs",
+            description:
+              "We provide legal support in tax and financial matters related to the business of companies and investors, including tax assessment procedures, organizing tax positions, and following transactions, objections, and related requirements before the General Commission for Taxes and other competent authorities, strengthening compliance and protecting client interests.",
+          },
+          {
+            title: "Healthcare Sector and Scientific Offices",
+            description:
+              "We provide legal support to companies and scientific offices operating in the pharmaceuticals, medical supplies, and medical devices sectors. Our work includes establishment, registration, licensing and approvals, contractual arrangements, compliance with legal and regulatory requirements, and follow-up before competent authorities, unions, and institutions.",
+          },
+          {
+            title: "Intellectual Property and Trademark Protection",
+            description:
+              "We provide legal support to protect our clients' intellectual and commercial rights and assets, including trademark registration and renewal, handling objections and related legal procedures, and addressing infringement to protect business identity and goodwill.",
+          },
+        ],
+      },
       whyChoose: {
         subtitle: "Why Choose Us",
         title: "Why Choose Our Firm",
@@ -1520,6 +1598,84 @@ export const translations = {
       subtitle: "ماذا نفعل",
       title: "مجالات ممارستنا",
       viewMore: "اعرف المزيد",
+      content: {
+        eyebrow: "خبرة قانونية متخصصة",
+        title: "خبرة قانونية تفهم أعمالك",
+        intro:
+          "نجمع بين المعرفة القانونية وفهم السوق العراقي وبيئة الأعمال والأطر التنظيمية ذات الصلة لنقدم لعملائنا رؤية واضحة وحلولاً عملية تساعدهم على اتخاذ قرارات مدروسة وإدارة أعمالهم واستثماراتهم بكفاءة. ونعتمد في ذلك على الخبرة والبصيرة والابتكار في التعامل مع المتطلبات القانونية والمسائل الأكثر تعقيداً.",
+        items: [
+          {
+            title: "الاستشارات القانونية",
+            description:
+              "نقدم استشارات قانونية متخصصة للأفراد والشركات والمؤسسات تستند إلى دراسة دقيقة للوقائع وفهم الأطر القانونية والتنظيمية وبيئة الأعمال بما يساعد عملاءنا على اتخاذ قرارات مدروسة واستباق المخاطر ومعالجة المسائل القانونية بكفاءة ووضوح.",
+          },
+          {
+            title: "الشركات والأعمال التجارية",
+            description:
+              "نتولى تأسيس وتسجيل الشركات الوطنية وتنظيم هياكلها القانونية وشؤون الشركاء والمساهمين وإعداد القرارات والتعديلات وتقديم المشورة القانونية المستمرة بما يدعم أعمالها ونموها ويحمي مصالحها.",
+          },
+          {
+            title: "الاستثمار الأجنبي والأعمال عبر الحدود",
+            description:
+              "نرافق الشركات والمستثمرين الأجانب في دخول السوق العراقي ونوفر لهم المعرفة القانونية والتنظيمية اللازمة لفهم بيئة الأعمال وممارسة نشاطهم بثقة بدءاً من فتح وتسجيل فروع ومكاتب الشركات الأجنبية وهيكلة الاستثمارات وصولاً إلى التراخيص والموافقات والمتطلبات التنظيمية ودعم المعاملات والاستثمارات العابرة للحدود.",
+          },
+          {
+            title: "النفط والغاز والطاقة",
+            description:
+              "نقدم الدعم القانوني للشركات والمستثمرين العاملين في قطاعات النفط والغاز والطاقة من خلال فهم البيئة القانونية والتنظيمية التي تحكم هذه القطاعات ومراجعة وصياغة العقود والاتفاقيات ودعم المشاريع والمعاملات التجارية والتعامل مع المتطلبات والتراخيص والجهات ذات العلاقة بما يسهم في حماية المصالح وإدارة المخاطر القانونية.",
+          },
+          {
+            title: "العقود والصفقات التجارية",
+            description:
+              "نقدم الدعم القانوني في إعداد وصياغة ومراجعة والتفاوض بشأن العقود والاتفاقيات المدنية والتجارية والاستثمارية ونحرص على فهم طبيعة الصفقة وأهدافها قبل صياغة إطارها القانوني بما يحقق التوازن بين حماية المصالح واستمرارية الأعمال والحد من المخاطر المحتملة.",
+          },
+          {
+            title: "المشاريع والاستثمارات",
+            description:
+              "نرافق المشاريع منذ مراحلها الأولى ونقدم المشورة بشأن هيكلتها القانونية والتعاقدية واستكمال الموافقات والتراخيص وتنظيم العلاقات بين المستثمرين والشركاء والمطورين والمتعاقدين بما يوفر أساساً قانونياً واضحاً يدعم تنفيذ المشروع واستدامته.",
+          },
+          {
+            title: "التقاضي وتسوية المنازعات",
+            description:
+              "نمثل عملاءنا في المنازعات المدنية والتجارية والإدارية والعمالية والجزائية أمام المحاكم والجهات القضائية والتحقيقية المختصة ونعتمد في إدارة النزاع على بناء استراتيجية قانونية تستند إلى دراسة الوقائع وتحليل الأدلة وتقييم المخاطر وتحديد المسار القانوني الأكثر ملاءمة لحماية حقوق ومصالح العميل.",
+          },
+          {
+            title: "العقارات والتطوير العقاري",
+            description:
+              "نقدم المشورة القانونية في المعاملات والمشاريع العقارية والسكنية والتجارية والاستثمارية بما يشمل دراسة الملكية والتصرفات العقارية وإعداد ومراجعة عقود البيع والإيجار والاستثمار والتطوير وتنظيم العلاقات القانونية بين المستثمرين والمطورين والمتعاقدين ومتابعة الإجراءات ذات الصلة أمام الجهات المختصة.",
+          },
+          {
+            title: "العمل والضمان الاجتماعي",
+            description:
+              "ندعم الشركات وأصحاب الأعمال في تنظيم علاقاتهم مع العاملين وإعداد ومراجعة عقود وسياسات العمل وتقديم المشورة بشأن الالتزامات القانونية والامتثال لمتطلبات العمل والضمان الاجتماعي وتمثيلهم في المنازعات والإجراءات المرتبطة بها.",
+          },
+          {
+            title: "الإقامة وإجازات العمل وسمات الدخول",
+            description:
+              "نقدم الدعم القانوني للشركات والمستثمرين والعاملين الأجانب في العراق بشأن متطلبات الإقامة وإجازات العمل وسمات الدخول ومتابعة الإجراءات والموافقات اللازمة أمام الجهات المختصة بما يضمن تنظيم وجود وممارسة عمل الكوادر الأجنبية وفقاً للأطر القانونية والتنظيمية النافذة.",
+          },
+          {
+            title: "التراخيص والامتثال التنظيمي",
+            description:
+              "نساعد الشركات والمستثمرين على فهم الأطر القانونية والتنظيمية التي تحكم أنشطتهم واستكمال التراخيص والموافقات والإجازات اللازمة ومتابعة الإجراءات أمام الوزارات والهيئات والجهات المختصة بما يدعم استمرارية أعمالهم ويحد من المخاطر القانونية والتنظيمية.",
+          },
+          {
+            title: "الشؤون الضريبية والمالية",
+            description:
+              "نقدم الدعم القانوني في الشؤون الضريبية والمالية المرتبطة بأعمال الشركات والمستثمرين بما يشمل إجراءات التحاسب الضريبي وتنظيم الموقف الضريبي ومتابعة المعاملات والاعتراضات والمتطلبات ذات الصلة أمام الهيئة العامة للضرائب والجهات المختصة بما يعزز الامتثال ويحمي مصالح العميل.",
+          },
+          {
+            title: "القطاع الصحي والمكاتب العلمية",
+            description:
+              "نقدم الدعم القانوني للشركات والمكاتب العلمية العاملة في قطاعات الأدوية والمستلزمات والأجهزة الطبية بما يشمل إجراءات التأسيس والتسجيل والتراخيص والموافقات وتنظيم العلاقات التعاقدية والامتثال للمتطلبات القانونية والتنظيمية ومتابعة الإجراءات أمام الجهات والنقابات والمؤسسات المختصة.",
+          },
+          {
+            title: "الملكية الفكرية وحماية العلامات التجارية",
+            description:
+              "نقدم الدعم القانوني لحماية الحقوق والأصول الفكرية والتجارية لعملائنا بما يشمل تسجيل العلامات التجارية وتجديدها ومتابعة الاعتراضات والإجراءات القانونية المرتبطة بها والتصدي لحالات التعدي بما يسهم في حماية الهوية التجارية والقيمة المعنوية للأعمال.",
+          },
+        ],
+      },
       whyChoose: {
         subtitle: "لماذا تختارنا",
         title: "لماذا تختار شركتنا",
@@ -1574,7 +1730,7 @@ export const translations = {
       },
       contact: {
         title: "معلومات الاتصال",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
+        address: "الكرادة عرصات الهدية",
         phone: "+964 774 646 4606",
         email: "al-remahLawfirm@outlook.com",
       },
@@ -1777,8 +1933,8 @@ export const translations = {
       },
       info: {
         phone: { title: "الهاتف", number: "+964 774 646 4606" },
-        email: { title: "البريد الإلكتروني", address: "info@yoursite.com" },
-        address: { title: "العنوان", full: "بغداد, المنصور, شارع مطعم الساعة" },
+        email: { title: "البريد الإلكتروني", address: "al-remahLawfirm@outlook.com" },
+        address: { title: "العنوان", full: "الكرادة عرصات الهدية" },
       },
       form: {
         title: "أرسل لنا رسالة",
@@ -1812,9 +1968,9 @@ export const translations = {
       addressCard: {
         title: "مكاتبنا",
         main: "المكتب الرئيسي",
-        mainAddress: "بغداد, المنصور, شارع مطعم الساعة",
-        branch: "المكتب الفرعي",
-        branchAddress: "بغداد, المنصور, شارع مطعم الساعة",
+        mainAddress: "الكرادة عرصات الهدية",
+        // branch: "المكتب الفرعي",
+        // branchAddress: "الكرادة عرصات الهدية",
       },
       appointment: {
         title: "احجز موعداً",
@@ -1876,7 +2032,7 @@ export const translations = {
       contact: {
         title: "اتصل",
         addressLabel: "العنوان:",
-        address: "بغداد, المنصور, شارع مطعم الساعة",
+        address: "الكرادة عرصات الهدية",
         telLabel: "هاتف:",
         phone: "+964 774 646 4606",
         emailLabel: "بريد إلكتروني:",

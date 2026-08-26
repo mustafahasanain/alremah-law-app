@@ -55,8 +55,8 @@ export function ContactPage() {
 
   const OFFICE_LOCATIONS = [
     {
-      name: "Baghdad",
-      address: "بغداد, المنصور, شارع مطعم الساعة",
+      name: "الكرادة",
+      address: "الكرادة عرصات الهدية",
       phone: "+964 774 646 4606",
       email: "al-remahLawfirm@outlook.com",
       hours: "Mon-Fri: 9:00 - 16:30",
@@ -66,9 +66,9 @@ export function ContactPage() {
     },
   ];
 
-  const MAP_URL = "https://maps.app.goo.gl/RQeASwKQCc7GjLXR9";
+  const MAP_URL = "https://maps.app.goo.gl/1GyDVEdUCvNWZ2Hz6?g_st=aw";
   const MAP_EMBED_URL =
-    "https://www.google.com/maps?q=33.31889435385042,44.33300254490547&z=17&hl=en&output=embed";
+  "https://www.google.com/maps?q=33.2959157,44.4334548&z=17&hl=en&output=embed";
 
   const handleInputChange = (
     e: React.ChangeEvent<
