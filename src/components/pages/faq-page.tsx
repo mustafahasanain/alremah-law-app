@@ -163,7 +163,10 @@ export function FAQPage() {
     q: string;
     a: string;
   }>;
-  const legalItems = t.faqPage.legal.items as Array<{ q: string; a: string }>;
+  const legalItems = t.faqPage.legal.items as unknown as Array<{
+    q: string;
+    a: string;
+  }>;
 
   const filteredGeneral = generalItems.filter((faq) => {
     if (!debouncedSearch) return true;

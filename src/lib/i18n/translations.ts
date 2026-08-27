@@ -746,60 +746,43 @@ export const translations = {
         title: "General Questions",
         items: [
           {
-            q: "What legal services does Alremah Company for Legal Services and Consultancy provide?",
-            a: "The office provides legal consultations, litigation, representation for companies and individuals before the courts, commercial law services, criminal defense, dispute resolution, intellectual property matters, company registration, contract review, and property disputes.",
+            q: "When is an investment opportunity in Iraq worth entering, and when is staying out the better decision?",
+            a: "Not every available project is a suitable opportunity for every investor. The value of the decision starts with knowing whether the activity, legal structure, regulatory requirements, contracts, obligations, and risks actually align with the investor's goals and ability to manage them.\n\nAlremah's role is not to push the client toward investing, but to help them see the legal picture clearly enough to make their decision with confidence.",
           },
           {
-            q: "How can I book an appointment?",
-            a: "You can book an appointment through the appointment form on the home page or contact the office by phone. Please include your name, contact information, preferred date and time, and a short description of the legal matter.",
+            q: "If you win the dispute, can you actually collect what you won?",
+            a: "A successful ruling does not always equal a successful commercial outcome. Legal protection begins before the dispute, with a study of guarantees, assets, the opposing party, the dispute resolution mechanism, and the possibility of enforcement.\n\nThat is why we do not only ask how to win the case, but how to turn the legal outcome into a right that can actually be enforced.",
           },
           {
-            q: "What should I bring to my first meeting?",
-            a: "Bring your identification and any documents related to the matter, such as court papers, contracts, company documents, correspondence, property records, official notices, police reports, or prior legal decisions.",
+            q: "If you were offered the same contract today, but you knew how the relationship would end five years from now, what would you change in it?",
+            a: "This is the question we try to answer before signing. We cannot know the future, but we can test the contract against scenarios of delay, breach, change of ownership, financing difficulties, disputes, and exit.\n\nSmart legal drafting does not predict the future, but it prepares for its possibilities.",
           },
           {
-            q: "Can the office review my documents before starting a case?",
-            a: "Yes. Document review is an important first step. The lawyer can examine contracts, notices, court papers, company files, and evidence to explain your legal position and recommend the next procedure.",
+            q: "Do you know what you are actually buying when you buy a company?",
+            a: "Buying shares does not only mean acquiring assets and opportunities; it may mean entering an entire legal history of contracts, obligations, debts, guarantees, disputes, and risks that existed before the investor arrived.\n\nThat is why Alremah does not only ask about the value of what the client will own after the deal, but also examines what liabilities may transfer with it.\n\nSometimes the most dangerous thing you buy in a deal is the thing that never appeared in its price.",
           },
           {
-            q: "Do you represent companies and organizations?",
-            a: "Yes. The office assists companies and organizations with registration, legal compliance, contracts, disputes, court representation, investment licensing matters, and ongoing legal advisory work.",
+            q: "If a decision only needs one person's signature, why might it need the protection of an entire company?",
+            a: "Because a manager's signature can create an obligation for the company that lasts for years and outlasts their time in the position.\n\nThat is why decision-making authority must match its scale and consequences, and material decisions should be surrounded by appropriate levels of approval and documentation.\n\nA signature may take a second, but its effect may outlive the person who signed it.",
           },
           {
-            q: "Where is the office located and when is it open?",
-            a: "The main office is in Baghdad, Al-Mansour. Regular working hours are Monday to Friday from 9:00 to 16:30 and Saturday from 9:00 to 15:30. Emergency calls are available on Sunday.",
+            q: "Can you lose an excellent opportunity because your company was not legally ready quickly enough?",
+            a: "Yes. Some opportunities require a fast decision, fast due diligence, and documents, authorizations, and an organized structure that allow the deal to close without having to fix the company mid-negotiation.",
+          },
+          {
+            q: "If you find an excellent investment opportunity in Iraq, how do you know the right time to enter it is now?",
+            a: "The opportunity is not defined by the attractiveness of the sector alone. The timing of entry is tied to the investor's readiness, the legal structure, licenses, contracts, financing, partners, and the ability to begin operating within the required track.\n\nAlremah helps the investor understand the legal and regulatory requirements that precede entry, so that the timing of the decision is based on readiness, not just on the appeal of the opportunity.\n\nA good opportunity at the wrong time can become a costly decision.",
+          },
+          {
+            q: "Do you know what will make the next investor trust your company before they even meet you?",
+            a: "Clarity of ownership, and orderly records, contracts, licenses, governance, and legal data give the investor a picture of the institution's level before serious negotiations even begin.\n\nTrust in business is not built by words alone, but by what the company can prove when it is examined.",
           },
         ],
       },
       legal: {
         subtitle: "Legal",
         title: "Legal Questions",
-        items: [
-          {
-            q: "What should I do if I receive a court notice or lawsuit?",
-            a: "Do not ignore the notice. Contact a lawyer quickly, keep the original papers, write down the date you received them, and avoid signing or submitting any response before the documents are reviewed.",
-          },
-          {
-            q: "Can the office represent me in criminal complaints or investigations?",
-            a: "Yes. The office handles criminal defense and criminal law matters, including legal advice before giving statements, review of investigation papers, preparation of a defense strategy, and representation before the competent authorities and the courts.",
-          },
-          {
-            q: "How can a property dispute be handled?",
-            a: "Property disputes usually begin with reviewing title deeds, contracts, notices, maps, payment records, and possession documents. The lawyer can then advise whether negotiation, official complaints, or court action is the proper path.",
-          },
-          {
-            q: "Can you draft or review commercial contracts?",
-            a: "Yes. The office reviews and drafts commercial contracts, partnership agreements, service agreements, settlement documents, and related legal correspondence to reduce risk and clarify obligations before signing.",
-          },
-          {
-            q: "Do you help with company or NGO registration?",
-            a: "Yes. The office assists with local and foreign company registration, organization registration, required paperwork, legal procedures, and follow-up with the relevant official authorities.",
-          },
-          {
-            q: "What is the first step in a dispute between partners or businesses?",
-            a: "The first step is to review the agreement, correspondence, financial records, and evidence of each party's obligations. After that, the lawyer can recommend negotiation, formal notice, mediation, or litigation.",
-          },
-        ],
+        items: [],
       },
       search: {
         placeholder: "Search questions...",
@@ -1768,60 +1751,43 @@ export const translations = {
         title: "أسئلة عامة",
         items: [
           {
-            q: "ما هي الخدمات القانونية التي يقدمها مكتب شركة الرماح لخدمات المحاماة والاستشارات القانونية؟",
-            a: "يقدم المكتب الاستشارات القانونية، والدعاوى القضائية، وتمثيل الشركات والأفراد أمام المحاكم، وقضايا القانون التجاري، والدفاع الجنائي، وتسوية النزاعات، وحقوق الملكية الفكرية، وتسجيل الشركات، ومراجعة العقود، والنزاعات العقارية.",
+            q: "متى تكون الفرصة الاستثمارية في العراق فرصة تستحق الدخول ومتى يكون عدم الدخول هو القرار الأفضل؟",
+            a: "ليس كل مشروع متاح فرصة مناسبة لكل مستثمر. قيمة القرار تبدأ من معرفة ما إذا كان النشاط والهيكل القانوني والمتطلبات التنظيمية والعقود والالتزامات والمخاطر تتوافق فعلاً مع أهداف المستثمر وقدرته على إدارتها.\n\nدور شركة الرماح ليس دفع العميل نحو الاستثمار، بل مساعدته على رؤية الصورة القانونية بوضوح كافٍ لاتخاذ قراره بثقة.",
           },
           {
-            q: "كيف يمكنني حجز موعد مع المحامي؟",
-            a: "يمكنك حجز موعد من خلال نموذج المواعيد في الصفحة الرئيسية أو التواصل مع المكتب هاتفياً. يرجى ذكر الاسم ومعلومات الاتصال والوقت المناسب وشرح مختصر للموضوع القانوني.",
+            q: "إذا ربحت النزاع فهل تستطيع تحصيل ما ربحت؟",
+            a: "الحكم الناجح لا يساوي دائماً نتيجة تجارية ناجحة. قيمة الحماية القانونية تبدأ قبل النزاع من دراسة الضمانات والأصول والطرف المقابل وآلية تسوية النزاع وإمكانية التنفيذ.\n\nلهذا لا نسأل فقط كيف نربح القضية، بل كيف تتحول النتيجة القانونية إلى حق يمكن تنفيذه فعلاً.",
           },
           {
-            q: "ماذا يجب أن أحضر لاجتماعي الأول؟",
-            a: "يفضل إحضار الهوية وأي مستندات مرتبطة بالموضوع، مثل أوراق المحكمة، العقود، مستندات الشركة، المراسلات، قيود العقار، التبليغات الرسمية، محاضر الشرطة، أو القرارات السابقة.",
+            q: "لو عُرض عليك العقد نفسه اليوم ولكنك تعرف كيف ستنتهي العلاقة بعد خمس سنوات، فماذا كنت ستغير فيه؟",
+            a: "هذا هو السؤال الذي نحاول الإجابة عنه قبل التوقيع. لا نستطيع معرفة المستقبل، لكن يمكننا اختبار العقد أمام سيناريوهات التأخير والإخلال وتغير الملكية وتعثر التمويل والنزاع والخروج.\n\nالصياغة القانونية الذكية لا تتنبأ بالمستقبل، لكنها تستعد لاحتمالاته.",
           },
           {
-            q: "هل يمكن مراجعة المستندات قبل البدء بالقضية؟",
-            a: "نعم. مراجعة المستندات خطوة أساسية قبل اتخاذ أي إجراء. يمكن للمحامي فحص العقود، والتبليغات، وأوراق الدعوى، وملفات الشركات، والأدلة لتوضيح الموقف القانوني واقتراح الإجراء المناسب.",
+            q: "هل تعرف ما الذي تشتريه فعلاً عندما تشتري شركة؟",
+            a: "شراء الأسهم لا يعني شراء الأصول والفرص فقط، بل قد يعني الدخول في تاريخ قانوني كامل من العقود والالتزامات والديون والضمانات والنزاعات والمخاطر التي نشأت قبل وصول المستثمر.\n\nلذلك لا تسأل شركة الرماح فقط عن قيمة ما سيملكه العميل بعد الصفقة، بل تبحث أيضاً عما قد ينتقل إليه معها من مسؤوليات.\n\nأحياناً أخطر ما تشتريه في الصفقة هو الشيء الذي لم يظهر في سعرها.",
           },
           {
-            q: "هل يمثل المكتب الشركات والمنظمات؟",
-            a: "نعم. يساعد المكتب الشركات والمنظمات في التسجيل، والامتثال القانوني، والعقود، والنزاعات، والتمثيل أمام المحاكم، وإجراءات إجازات الاستثمار، والاستشارات القانونية المستمرة.",
+            q: "إذا كان القرار يحتاج توقيع شخص واحد فلماذا قد يحتاج حماية شركة كاملة؟",
+            a: "لأن توقيع المدير قد يرتب التزاماً على الشركة يمتد سنوات ويتجاوز مدة وجوده في منصبه.\n\nلهذا يجب أن تتناسب صلاحية اتخاذ القرار مع حجمه وآثاره، وأن تحيط القرارات الجوهرية بمستويات مناسبة من الاعتماد والتوثيق.\n\nقد يستغرق التوقيع ثانية، لكن أثره قد يعيش أطول ممن وقّعه.",
           },
           {
-            q: "أين يقع المكتب وما هي أوقات العمل؟",
-            a: "يقع المكتب الرئيسي في بغداد، المنصور. أوقات العمل من الاثنين إلى الجمعة من 9:00 إلى 16:30، ويوم السبت من 9:00 إلى 15:30. أما يوم الأحد فهو مخصص للاتصالات الطارئة.",
+            q: "هل يمكن أن تخسر فرصة ممتازة لأن شركتك لم تكن جاهزة قانونياً بالسرعة الكافية؟",
+            a: "نعم. بعض الفرص تحتاج قراراً سريعاً وفحصاً سريعاً ومستندات وصلاحيات وهيكلاً منظماً يسمح بإتمام الصفقة دون البدء بإصلاح الشركة أثناء التفاوض.",
+          },
+          {
+            q: "إذا وجدت فرصة استثمارية ممتازة في العراق فكيف تعرف أن الوقت المناسب لدخولها هو الآن؟",
+            a: "الفرصة لا تتحدد بجاذبية القطاع وحدها. توقيت الدخول يرتبط بجاهزية المستثمر والهيكل القانوني والتراخيص والعقود والتمويل والشركاء والقدرة على بدء التشغيل ضمن المسار المطلوب.\n\nتساعد شركة الرماح المستثمر على فهم المتطلبات القانونية والتنظيمية التي تسبق الدخول حتى يكون توقيت القرار مبنياً على الجاهزية لا على جاذبية الفرصة وحدها.\n\nفالفرصة الجيدة في التوقيت الخطأ قد تصبح قراراً مكلفاً.",
+          },
+          {
+            q: "هل تعرف ما الذي سيجعل المستثمر القادم يثق بشركتك قبل أن يلتقي بك؟",
+            a: "وضوح الملكية وانتظام السجلات والعقود والتراخيص والحوكمة والبيانات القانونية يعطي المستثمر صورة عن مستوى المؤسسة قبل أن تبدأ المفاوضات الجدية.\n\nالثقة في الأعمال لا تُبنى بالكلام وحده، بل بما تستطيع الشركة إثباته عندما تُفحص.",
           },
         ],
       },
       legal: {
         subtitle: "قانوني",
         title: "أسئلة قانونية",
-        items: [
-          {
-            q: "ماذا أفعل إذا وصلتني دعوى أو تبليغ من المحكمة؟",
-            a: "لا تهمل التبليغ. تواصل مع محامٍ بسرعة، واحتفظ بالأوراق الأصلية، وسجل تاريخ الاستلام، ولا توقع أو تقدم أي جواب قبل مراجعة المستندات قانونياً.",
-          },
-          {
-            q: "هل يتولى المكتب القضايا الجنائية والتحقيقات؟",
-            a: "نعم. يتعامل المكتب مع قضايا الدفاع الجنائي والقانون الجنائي، بما في ذلك المشورة قبل الإدلاء بالأقوال، ومراجعة أوراق التحقيق، وإعداد خطة الدفاع، والتمثيل أمام الجهات المختصة والمحاكم.",
-          },
-          {
-            q: "كيف يتم التعامل مع النزاعات العقارية؟",
-            a: "تبدأ النزاعات العقارية عادة بمراجعة سندات الملكية، والعقود، والتبليغات، والخرائط، وسجلات الدفع، ووثائق الحيازة. بعد ذلك يحدد المحامي هل الأنسب التفاوض أو الشكوى الرسمية أو إقامة الدعوى.",
-          },
-          {
-            q: "هل يمكن صياغة أو مراجعة العقود التجارية؟",
-            a: "نعم. يقوم المكتب بمراجعة وصياغة العقود التجارية، واتفاقيات الشراكة، وعقود الخدمات، ومحاضر التسوية، والمراسلات القانونية المرتبطة بها لتقليل المخاطر وتوضيح الالتزامات قبل التوقيع.",
-          },
-          {
-            q: "هل يساعد المكتب في تسجيل الشركات أو المنظمات؟",
-            a: "نعم. يساعد المكتب في تسجيل الشركات المحلية والأجنبية، وتسجيل المنظمات، وتجهيز المتطلبات القانونية، ومتابعة الإجراءات لدى الجهات الرسمية المختصة.",
-          },
-          {
-            q: "ما هي الخطوة الأولى في نزاع بين شركاء أو شركات؟",
-            a: "الخطوة الأولى هي مراجعة الاتفاق، والمراسلات، والسجلات المالية، والأدلة التي تثبت التزامات كل طرف. بعد ذلك يمكن للمحامي اقتراح التفاوض، أو الإنذار الرسمي، أو الوساطة، أو التقاضي.",
-          },
-        ],
+        items: [],
       },
       search: {
         placeholder: "ابحث في الأسئلة...",
