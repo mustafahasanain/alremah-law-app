@@ -10,6 +10,8 @@ const BLOG_POST_LIST_FIELDS = [
   'blog_intro',
   'published',
   'published_on',
+  'featured',
+  'read_time',
   'meta_title',
   'meta_description',
   'meta_image',
@@ -17,7 +19,13 @@ const BLOG_POST_LIST_FIELDS = [
   'blog_category',
 ] as const;
 
-const BLOG_POST_DETAIL_FIELDS = [...BLOG_POST_LIST_FIELDS, 'content'] as const;
+const BLOG_POST_DETAIL_FIELDS = [
+  ...BLOG_POST_LIST_FIELDS,
+  'content_type',
+  'content',
+  'content_md',
+  'content_html',
+] as const;
 
 const DEFAULT_PAGE_LENGTH = 20;
 
@@ -82,11 +90,34 @@ export async function getBlogger(name: string): Promise<Blogger | null> {
 /** Fetch published Blog Categories. */
 export async function getBlogCategories(): Promise<BlogCategory[]> {
   const params = new URLSearchParams({
-    fields: JSON.stringify(['name', 'title', 'route']),
+    fields: JSON.stringify(['name', 'title', 'route', 'published']),
     filters: JSON.stringify([['published', '=', 1]]),
     limit_page_length: String(DEFAULT_PAGE_LENGTH),
   });
 
   const result = await frappeFetch<FrappeListResponse<BlogCategory>>(`/api/resource/Blog%20Category?${params}`);
   return result.data;
+}
+
+/**
+ * Return the raw (unrendered) content source for a Blog Post, selected
+ * according to `content_type`:
+ *   - "Rich Text" -> content
+ *   - "Markdown"  -> content_md
+ *   - "HTML"      -> content_html
+ *   - null/unknown -> falls back to `content` (Frappe's default content_type
+ *     is Rich Text, so this is the safe default).
+ * Does not render, sanitize, or otherwise transform the value — that
+ * belongs to the Blog page implementation.
+ */
+export function getBlogPostRawContent(post: BlogPost): string | null {
+  switch (post.content_type) {
+    case 'Markdown':
+      return post.content_md;
+    case 'HTML':
+      return post.content_html;
+    case 'Rich Text':
+    default:
+      return post.content;
+  }
 }

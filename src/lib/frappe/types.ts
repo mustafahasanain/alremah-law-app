@@ -7,20 +7,36 @@
  * Note on `route`: Frappe stores the FULL slug on the document, e.g.
  * "blog/example-post" (Blog Category route + scrubbed title), not just the
  * last path segment. See blog_post.py -> make_route().
+ *
+ * Note on content fields: a Blog Post's active content field depends on
+ * `content_type`:
+ *   - content_type === "Rich Text" -> `content` holds the HTML to render.
+ *   - content_type === "Markdown"  -> `content_md` holds the markdown source.
+ *   - content_type === "HTML"      -> `content_html` holds the HTML source.
+ * A post that was previously edited under a different content type may
+ * still carry a stale value in the other field(s) — callers must select the
+ * field based on `content_type`, not on which fields happen to be non-empty.
  */
 export interface BlogPost {
   name: string;
   title: string;
   route: string;
-  blog_intro: string;
-  content: string;
+  blog_intro: string | null;
+  blogger: string;
+  blog_category: string;
   published: 0 | 1;
   published_on: string;
+  featured: 0 | 1;
+  read_time: number | null;
+
+  content_type: 'Rich Text' | 'Markdown' | 'HTML' | null;
+  content: string | null;
+  content_md: string | null;
+  content_html: string | null;
+
   meta_title: string | null;
   meta_description: string | null;
   meta_image: string | null;
-  blogger: string;
-  blog_category: string;
 }
 
 /** Minimal Blogger fields needed for current integration. */
@@ -36,6 +52,7 @@ export interface BlogCategory {
   name: string;
   title: string;
   route: string;
+  published: 0 | 1;
 }
 
 /** Shape of a Frappe REST "list" response: { data: T[] }. */

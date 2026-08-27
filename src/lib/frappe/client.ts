@@ -104,3 +104,21 @@ export async function frappeFetch<T>(path: string, options: FrappeFetchOptions =
     throw new FrappeRequestError('Frappe request failed: response was not valid JSON', response.status);
   }
 }
+
+/**
+ * Resolve a Frappe-stored asset path (e.g. a `meta_image` value like
+ * "/files/images (1).jpeg") into an absolute URL the frontend can load.
+ *
+ * - null/empty -> null
+ * - already-absolute ("https://..." or "http://...") -> unchanged
+ * - relative ("/files/...") -> prefixed with FRAPPE_URL
+ *
+ * Never includes API credentials; only reads the public base URL.
+ */
+export function getFrappeAssetUrl(path: string | null | undefined): string | null {
+  if (!path) return null;
+  if (/^https?:\/\//i.test(path)) return path;
+
+  const { url } = getFrappeEnv();
+  return `${url}${path.startsWith('/') ? '' : '/'}${path}`;
+}
