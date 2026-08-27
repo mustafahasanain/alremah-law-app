@@ -68,6 +68,28 @@ export async function getBlogPostByRoute(route: string): Promise<BlogPost | null
   return result.data[0] ?? null;
 }
 
+/**
+ * Fetch a single published Blog Post by its exact `name` (the Frappe
+ * document id, used as the public Next.js slug — see
+ * src/app/blog/[slug]/page.tsx). Unlike `route`, `name` does not encode the
+ * category, so this is what the public URL uses instead of Frappe's
+ * category-based website route. Returns null if no matching published post
+ * exists, so unpublished/draft posts are never returned to the frontend.
+ */
+export async function getBlogPostByName(name: string): Promise<BlogPost | null> {
+  const params = new URLSearchParams({
+    fields: JSON.stringify(BLOG_POST_DETAIL_FIELDS),
+    filters: JSON.stringify([
+      ['name', '=', name],
+      ['published', '=', 1],
+    ]),
+    limit_page_length: '1',
+  });
+
+  const result = await frappeFetch<FrappeListResponse<BlogPost>>(`/api/resource/Blog%20Post?${params}`);
+  return result.data[0] ?? null;
+}
+
 /** Fetch a single Blogger by name (the User-linked blogger record). */
 export async function getBlogger(name: string): Promise<Blogger | null> {
   const params = new URLSearchParams({

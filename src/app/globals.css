@@ -1105,3 +1105,176 @@ html {
 .rtl [class*="grid-cols"] {
   direction: rtl;
 }
+
+/* ===== Blog Article Typography ===== */
+/* Styles Blog Post body content (Rich Text / HTML / Markdown) rendered via
+   src/components/blog/article-content.tsx. Deliberately does not depend on
+   Frappe's own `.ql-editor` CSS -- that stylesheet is never shipped to
+   this app, so article formatting comes entirely from these rules. */
+
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+  color: var(--color-charcoal);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+.dark .article-prose {
+  color: #e5e5e5;
+}
+
+.article-prose > :first-child {
+  margin-top: 0;
+}
+
+.article-prose p {
+  margin-block: 1.25em;
+}
+
+.article-prose h1,
+.article-prose h2,
+.article-prose h3,
+.article-prose h4,
+.article-prose h5,
+.article-prose h6 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-top: 1.75em;
+  margin-bottom: 0.75em;
+  line-height: 1.4;
+}
+
+.rtl .article-prose h1,
+.rtl .article-prose h2,
+.rtl .article-prose h3,
+.rtl .article-prose h4,
+.rtl .article-prose h5,
+.rtl .article-prose h6 {
+  font-family: var(--font-arabic), sans-serif;
+}
+
+.dark .article-prose h1,
+.dark .article-prose h2,
+.dark .article-prose h3,
+.dark .article-prose h4,
+.dark .article-prose h5,
+.dark .article-prose h6 {
+  color: #ffffff;
+}
+
+.article-prose h1 { font-size: 1.875rem; }
+.article-prose h2 { font-size: 1.5rem; }
+.article-prose h3 { font-size: 1.25rem; }
+.article-prose h4,
+.article-prose h5,
+.article-prose h6 { font-size: 1.05rem; }
+
+.article-prose ul,
+.article-prose ol {
+  margin-block: 1.25em;
+  padding-inline-start: 1.5em;
+}
+
+.article-prose ul { list-style-type: disc; }
+.article-prose ol { list-style-type: decimal; }
+
+.article-prose li {
+  margin-block: 0.4em;
+}
+
+.article-prose a {
+  color: var(--color-gold-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-prose a:hover {
+  color: var(--color-gold);
+}
+
+.article-prose blockquote {
+  margin-block: 1.5em;
+  padding-inline-start: 1.25em;
+  border-inline-start: 3px solid var(--color-gold);
+  color: var(--color-medium-gray);
+  font-style: italic;
+}
+
+.dark .article-prose blockquote {
+  color: #b5b5b5;
+}
+
+.article-prose code {
+  background: var(--color-light-gray);
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+.dark .article-prose code {
+  background: #262626;
+}
+
+.article-prose pre {
+  background: var(--color-charcoal);
+  color: #f5f5f5;
+  padding: 1em 1.25em;
+  overflow-x: auto;
+  margin-block: 1.5em;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.article-prose pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1.5em;
+  font-size: 0.9em;
+  overflow-x: auto;
+  display: block;
+}
+
+.article-prose th,
+.article-prose td {
+  border: 1px solid var(--color-border-gray);
+  padding: 0.5em 0.75em;
+  text-align: start;
+}
+
+.dark .article-prose th,
+.dark .article-prose td {
+  border-color: #3a3a3a;
+}
+
+.article-prose th {
+  background: var(--color-light-gray);
+  font-weight: 600;
+}
+
+.dark .article-prose th {
+  background: #262626;
+}
+
+.article-prose img {
+  max-width: 100%;
+  height: auto;
+  margin-block: 1.5em;
+  display: block;
+}
+
+.article-prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border-gray);
+  margin-block: 2em;
+}
+
+.dark .article-prose hr {
+  border-color: #3a3a3a;
+}
