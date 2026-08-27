@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Cairo, Montserrat, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "next-themes";
+import { NO_FLASH_SCRIPT, ThemeProvider } from "@/components/theme/theme-provider";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -92,17 +93,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+        {/* Must run before hydration to avoid a flash of the wrong theme;
+            App Router requires beforeInteractive scripts to be written
+            directly in the root layout (see theme-provider.tsx). */}
+        <Script id="theme-no-flash" strategy="beforeInteractive">
+          {NO_FLASH_SCRIPT}
+        </Script>
       </head>
       <body
         className={`${montserrat.variable} ${playfair.variable} ${cairo.variable} antialiased bg-background text-foreground font-sans transition-colors duration-300`}
         style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-          disableTransitionOnChange={false}
-        >
+        <ThemeProvider>
           {children}
           <Toaster />
         </ThemeProvider>
