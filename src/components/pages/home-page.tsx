@@ -11,6 +11,12 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   Scale,
   Phone,
   Mail,
@@ -660,73 +666,73 @@ function SectionDivider({ flip = false }: { flip?: boolean }) {
   );
 }
 
-function HowWeCanHelpAccordion() {
+/* ===== Legal Vision / FAQ Accordion Group (Phase 3) ===== */
+
+function LegalVisionAccordionGroup({
+  groupLabel,
+  items,
+  idPrefix,
+}: {
+  groupLabel: string;
+  items: readonly { question: string; answer: string }[];
+  idPrefix: string;
+}) {
+  return (
+    <div>
+      <h3
+        className="flex items-center gap-3 text-lg md:text-xl font-bold text-charcoal dark:text-white mb-4"
+        style={{ fontFamily: "var(--font-playfair), serif" }}
+      >
+        <span className="w-1 h-6 bg-gold inline-block shrink-0" />
+        {groupLabel}
+      </h3>
+      <Accordion type="single" collapsible className="space-y-3">
+        {items.map((item, index) => (
+          <AccordionItem
+            key={`${idPrefix}-${index}`}
+            value={`${idPrefix}-${index}`}
+            className="border border-border-gray dark:border-gray-700 bg-white dark:bg-charcoal-dark rounded-lg hover:border-gold/30 transition-all duration-300 data-[state=open]:border-l-gold data-[state=open]:border-l-4 data-[state=open]:shadow-md"
+          >
+            <AccordionTrigger className="text-charcoal dark:text-white hover:text-gold font-semibold py-4 px-5 text-base hover:no-underline [&>svg]:hidden transition-colors duration-200">
+              <span className="flex-1">{item.question}</span>
+              <div className="relative w-7 h-7 flex items-center justify-center shrink-0 rounded-full border border-gold/30 group-hover:border-gold transition-colors">
+                <Plus
+                  size={14}
+                  className="text-gold absolute transition-all duration-200 data-[state=open]:opacity-0 data-[state=open]:rotate-90"
+                />
+                <Minus
+                  size={14}
+                  className="text-gold absolute opacity-0 transition-all duration-200 data-[state=open]:opacity-100"
+                />
+              </div>
+            </AccordionTrigger>
+            <AccordionContent className="text-medium-gray dark:text-gray-300 leading-relaxed pb-5 px-5 pt-0 whitespace-pre-line">
+              <div className="border-t border-border-gray dark:border-gray-700 pt-4">
+                {item.answer}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  );
+}
+
+function LegalVisionSection() {
   const { t } = useLanguage();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const items = t.howWeCanHelp.items;
 
   return (
-    <div className="space-y-3">
-      {items.map(
-        (item: { title: string; description: string }, index: number) => (
-          <div
-            key={item.title}
-            className={`border-l-4 transition-all duration-300 ${
-              openIndex === index
-                ? "border-l-gold bg-white dark:bg-charcoal-dark shadow-md"
-                : "border-l-transparent bg-white/50 dark:bg-charcoal/50 hover:bg-white dark:hover:bg-charcoal-dark shadow-sm"
-            }`}
-          >
-            <button
-              onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between px-6 py-4 text-left group"
-              aria-expanded={openIndex === index}
-              aria-controls={`accordion-content-${index}`}
-            >
-              <h3
-                className={`font-semibold text-lg transition-colors duration-300 ${
-                  openIndex === index
-                    ? "text-gold"
-                    : "text-charcoal dark:text-gray-300 group-hover:text-gold"
-                }`}
-                style={{ fontFamily: "var(--font-playfair), serif" }}
-              >
-                {item.title}
-              </h3>
-              <div
-                className={`shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300 ${
-                  openIndex === index
-                    ? "bg-gold text-charcoal border-gold"
-                    : "border-gold/30 text-gold group-hover:border-gold group-hover:bg-gold/10"
-                }`}
-              >
-                {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
-              </div>
-            </button>
-            <div
-              id={`accordion-content-${index}`}
-              className={`overflow-hidden transition-all duration-300 ${
-                openIndex === index
-                  ? "max-h-[640px] opacity-100"
-                  : "max-h-0 opacity-0"
-              }`}
-              role="region"
-              aria-labelledby={`accordion-trigger-${index}`}
-            >
-              <div className="px-6 pb-5 pt-0">
-                <p className="text-medium-gray dark:text-gray-300 text-sm leading-relaxed whitespace-pre-line">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          </div>
-        ),
-      )}
+    <div className="space-y-10 max-w-3xl mx-auto">
+      <LegalVisionAccordionGroup
+        groupLabel={t.legalVision.strategicLabel}
+        items={t.legalVision.strategic}
+        idPrefix="strategic"
+      />
+      <LegalVisionAccordionGroup
+        groupLabel={t.legalVision.practicalLabel}
+        items={t.legalVision.practical}
+        idPrefix="practical"
+      />
     </div>
   );
 }
@@ -1152,18 +1158,20 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* How We Can Help - Interactive Accordion Section */}
+      {/* Legal Vision / FAQ - Interactive Accordion Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-light-gray dark:bg-charcoal transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection>
             <SectionTitle
-              title={t.howWeCanHelp.title}
-              subtitle={t.howWeCanHelp.subtitle}
+              title={t.legalVision.title}
+              subtitle={t.legalVision.subtitle}
             />
           </AnimatedSection>
-          <div className="max-w-3xl mx-auto mt-6 md:mt-8">
-            <HowWeCanHelpAccordion />
-          </div>
+          <AnimatedSection delay={150}>
+            <div className="mt-6 md:mt-8">
+              <LegalVisionSection />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

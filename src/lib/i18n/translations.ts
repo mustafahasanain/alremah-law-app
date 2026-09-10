@@ -186,23 +186,49 @@ export const translations = {
     // How It Works
     howItWorks: {
       subtitle: "How It Works",
-      title: "3 Easy Steps to Get Legal Help",
-      intro: "",
+      title: "Workflow & Legal Assignment Management",
+      intro:
+        "Alremah follows an institutional and organized workflow for managing corporate and institutional legal assignments, combining legal expertise, administrative organization, and modern electronic systems to ensure accurate follow-up, continuous documentation, and clear communication with the client at every stage of the work.",
       items: [
         {
-          title: "Request a Consultation",
-          subtitle: "Send us the details of your case",
-          btnText: "Send Request",
+          title: "Submission of the Assignment",
+          subtitle:
+            "Requests, consultations, and legal assignments are submitted through the company's designated email, together with the relevant documents and information, ensuring the request is documented and referred to the specialized team.",
         },
         {
-          title: "Book an Appointment",
-          subtitle: "We will review your case",
-          btnText: "Learn More",
+          title: "Registration & Classification",
+          subtitle:
+            "Every assignment is registered within Alremah's internal electronic system, where a dedicated file is created covering its subject, documents, procedures, and deadlines, and classified according to the nature of the work and its priority.",
         },
         {
-          title: "Receive a Fee Quote",
-          subtitle: "We will represent your case in court",
-          btnText: "See Results",
+          title: "Review & Assignment",
+          subtitle:
+            "The assignment is reviewed, the scope of work and legal requirements are determined, and the file is then assigned to the responsible lawyer or specialized team, with a direct person in charge designated to manage and follow up the file.",
+        },
+        {
+          title: "Assessment & Work Plan",
+          subtitle:
+            "The specialized team studies the legal position, the available options, the risks, and the relevant requirements, and determines the course of action and the procedures required according to the nature of the assignment and the client's objectives.",
+        },
+        {
+          title: "Execution & Follow-up",
+          subtitle:
+            "The required legal, judicial, and administrative procedures are carried out, with continuous follow-up of deadlines, correspondence, and developments, and the file's electronic record is updated on an ongoing basis.",
+        },
+        {
+          title: "Reports & Communication",
+          subtitle:
+            "Periodic reports on the progress of the work are prepared, covering the procedures completed, the current status of each assignment, the next steps, and any material observations, and are sent to the client via the approved email to ensure clarity of progress and continuity of communication.",
+        },
+        {
+          title: "Documentation & Archiving",
+          subtitle:
+            "Documents, correspondence, reports, and procedural records are stored electronically within Alremah's internal system, organized separately for each client and file, making it easy to trace the assignment's history and follow its developments.",
+        },
+        {
+          title: "Completion of the Assignment",
+          subtitle:
+            "Upon completion of the scope of work, the outcome and the procedures carried out are documented, and the report or final deliverables are sent to the client, together with a statement of any subsequent procedures or requirements, where applicable.",
         },
       ],
     },
@@ -352,35 +378,84 @@ export const translations = {
         },
       ],
     },
-    // How We Can Help
-    howWeCanHelp: {
-      title: "Related Questions",
-      subtitle: "Legal Answers",
-      items: [
+    // Legal Vision & FAQ
+    legalVision: {
+      subtitle: "Our Legal Vision",
+      title: "Legal Vision & Frequently Asked Questions",
+      strategicLabel: "Strategic & Intellectual Questions",
+      practicalLabel: "Practical & Procedural Questions",
+      strategic: [
         {
-          title: "When should I request legal advice?",
-          description:
-            "Request legal advice before signing contracts, answering official notices, filing a lawsuit, giving statements, or making decisions that may affect your rights or business obligations.",
+          question:
+            "When is an investment opportunity in Iraq worth entering, and when is not entering the better decision?",
+          answer:
+            "Not every available project is a suitable opportunity for every investor. The value of the decision begins with knowing whether the activity, the legal structure, the regulatory requirements, the contracts, the obligations, and the risks truly align with the investor's objectives and capacity to manage them.\n\nAlremah's role is not to push the client toward investing, but to help them see the legal picture clearly enough to make their decision with confidence.",
         },
         {
-          title: "Can the office represent me before court?",
-          description:
-            "Yes. The office handles litigation, lawsuits, criminal defense, company disputes, property matters, and representation before courts and official authorities.",
+          question: "If you win the dispute, can you actually collect what you won?",
+          answer:
+            "A successful judgment does not always equal a successful commercial outcome. The value of legal protection begins before the dispute, with a study of the guarantees, the assets, the opposing party, the dispute resolution mechanism, and the possibility of enforcement.\n\nThat is why we do not ask only how to win the case, but how the legal outcome turns into a right that can actually be enforced.",
         },
         {
-          title: "Do companies need ongoing legal support?",
-          description:
-            "Ongoing legal support helps companies review contracts, manage compliance, handle disputes early, prepare official documents, and reduce risks before problems reach court.",
+          question:
+            "If the same contract were offered to you today, but you knew how the relationship would end five years from now, what would you change in it?",
+          answer:
+            "This is the question we try to answer before signing. We cannot know the future, but we can test the contract against scenarios of delay, breach, change of ownership, financing default, dispute, and exit.\n\nIntelligent legal drafting does not predict the future, but it prepares for its possibilities and sets out clear mechanisms for managing any shift that may arise in the partnership.",
         },
         {
-          title: "What documents help in a property or contract dispute?",
-          description:
-            "Useful documents include contracts, title deeds, receipts, correspondence, notices, court papers, company records, photographs, and any proof showing each party's rights and obligations.",
+          question: "Do you know what you are actually buying when you buy a company?",
+          answer:
+            "Buying shares does not only mean buying assets and opportunities — it may mean entering an entire legal history of contracts, obligations, debts, guarantees, disputes, and risks that arose before the investor's arrival.\n\nThat is why Alremah does not only ask about the value of what the client will own after the deal, but also looks into what liabilities may transfer with it.\n\nSometimes the most dangerous thing you buy in a deal is the thing that never appeared in its price.",
         },
         {
-          title: "Can disputes be resolved without a lawsuit?",
-          description:
-            "Many disputes can be handled through negotiation, formal legal notices, settlement discussions, or mediation. If these options are not effective, litigation may be recommended.",
+          question:
+            "If a decision only needs one person's signature, why might it need the protection of the entire company?",
+          answer:
+            "Because a manager's signature may create an obligation on the company that extends for years and outlasts their time in the position.\n\nThat is why the authority to make a decision must match its scale and its consequences, and material decisions must be surrounded by appropriate levels of approval and documentation.\n\nA signature may take a second, but its effect may outlive the person who signed it.",
+        },
+        {
+          question:
+            "Can you lose an excellent opportunity because your company was not legally ready quickly enough?",
+          answer:
+            "Yes, absolutely. Some opportunities require a fast decision, a fast due-diligence review, documents, authorities, and an organized structure that allows the deal to be completed without having to start fixing the company and correcting its legal standing while negotiations are underway.\n\nPrior legal readiness is what protects opportunities and keeps them within reach of those who deserve them.",
+        },
+        {
+          question:
+            "If you find an excellent investment opportunity in Iraq, how do you know that now is the right time to enter it?",
+          answer:
+            "An opportunity is not defined by the attractiveness of the sector alone. The timing of entry depends on the investor's readiness, the legal structure, the licenses, the contracts, the financing, the partners, and the ability to begin operations within the required track.\n\nAlremah helps the investor understand the legal and regulatory requirements that precede entry, so that the timing of the decision is based on readiness rather than on the attractiveness of the opportunity alone.\n\nA good opportunity at the wrong time can become a costly decision.",
+        },
+        {
+          question:
+            "Do you know what will make the next investor trust your company before they even meet you?",
+          answer:
+            "Clarity of ownership, and the orderliness of records, contracts, licenses, governance, and legal data, gives the investor a picture of the institution's standing before serious negotiations even begin.\n\nTrust in business is not built by words alone, but by what the company can prove when it is examined legally, administratively, and financially.",
+        },
+      ],
+      practical: [
+        {
+          question:
+            "How long does it take to register a foreign company's branch in Iraq, and what are the basic requirements?",
+          answer:
+            "Registration procedures usually take between 4 to 8 weeks, depending on the completeness of the parent company's documents and their certification by the Iraqi embassy, the Ministry of Foreign Affairs, and certified official translation.\n\nThe basic requirements include: the parent company's memorandum and articles of association, the official certificate of registration, the financial statements for the last fiscal year, and a board resolution to open the branch in Iraq, naming the authorized manager and granting them the powers needed to deal with the Companies Registration Department and official authorities.",
+        },
+        {
+          question:
+            "Does Iraqi law require foreign companies to have a local Iraqi partner in order to do business?",
+          answer:
+            "The Iraqi Companies Law and the Investment Law allow foreign companies to open branches and representative offices that are 100% owned by the parent company, without the need for an Iraqi partner.\n\nIn the case of establishing local joint-stock or limited liability companies outside the framework of the Investment Law, however, some sectors may require specific national participation percentages.\n\nAlremah's team guides the investor toward the legal structure that ensures them full control and flexibility according to the nature of their activity.",
+        },
+        {
+          question:
+            "How do you protect your company from the risk of sudden estimated tax assessments in Iraq?",
+          answer:
+            "Tax protection begins from the moment commercial contracts are drafted, by determining who bears the tax retentions and withholdings, followed by the regular keeping of official accounting books, opening the tax file, and filing returns by their legally set deadlines.\n\nFollowing up on periodic tax settlement and obtaining annual tax clearance certificates protects the company from financial accumulations, late-payment fines, and arbitrary estimated-assessment decisions that are issued in the absence of regular documentation.",
+        },
+        {
+          question:
+            "What is the legally required percentage of local labor when employing foreign staff in Iraq?",
+          answer:
+            "Iraqi Labor Law No. 37 of 2015 and the effective ministerial instructions set a minimum of 50% national workforce in projects operating within Iraq, rising to higher percentages in certain oil-sector and special-license activities.\n\nWe help our clients manage the file of employing foreign staff and obtaining their official work permits, with full compliance with national labor percentages, to avoid any regulatory violations or penalties.",
         },
       ],
     },
@@ -1311,7 +1386,7 @@ export const translations = {
         {
           title: "التنفيذ والمتابعة",
           subtitle:
-            "تتم المباشرة بالإجراءات القانونية والقضائية والإدارية المطلوبة مع متابعة المواعيد والمخاطبات والمستجدات وتحديث سجل الملف إلكترونيا بصورة مستمرة.",
+            "تتم المباشرة بالإجراءات القانونية والقضائية والإدارية المطلوبة مع متابعة المواعيد والمخاطبات والمستجدات وتحديث سجل الملف إلكترونياً بصورة مستمرة.",
         },
         {
           title: "التقارير والتواصل",
@@ -1321,7 +1396,7 @@ export const translations = {
         {
           title: "التوثيق والأرشفة",
           subtitle:
-            "تُحفظ المستندات والمراسلات والتقارير وسجلات الإجراءات إلكترونيا ضمن النظام الداخلي لشركة الرماح وفق تنظيم خاص بكل عميل وملف بما يضمن سهولة الرجوع إلى تاريخ التكليف ومتابعة تطوراته.",
+            "تُحفظ المستندات والمراسلات والتقارير وسجلات الإجراءات إلكترونياً ضمن النظام الداخلي لشركة الرماح وفق تنظيم خاص بكل عميل وملف بما يضمن سهولة الرجوع إلى تاريخ التكليف ومتابعة تطوراته.",
         },
         {
           title: "استكمال التكليف",
@@ -1476,38 +1551,83 @@ export const translations = {
       ],
     },
     // How We Can Help
-    howWeCanHelp: {
-      title: "أسئلة ذات صلة",
-      subtitle: "إجابات قانونية",
-      items: [
+    legalVision: {
+      subtitle: "رؤيتنا القانونية",
+      title: "الرؤية القانونية والأسئلة الشائعة",
+      strategicLabel: "أسئلة استراتيجية وفكرية",
+      practicalLabel: "أسئلة عملية وإجرائية",
+      strategic: [
         {
-          title:
-            "متى تكون الفرصة الاستثمارية في العراق فرصة تستحق الدخول، ومتى يكون عدم الدخول هو القرار الأفضل؟",
-          description:
-            "ليس كل مشروع متاح فرصة مناسبة لكل مستثمر. قيمة القرار تبدأ من معرفة ما إذا كان النشاط والهيكل القانوني والمتطلبات التنظيمية والعقود والالتزامات والمخاطر تتوافق فعلاً مع أهداف المستثمر وقدرته على إدارتها.\n\nدور شركة الرماح ليس دفع العميل نحو الاستثمار، بل مساعدته على رؤية الصورة القانونية بوضوح كافٍ لاتخاذ قراره بثقة.",
+          question:
+            "متى تكون الفرصة الاستثمارية في العراق فرصة تستحق الدخول ومتى يكون عدم الدخول هو القرار الأفضل؟",
+          answer:
+            "ليس كل مشروع متاح فرصة مناسبة لكل مستثمر. قيمة القرار تبدأ من معرفة ما إذا كان النشاط والهيكل القانوني والمتطلبات التنظيمية والعقود والالتزامات والمخاطر تتوافق فعلاً مع أهداف المستثمر وقدرته على إدارتها.\n\nدور شركة الرماح ليس دفع العميل نحو الاستثمار بل مساعدته على رؤية الصورة القانونية بوضوح كافٍ لاتخاذ قراره بثقة.",
         },
         {
-          title: "هل تعرف ما الذي تشتريه فعلاً عندما تشتري شركة؟",
-          description:
-            "شراء الأسهم لا يعني شراء الأصول والفرص فقط، بل قد يعني الدخول في تاريخ قانوني كامل من العقود والالتزامات والديون والضمانات والنزاعات والمخاطر التي نشأت قبل وصول المستثمر.\n\nلذلك لا تسأل شركة الرماح فقط عن قيمة ما سيملكه العميل بعد الصفقة، بل تبحث أيضاً عمّا قد ينتقل إليه معها من مسؤوليات.\n\nأحياناً أخطر ما تشتريه في الصفقة هو الشيء الذي لم يظهر في سعرها.",
+          question: "إذا ربحت النزاع فهل تستطيع تحصيل ما ربحت؟",
+          answer:
+            "الحكم الناجح لا يساوي دائماً نتيجة تجارية ناجحة. قيمة الحماية القانونية تبدأ قبل النزاع من دراسة الضمانات والأصول والطرف المقابل وآلية تسوية النزاع وإمكانية التنفيذ.\n\nلهذا لا نسأل فقط كيف نربح القضية بل كيف تتحول النتيجة القانونية إلى حق يمكن تنفيذه فعلاً.",
         },
         {
-          title:
-            "إذا كان القرار يحتاج توقيع شخص واحد، فلماذا قد يحتاج حماية شركة كاملة؟",
-          description:
-            "لأن توقيع المدير قد يرتب التزاماً على الشركة يمتد سنوات ويتجاوز مدة وجوده في منصبه.\n\nلهذا يجب أن تتناسب صلاحية اتخاذ القرار مع حجمه وآثاره، وأن تُحاط القرارات الجوهرية بمستويات مناسبة من الاعتماد والتوثيق.\n\nقد يستغرق التوقيع ثانية، لكن أثره قد يعيش أطول ممن وقّعه.",
+          question:
+            "لو عُرض عليك العقد نفسه اليوم ولكنك تعرف كيف ستنتهي العلاقة بعد خمس سنوات فماذا كنت ستغير فيه؟",
+          answer:
+            "هذا هو السؤال الذي نحاول الإجابة عنه قبل التوقيع. لا نستطيع معرفة المستقبل لكن يمكننا اختبار العقد أمام سيناريوهات التأخير والإخلال وتغير الملكية وتعثر التمويل والنزاع والخروج.\n\nالصياغة القانونية الذكية لا تتنبأ بالمستقبل لكنها تستعد لاحتمالاته وتضع آليات واضحة لإدارة أي تحول يطرأ على الشراكة.",
         },
         {
-          title:
-            "إذا وجدت فرصة استثمارية ممتازة في العراق، فكيف تعرف أن الوقت المناسب لدخولها هو الآن؟",
-          description:
-            "الفرصة لا تتحدد بجاذبية القطاع وحدها. توقيت الدخول يرتبط بجاهزية المستثمر والهيكل القانوني والتراخيص والعقود والتمويل والشركاء والقدرة على بدء التشغيل ضمن المسار المطلوب.\n\nتساعد شركة الرماح المستثمر على فهم المتطلبات القانونية والتنظيمية التي تسبق الدخول، حتى يكون توقيت القرار مبنياً على الجاهزية لا على جاذبية الفرصة وحدها.\n\nفالفرصة الجيدة في التوقيت الخطأ قد تصبح قراراً مكلفاً.",
+          question: "هل تعرف ما الذي تشتريه فعلاً عندما تشتري شركة؟",
+          answer:
+            "شراء الأسهم لا يعني شراء الأصول والفرص فقط بل قد يعني الدخول في تاريخ قانوني كامل من العقود والالتزامات والديون والضمانات والنزاعات والمخاطر التي نشأت قبل وصول المستثمر.\n\nلذلك لا تسأل شركة الرماح فقط عن قيمة ما سيملكه العميل بعد الصفقة بل تبحث أيضاً عما قد ينتقل إليه معها من مسؤوليات.\n\nأحياناً أخطر ما تشتريه في الصفقة هو الشيء الذي لم يظهر في سعرها.",
         },
         {
-          title:
+          question:
+            "إذا كان القرار يحتاج توقيع شخص واحد فلماذا قد يحتاج حماية شركة كاملة؟",
+          answer:
+            "لأن توقيع المدير قد يرتب التزاماً على الشركة يمتد سنوات ويتجاوز مدة وجوده في منصبه.\n\nلهذا يجب أن تتناسب صلاحية اتخاذ القرار مع حجمه وآثاره وأن تحيط القرارات الجوهرية بمستويات مناسبة من الاعتماد والتوثيق.\n\nقد يستغرق التوقيع ثانية لكن أثره قد يعيش أطول ممن وقّعه.",
+        },
+        {
+          question:
+            "هل يمكن أن تخسر فرصة ممتازة لأن شركتك لم تكن جاهزة قانونياً بالسرعة الكافية؟",
+          answer:
+            "نعم وبكل تأكيد. بعض الفرص تحتاج قراراً سريعاً وفحصاً سريعاً ومستندات وصلاحيات وهيكلاً منظماً يسمح بإتمام الصفقة دون البدء بإصلاح الشركة وتعديل أوضاعها القانونية أثناء التفاوض.\n\nالجاهزية القانونية المسبقة هي التي تحمي الفرص وتجعلها في متناول من يستحقها.",
+        },
+        {
+          question:
+            "إذا وجدت فرصة استثمارية ممتازة في العراق فكيف تعرف أن الوقت المناسب لدخولها هو الآن؟",
+          answer:
+            "الفرصة لا تتحدد بجاذبية القطاع وحدها. توقيت الدخول يرتبط بجاهزية المستثمر والهيكل القانوني والتراخيص والعقود والتمويل والشركاء والقدرة على بدء التشغيل ضمن المسار المطلوب.\n\nتساعد شركة الرماح المستثمر على فهم المتطلبات القانونية والتنظيمية التي تسبق الدخول حتى يكون توقيت القرار مبنياً على الجاهزية لا على جاذبية الفرصة وحدها.\n\nفالفرصة الجيدة في التوقيت الخطأ قد تصبح قراراً مكلفاً.",
+        },
+        {
+          question:
             "هل تعرف ما الذي سيجعل المستثمر القادم يثق بشركتك قبل أن يلتقي بك؟",
-          description:
-            "وضوح الملكية، وانتظام السجلات والعقود والتراخيص والحوكمة والبيانات القانونية، يعطي المستثمر صورة عن مستوى المؤسسة قبل أن تبدأ المفاوضات الجدية.\n\nالثقة في الأعمال لا تُبنى بالكلام وحده، بل بما تستطيع الشركة إثباته عندما تُفحص.",
+          answer:
+            "وضوح الملكية وانتظام السجلات والعقود والتراخيص والحوكمة والبيانات القانونية يعطي المستثمر صورة عن مستوى المؤسسة قبل أن تبدأ المفاوضات الجدية.\n\nالثقة في الأعمال لا تُبنى بالكلام وحده بل بما تستطيع الشركة إثباته عندما تُفحص قانونياً وإدارياً ومالياً.",
+        },
+      ],
+      practical: [
+        {
+          question:
+            "كم يستغرق تسجيل فرع شركة أجنبية في العراق وما هي المتطلبات الأساسية؟",
+          answer:
+            "تستغرق إجراءات التسجيل عادة ما بين 4 إلى 8 أسابيع، اعتماداً على اكتمال وثائق الشركة الأم وتصديقها من السفارة العراقية ووزارة الخارجية والترجمة الرسمية المعتمدة.\n\nتتضمن المتطلبات الأساسية: عقد تأسيس الشركة الأم ونظامها الداخلي، شهادة التسجيل الرسمية، الحسابات الختامية لآخر سنة مالية، وقرار مجلس الإدارة بفتح الفرع في العراق وتسمية المدير المفوض ومنحه الصلاحيات اللازمة لمراجعة دائرة تسجيل الشركات والجهات الرسمية.",
+        },
+        {
+          question:
+            "هل يُلزم القانون العراقي الشركات الأجنبية بوجود شريك محلي عراقي لممارسة الأعمال؟",
+          answer:
+            "يتيح قانون الشركات العراقي وقانون الاستثمار للشركات الأجنبية فتح فروع ومكاتب تمثيل مملوكة بالكامل 100% للشركة الأم دون الحاجة لشريك عراقي.\n\nأما في حالة تأسيس شركات مساهمة أو محدودة محلية خارج إطار قانون الاستثمار، فقد تشترط بعض القطاعات نسب مساهمة وطنية محددة.\n\nيتولى فريق الرماح توجيه المستثمر نحو الهيكل القانوني الذي يضمن له السيطرة والمرونة الكاملة وفقاً لطبيعة نشاطه.",
+        },
+        {
+          question:
+            "كيف تحمي شركتك من مخاطر التقديرات والتحاسب الضريبي المفاجئ في العراق؟",
+          answer:
+            "تبدأ الحماية الضريبية من لحظة صياغة العقود التجارية بتحديد من يتحمل الأمانات والاستقطاعات الضريبية، يتبعها انتظام مسك الدفاتر المحاسبية الرسمية وفتح الملف الضريبي وتقديم الإقرارات في مواعيدها المقررة قانوناً.\n\nمتابعة التحاسب الدوري واستخراج براءات الذمة سنوياً تحمي الشركة من التراكمات المالية والغرامات التأخيرية وقرارات التحاسب التقديري الجزافي التي تصدر في غياب توثيق منتظم.",
+        },
+        {
+          question:
+            "ما هي النسبة القانونية للعمالة المحلية المطلوبة عند تشغيل كوادر أجنبية في العراق؟",
+          answer:
+            "يحدد قانون العمل العراقي رقم 37 لسنة 2015 والتعليمات الوزارية النافذة نسبة لا تقل عن 50% من الأيدي العاملة الوطنية في المشاريع العاملة داخل العراق، وتصل في بعض قطاعات النفط والتراخيص الخاصة إلى نسب أعلى.\n\nنساعد عملاءنا على إدارة ملف تشغيل الكوادر الأجنبية واستحصال إجازات العمل الرسمية لهم مع الامتثال التام لنسب العمالة الوطنية لتفادي أي مخالفات أو عقوبات تنظيمية.",
         },
       ],
     },
