@@ -12,11 +12,6 @@ import {
 } from "@/components/ui/dialog";
 import {
   Scale,
-  BookOpen,
-  Gavel,
-  Briefcase,
-  Shield,
-  Copyright,
   Phone,
   Mail,
   ArrowRight,
@@ -32,20 +27,7 @@ import {
   Plus,
   Minus,
   MapPin,
-  Clock,
-  DollarSign,
-  Share2,
-  Copy,
-  Twitter,
-  Linkedin,
-  Check,
   MessageCircle,
-  Globe,
-  Flame,
-  Building2,
-  Plane,
-  Stethoscope,
-  FileText,
   ClipboardList,
   ClipboardCheck,
   PlayCircle,
@@ -53,29 +35,11 @@ import {
 } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { AppointmentForm } from "../thelaw/appointment-form";
-import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/lib/i18n/language-context";
+import { SERVICES } from "@/lib/data/services";
+import { ServiceCard } from "../thelaw/service-card";
 
 /* ===== Non-translatable data (icons, images, long descriptions/services for modals) ===== */
-
-const PRACTICE_AREAS_PREVIEW_COUNT = 9;
-
-const PRACTICE_AREA_ICONS = [
-  BookOpen, // Legal Consultations
-  Briefcase, // Companies & Commercial Business
-  Globe, // Foreign Investment & Cross-Border Business
-  Flame, // Oil, Gas & Energy
-  FileText, // Contracts & Commercial Deals
-  TrendingUp, // Projects & Investments
-  Gavel, // Litigation & Dispute Resolution
-  Building2, // Real Estate & Development
-  Users, // Labor & Social Security
-  Plane, // Residency, Work Permits & Visas
-  Shield, // Licensing & Regulatory Compliance
-  DollarSign, // Tax & Financial Affairs
-  Stethoscope, // Health Sector & Scientific Offices
-  Copyright, // Intellectual Property & Trademarks
-];
 
 const HOW_IT_WORKS_ICONS = [
   Send, // Submitting the assignment
@@ -767,83 +731,10 @@ function HowWeCanHelpAccordion() {
   );
 }
 
-/* ===== Practice Area Share Buttons ===== */
-function PracticeAreaShareButtons({ title }: { title: string }) {
-  const { t } = useLanguage();
-  const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      setCopied(true);
-      toast({ title: t.common.copied, description: "" });
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      toast({
-        title: "Failed to copy",
-        description: "",
-        variant: "destructive",
-      });
-    }
-  };
-
-  const handleShareTwitter = () => {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`Learn about ${title} at Alremah Company for Legal Services and Consultancy`)}&url=${encodeURIComponent(window.location.href)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
-  const handleShareLinkedIn = () => {
-    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
-  return (
-    <div className="pt-4 border-t border-border-gray dark:border-gray-700">
-      <div className="flex flex-wrap items-center gap-3">
-        <span className="text-charcoal dark:text-gray-300 font-semibold text-sm flex items-center gap-2">
-          <Share2 size={16} className="text-gold" />
-          {t.common.shareThis}
-        </span>
-        <button
-          onClick={handleCopyLink}
-          className="flex items-center gap-1.5 px-3 py-2 text-sm border border-border-gray dark:border-gray-600 rounded-md hover:border-gold hover:text-gold transition-colors text-charcoal dark:text-gray-300"
-        >
-          {copied ? (
-            <Check size={14} className="text-gold" />
-          ) : (
-            <Copy size={14} />
-          )}
-          {copied ? t.common.copied : t.common.copyLink}
-        </button>
-        <button
-          onClick={handleShareTwitter}
-          className="flex items-center gap-1.5 px-3 py-2 text-sm border border-border-gray dark:border-gray-600 rounded-md hover:border-gold hover:text-gold transition-colors text-charcoal dark:text-gray-300"
-        >
-          <Twitter size={14} />
-          Twitter
-        </button>
-        <button
-          onClick={handleShareLinkedIn}
-          className="flex items-center gap-1.5 px-3 py-2 text-sm border border-border-gray dark:border-gray-600 rounded-md hover:border-gold hover:text-gold transition-colors text-charcoal dark:text-gray-300"
-        >
-          <Linkedin size={14} />
-          LinkedIn
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export function HomePage() {
   const { t, isRTL } = useLanguage();
   const { navigate } = useRouter();
   const [caseIndex, setCaseIndex] = useState(0);
-  const [selectedPracticeAreaIndex, setSelectedPracticeAreaIndex] = useState<
-    number | null
-  >(null);
-  const [practiceAreaModalOpen, setPracticeAreaModalOpen] = useState(false);
-  const [showAllPracticeAreas, setShowAllPracticeAreas] = useState(false);
   const [heroSlide, setHeroSlide] = useState(0);
   const [typedName, setTypedName] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -906,118 +797,8 @@ export function HomePage() {
     },
   ];
 
-  const handlePracticeAreaClick = (index: number) => {
-    setSelectedPracticeAreaIndex(index);
-    setPracticeAreaModalOpen(true);
-  };
-
-  const selectedPracticeArea =
-    selectedPracticeAreaIndex !== null
-      ? t.practiceAreas.items[selectedPracticeAreaIndex]
-      : null;
-  const selectedPracticeAreaIcon =
-    selectedPracticeAreaIndex !== null
-      ? PRACTICE_AREA_ICONS[selectedPracticeAreaIndex]
-      : null;
-  const selectedPracticeAreaTitle =
-    selectedPracticeAreaIndex !== null
-      ? t.practiceAreas.items[selectedPracticeAreaIndex].title
-      : "";
-  const selectedPracticeAreaDesc =
-    selectedPracticeAreaIndex !== null
-      ? t.practiceAreas.items[selectedPracticeAreaIndex].desc
-      : "";
-  const SelectedPracticeAreaIcon = selectedPracticeAreaIcon;
-
   return (
     <div className="overflow-x-hidden max-w-full">
-      {/* Practice Area Detail Modal */}
-      <Dialog
-        open={practiceAreaModalOpen}
-        onOpenChange={setPracticeAreaModalOpen}
-      >
-        <DialogContent className="sm:max-w-2xl bg-white dark:bg-charcoal-dark border-gold/20 max-h-[90vh] overflow-y-auto">
-          <DialogTitle className="sr-only">
-            {selectedPracticeAreaTitle} - Practice Area Details
-          </DialogTitle>
-          <DialogDescription className="sr-only">
-            {selectedPracticeAreaDesc}
-          </DialogDescription>
-
-          {selectedPracticeArea && SelectedPracticeAreaIcon && (
-            <div className="space-y-6">
-              {/* Icon and Title */}
-              <div className="flex items-center gap-4 pb-4 border-b border-border-gray dark:border-gray-700">
-                <div className="w-16 h-16 flex items-center justify-center bg-gold/10 text-gold shrink-0">
-                  <SelectedPracticeAreaIcon size={32} strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h2
-                    className="text-2xl font-bold text-charcoal dark:text-white"
-                    style={{ fontFamily: "var(--font-playfair), serif" }}
-                  >
-                    {selectedPracticeAreaTitle}
-                  </h2>
-                  <p className="text-gold text-sm uppercase tracking-wider font-semibold">
-                    {selectedPracticeAreaDesc}
-                  </p>
-                </div>
-              </div>
-
-              {/* Description */}
-              <div>
-                <p className="text-medium-gray dark:text-gray-300 leading-relaxed text-sm">
-                  {selectedPracticeArea.fullDescription}
-                </p>
-              </div>
-
-              {/* Key Services */}
-              {selectedPracticeArea.services &&
-                selectedPracticeArea.services.length > 0 && (
-                  <div>
-                    <h3
-                      className="text-lg font-bold text-charcoal dark:text-white mb-4"
-                      style={{ fontFamily: "var(--font-playfair), serif" }}
-                    >
-                      Key Services
-                    </h3>
-                    <div className="space-y-2.5">
-                      {selectedPracticeArea.services.map((service) => (
-                        <div key={service} className="flex items-center gap-3">
-                          <CheckCircle
-                            size={18}
-                            className="text-gold shrink-0"
-                          />
-                          <span className="text-charcoal dark:text-gray-300 text-sm">
-                            {service}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-              {/* Share Buttons */}
-              <PracticeAreaShareButtons title={selectedPracticeAreaTitle} />
-
-              {/* CTA Button */}
-              <div className="pt-4 border-t border-border-gray dark:border-gray-700">
-                <button
-                  onClick={() => {
-                    setPracticeAreaModalOpen(false);
-                    navigate("contact");
-                  }}
-                  className="w-full btn-ripple btn-primary-hover bg-gold text-charcoal px-6 py-3.5 font-semibold uppercase text-sm tracking-wider hover:bg-gold-dark transition-all flex items-center justify-center gap-2"
-                >
-                  <Phone size={16} />
-                  {t.common.contactUs}
-                </button>
-              </div>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
-
       {/* Hero Section */}
       <section className="relative min-h-[500px] md:min-h-[600px] lg:min-h-[700px] bg-charcoal overflow-hidden max-w-full">
         {/* Background image with dark overlay - parallax-like effect */}
@@ -1262,70 +1043,31 @@ export function HomePage() {
         </svg>
       </div>
 
-      {/* Practice Areas Section */}
+      {/* Services Section — all 17 approved legal services */}
       <section className="py-12 md:py-16 lg:py-20 bg-white dark:bg-charcoal-dark transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
           <AnimatedSection>
             <SectionTitle
-              title={t.practiceAreas.title}
-              subtitle={t.practiceAreas.subtitle}
+              title={t.servicesHub.title}
+              subtitle={t.servicesHub.eyebrow}
             />
-            {t.practiceAreas.intro && (
+            {t.servicesHub.intro && (
               <p className="text-medium-gray dark:text-gray-400 leading-relaxed text-base max-w-3xl mx-auto text-center mb-10 -mt-6">
-                {t.practiceAreas.intro}
+                {t.servicesHub.intro}
               </p>
             )}
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {(showAllPracticeAreas
-              ? t.practiceAreas.items
-              : t.practiceAreas.items.slice(0, PRACTICE_AREAS_PREVIEW_COUNT)
-            ).map((area, index) => {
-              const Icon = PRACTICE_AREA_ICONS[index] ?? Scale;
-
-              return (
-                <AnimatedSection
-                  key={index}
-                  delay={(index % PRACTICE_AREAS_PREVIEW_COUNT) * 100}
-                  className="h-full"
-                >
-                  <div className="practice-card hover-gold-shadow flex h-full items-start gap-3 md:gap-4 p-5 md:p-6 rounded-lg bg-white dark:bg-charcoal border border-border-gray dark:border-gray-700 shadow-sm hover:shadow-md group relative overflow-hidden hover:border-t-2 hover:border-t-gold hover:scale-[1.02] transition-all duration-300">
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="shrink-0 w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-gold/10 dark:bg-gold/5 text-gold group-hover:bg-gold group-hover:text-white transition-all group-hover:rotate-6 duration-300 rounded-lg">
-                      <Icon
-                        size={24}
-                        strokeWidth={1.5}
-                        className="md:w-[32px] md:h-[32px]"
-                      />
-                    </div>
-                    <div className="relative z-10 flex-1">
-                      <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1 group-hover:text-gold transition-colors">
-                        {area.title}
-                      </h3>
-                      <p className="text-medium-gray dark:text-gray-300 text-sm">
-                        {area.desc}
-                      </p>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              );
-            })}
+            {SERVICES.map((service, index) => (
+              <AnimatedSection
+                key={service.id}
+                delay={(index % 9) * 70}
+                className="h-full"
+              >
+                <ServiceCard service={service} />
+              </AnimatedSection>
+            ))}
           </div>
-          {t.practiceAreas.items.length > PRACTICE_AREAS_PREVIEW_COUNT && (
-            <AnimatedSection>
-              <div className="text-center mt-10">
-                <button
-                  onClick={() => setShowAllPracticeAreas((prev) => !prev)}
-                  className="btn-ripple btn-primary-hover border-2 border-gold text-gold px-8 py-3 font-semibold uppercase text-sm tracking-wider hover:bg-gold hover:text-charcoal transition-all"
-                >
-                  {showAllPracticeAreas
-                    ? t.practiceAreas.showLess
-                    : t.practiceAreas.showMore}
-                </button>
-              </div>
-            </AnimatedSection>
-          )}
         </div>
       </section>
 

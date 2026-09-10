@@ -713,6 +713,22 @@ export const translations = {
         email: "al-remahLawfirm@outlook.com",
       },
     },
+    // Services Hub (Home service cards + Practice Areas detailed hub)
+    servicesHub: {
+      eyebrow: "Our Services",
+      title: "Complete Legal Services",
+      intro:
+        "A full picture of our practice — 17 specialized legal services covering the needs of individuals, companies, and investors in Iraq. Select any service to view its full details.",
+      viewFullDetails: "View Full Details →",
+      sidebarTitle: "All Services",
+      sidebarAriaLabel: "Services navigation",
+      mobileSelectorLabel: "Browse Services",
+      mobileSelectorHint: "Tap to choose a different service",
+      ctaTitle: "Need Legal Assistance?",
+      ctaDescription:
+        "Speak with our team for a consultation tailored to this service.",
+      ctaButton: "Request a Legal Consultation",
+    },
     // Foreign Entities Registration Page
     foreignEntitiesPage: {
       hero: {
@@ -1780,6 +1796,21 @@ export const translations = {
         phone: "+964 774 646 4606",
         email: "al-remahLawfirm@outlook.com",
       },
+    },
+    // مركز الخدمات القانونية (بطاقات الرئيسية + صفحة مجالات الممارسة التفصيلية)
+    servicesHub: {
+      eyebrow: "خدماتنا",
+      title: "خدماتنا القانونية الكاملة",
+      intro:
+        "صورة كاملة عن ممارستنا القانونية - 17 خدمة قانونية متخصصة تغطي احتياجات الأفراد والشركات والمستثمرين في العراق. اختر أي خدمة لعرض تفاصيلها الكاملة.",
+      viewFullDetails: "عرض التفاصيل الكاملة ←",
+      sidebarTitle: "جميع الخدمات",
+      sidebarAriaLabel: "التنقل بين الخدمات",
+      mobileSelectorLabel: "تصفح الخدمات",
+      mobileSelectorHint: "اضغط لاختيار خدمة أخرى",
+      ctaTitle: "هل تحتاج إلى مساعدة قانونية؟",
+      ctaDescription: "تواصل مع فريقنا للحصول على استشارة تتناسب مع هذه الخدمة.",
+      ctaButton: "طلب استشارة قانونية",
     },
     // صفحة تسجيل الشركات والمنظمات الأجنبية
     foreignEntitiesPage: {
