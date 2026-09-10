@@ -19,6 +19,7 @@ export const translations = {
       home: "Home",
       about: "About Us",
       practiceAreas: "Practice Areas",
+      foreignEntities: "Foreign Entities Registration",
       faq: "FAQ",
       blog: "Blog",
       contact: "Contact",
@@ -712,6 +713,67 @@ export const translations = {
         email: "al-remahLawfirm@outlook.com",
       },
     },
+    // Foreign Entities Registration Page
+    foreignEntitiesPage: {
+      hero: {
+        title: "Foreign Entities Registration",
+        subtitle:
+          "A dedicated legal practice for foreign companies, investors, and non-governmental organizations entering the Iraqi market.",
+        breadcrumb: { home: "Home", current: "Foreign Entities Registration" },
+      },
+      sections: [
+        {
+          title: "Registering and Managing Foreign Company Branches in Iraq",
+          imageAlt: "International corporate office towers representing foreign company branches in Iraq",
+          paragraphs: [
+            "We serve as a legal partner to foreign companies seeking to establish their presence and conduct business in Iraq, providing comprehensive legal management that begins at the market-entry planning stage and extends through branch registration, commencement of activity, and management of its legal and regulatory requirements throughout its operation.",
+            "We begin by understanding the nature of the company's business, its activities, and the sector it targets, and determine the legal and regulatory requirements necessary for its presence in Iraq. We then prepare and review the branch registration file, examine the parent company's documents, complete authentication, translation, and deposit requirements, and follow up the registration procedures before the Companies Registrar and the competent authorities until the branch's legal existence is established and it commences its operations.",
+            "Our role extends to building the legal environment necessary for operating the branch after registration, through completing tax registrations, labor and social security requirements, sector licenses and approvals, organizing the affairs of employees and foreign staff, and following up residency, work permits, entry visas, and other requirements linked to the nature of the company's activity.",
+            "We also organize the legal and administrative relationship between the branch and the parent company, prepare the powers of attorney, delegations, authorizations, resolutions, and correspondence required, and provide legal support to local management in its daily business, decisions, transactions, and relationships with government authorities, clients, contractors, suppliers, and service providers.",
+            "For companies operating in regulated sectors and government and investment projects, we handle their registration and qualification and follow up their requirements before ministries, authorities, state companies, and the competent sectoral bodies, and complete the approvals, classifications, and registrations required by the nature of their activity to participate in projects and tenders and conduct business in Iraq.",
+            "Our relationship with the company does not end upon issuance of the branch's registration documents. We continue to manage its legal and regulatory affairs, follow up renewals, changes, licenses, and periodic obligations, represent it before official, regulatory, and judicial authorities, and address the legal matters that accompany its activity and growth in the market.",
+          ],
+        },
+        {
+          title: "Establishment and Registration of Foreign and Local Non-Governmental Organizations (NGOs)",
+          imageAlt: "International team in an organizational meeting representing NGO establishment and governance",
+          paragraphs: [
+            "We provide national and foreign non-governmental organizations with a comprehensive legal framework for establishing their presence and managing their operations in Iraq, beginning with the registration stage and building their organizational structure, through to providing ongoing legal management that keeps pace with their activities, programs, and relationships with official authorities and related parties.",
+            "We prepare and complete the organization's registration file and draft its bylaws to reflect the nature of its objectives and scope of work, organizing its administrative structure, the powers of its bodies, and its decision-making, management, and representation mechanisms, while preparing the required documents and legal requirements and following up registration procedures before the NGO Directorate and the competent authorities until the legal status necessary to commence activity is established.",
+            "We also provide solutions related to the organization's legal headquarters requirements and organize the contractual and procedural basis for it in line with registration requirements and the conduct of activity.",
+            "For foreign and international non-governmental organizations, we provide dedicated legal support to organize their presence in Iraq and complete their registration procedures, approvals, and regulatory requirements, and follow up their dealings with government authorities in a way that helps them carry out their programs and activities within a clear legal framework.",
+            "Our role extends beyond registration through providing comprehensive legal management for the organization, including governance of its operations, organizing the decisions and minutes of its administrative bodies, drafting and reviewing contracts, agreements, and memoranda of understanding, managing employment relations and staff affairs, reviewing legal and regulatory obligations, and following up tax and social security requirements, in addition to residency, work permits, and entry visas for foreign staff.",
+          ],
+        },
+        {
+          title: "Foreign Commercial Agencies and Entry into the Iraqi Market",
+          imageAlt: "International shipping and trade port representing foreign commercial agencies",
+          paragraphs: [
+            "We serve as a legal partner to foreign companies wishing to enter the Iraqi market and market their products or provide their services through commercial agencies, providing them with the legal and regulatory framework necessary to build an organized and stable commercial presence in Iraq.",
+            "We begin by studying the nature of the company's business and the products or services it intends to introduce to the Iraqi market, determine the legal and regulatory requirements related to its activity, and organize the relationship between it and its Iraqi commercial agent in a manner consistent with its business and market strategy.",
+            "We draft and review commercial agency contracts and organize their scope, term, and the resulting rights and obligations, marketing, distribution, and service-provision mechanisms, trademark and confidentiality protection, guarantees, and cases of breach and termination, providing the foreign company with a clear contractual framework that protects its interests and organizes its relationship with its agent in Iraq.",
+            "We also complete the commercial agency registration procedures, prepare and review foreign documents, follow up authentication, translation, and registration requirements, and obtain the necessary approvals before the Companies Registration Directorate and the competent authorities, up to completing the legal requirements for conducting agency business in Iraq.",
+            "We also protect the foreign company's commercial interests and its rights related to trademarks, products, and distribution and representation rights, and review changes to the agency relationship, addressing cases of amendment, renewal, or termination and the legal and commercial effects that follow.",
+          ],
+        },
+        {
+          title: "Residency, Work Permits, and Entry Visas for Foreign Personnel",
+          imageAlt: "Traveler waiting at an airport representing residency and work-visa services for foreign personnel",
+          paragraphs: [
+            "We provide companies, investors, and foreign personnel in Iraq with comprehensive legal management of residency, work, and entry-visa requirements, ensuring that the presence of foreign employees and the conduct of their work are organized in accordance with the legal frameworks and procedures adopted by the competent authorities.",
+            "We manage the file from the stage of the foreign staff member's entry into Iraq, determining the requirements and procedures appropriate to the nature of the visit or work, following up on obtaining entry visas and the necessary approvals, completing residency procedures and their renewal, and organizing the legal status of foreign nationals throughout their presence in Iraq.",
+            "We also handle procedures for obtaining and renewing work permits for foreign employees, following up the requirements, approvals, and correspondence related to them before the Ministry of Labor and Social Affairs and the relevant sectoral and regulatory bodies, and addressing the legal and procedural matters that may arise during the term of employment.",
+            "For foreign companies and projects that rely on international personnel, we provide ongoing management of foreign employees' files, including organizing and following up residency and work-permit dates, entry visas, renewals, and legal requirements for each employee, helping companies ensure the continuity of their staff's work and avoid delays or violations related to their legal status.",
+          ],
+        },
+      ],
+      cta: {
+        title: "Considering Entering the Iraqi Market?",
+        description:
+          "Speak with our legal team about registering your branch, organization, or commercial agency in Iraq.",
+        button: "Request Legal Consultation",
+      },
+    },
     // FAQ Page
     faqPage: {
       hero: {
@@ -1072,6 +1134,7 @@ export const translations = {
       home: "الرئيسية",
       about: "من نحن",
       practiceAreas: "مجالات الممارسة",
+      foreignEntities: "تسجيل الشركات والمنظمات الأجنبية",
       faq: "الأسئلة الشائعة",
       blog: "المدونة",
       contact: "اتصل بنا",
@@ -1716,6 +1779,67 @@ export const translations = {
         address: "الكرادة عرصات الهدية",
         phone: "+964 774 646 4606",
         email: "al-remahLawfirm@outlook.com",
+      },
+    },
+    // صفحة تسجيل الشركات والمنظمات الأجنبية
+    foreignEntitiesPage: {
+      hero: {
+        title: "تسجيل الشركات والمنظمات الأجنبية",
+        subtitle:
+          "ممارسة قانونية متخصصة للشركات والمستثمرين والمنظمات غير الحكومية الأجنبية الراغبة بدخول السوق العراقي.",
+        breadcrumb: { home: "الرئيسية", current: "تسجيل الشركات والمنظمات الأجنبية" },
+      },
+      sections: [
+        {
+          title: "تسجيل وإدارة فروع الشركات الأجنبية في العراق",
+          imageAlt: "أبراج مكاتب تجارية دولية ترمز إلى فروع الشركات الأجنبية في العراق",
+          paragraphs: [
+            "نعمل كشريك قانوني للشركات الأجنبية الراغبة في تأسيس حضورها وممارسة أعمالها في العراق ونوفر لها إدارة قانونية متكاملة تبدأ منذ مرحلة التخطيط لدخول السوق وتمتد إلى تسجيل الفرع ومباشرة نشاطه وإدارة متطلباته القانونية والتنظيمية طوال فترة عمله.",
+            "نبدأ بفهم طبيعة أعمال الشركة ونشاطها والقطاع الذي تستهدفه ونحدد المتطلبات القانونية والتنظيمية اللازمة لوجودها في العراق ثم نتولى إعداد وتدقيق ملف تسجيل الفرع ومراجعة وثائق الشركة الأم واستكمال متطلبات التصديق والترجمة والإيداع ومتابعة إجراءات التسجيل أمام مسجل الشركات والجهات المختصة حتى استكمال الوجود القانوني للفرع ومباشرة أعماله.",
+            "ويمتد دورنا إلى بناء البيئة القانونية اللازمة لتشغيل الفرع بعد التسجيل من خلال استكمال التسجيلات الضريبية ومتطلبات العمل والضمان الاجتماعي والتراخيص والموافقات القطاعية وتنظيم شؤون العاملين والكوادر الأجنبية ومتابعة الإقامة وإجازات العمل وسمات الدخول وغيرها من المتطلبات المرتبطة بطبيعة نشاط الشركة.",
+            "كما نتولى تنظيم العلاقة القانونية والإدارية بين الفرع والشركة الأم وإعداد الوكالات والتفويضات والصلاحيات والقرارات والمخاطبات اللازمة ونقدم الدعم القانوني للإدارة المحلية في أعمالها اليومية وقراراتها ومعاملاتها وعلاقاتها مع الجهات الحكومية والعملاء والمقاولين والمجهزين ومقدمي الخدمات.",
+            "وبالنسبة إلى الشركات العاملة في القطاعات المنظمة والمشاريع الحكومية والاستثمارية نتولى تسجيلها وتأهيلها ومتابعة متطلباتها أمام الوزارات والهيئات والشركات العامة والجهات القطاعية المختصة واستكمال ما تتطلبه طبيعة نشاطها من موافقات وتصنيفات وتسجيلات لازمة للمشاركة في المشاريع والمناقصات وممارسة الأعمال في العراق.",
+            "ولا تنتهي علاقتنا بالشركة عند إصدار وثائق تسجيل الفرع بل نستمر في إدارة شؤونه القانونية والتنظيمية ومتابعة التجديدات والتغييرات والتراخيص والالتزامات الدورية وتمثيله أمام الجهات الرسمية والتنظيمية والقضائية ومعالجة المسائل القانونية التي ترافق نشاطه وتطوره في السوق.",
+          ],
+        },
+        {
+          title: "تأسيس وتسجيل المنظمات غير الحكومية (NGOs) الأجنبية والمحلية",
+          imageAlt: "فريق دولي في اجتماع تنظيمي يرمز إلى تأسيس وحوكمة المنظمات غير الحكومية",
+          paragraphs: [
+            "نقدم للمنظمات غير الحكومية الوطنية والأجنبية إطاراً قانونياً متكاملاً لتأسيس وجودها وإدارة أعمالها في العراق بدءاً من مرحلة التسجيل وبناء هيكلها التنظيمي وصولاً إلى توفير إدارة قانونية مستمرة تواكب نشاطها وبرامجها وعلاقاتها مع الجهات الرسمية والأطراف ذات العلاقة.",
+            "نتولى إعداد واستكمال ملف تسجيل المنظمة وصياغة نظامها الداخلي بما يعكس طبيعة أهدافها ونطاق عملها وينظم هيكلها الإداري وصلاحيات هيئاتها وآليات اتخاذ القرار والإدارة والتمثيل مع إعداد الوثائق والمتطلبات القانونية ومتابعة إجراءات التسجيل أمام دائرة المنظمات غير الحكومية والجهات المختصة حتى استكمال المركز القانوني اللازم لمباشرة النشاط.",
+            "كما نوفر الحلول المتعلقة بمتطلبات المقر القانوني للمنظمة وننظم الأساس التعاقدي والإجرائي الخاص به بما يتوافق مع متطلبات التسجيل وممارسة النشاط.",
+            "وبالنسبة إلى المنظمات غير الحكومية الأجنبية والدولية نوفر دعماً قانونياً مخصصاً لتنظيم وجودها في العراق واستكمال إجراءات تسجيلها وموافقاتها ومتطلباتها التنظيمية ومتابعة تعاملاتها مع الجهات الحكومية بما يساعدها على ممارسة برامجها وأنشطتها ضمن إطار قانوني واضح.",
+            "ويمتد دورنا إلى ما بعد التسجيل من خلال تولي الإدارة القانونية الكاملة للمنظمة بما يشمل حوكمة أعمالها وتنظيم قرارات ومحاضر هيئاتها الإدارية وصياغة ومراجعة العقود والاتفاقيات ومذكرات التفاهم وإدارة علاقات العمل وشؤون الموظفين ومراجعة الالتزامات القانونية والتنظيمية ومتابعة متطلبات الضرائب والضمان الاجتماعي إلى جانب الإقامة وإجازات العمل وسمات الدخول للكوادر الأجنبية.",
+          ],
+        },
+        {
+          title: "الوكالات التجارية الأجنبية ودخول السوق العراقي",
+          imageAlt: "ميناء شحن وتجارة دولية يرمز إلى الوكالات التجارية الأجنبية",
+          paragraphs: [
+            "نعمل كشريك قانوني للشركات الأجنبية الراغبة في دخول السوق العراقي وتسويق منتجاتها أو تقديم خدماتها من خلال الوكالات التجارية ونوفر لها الإطار القانوني والتنظيمي اللازم لبناء حضور تجاري منظم ومستقر في العراق.",
+            "نبدأ بدراسة طبيعة أعمال الشركة والمنتجات أو الخدمات التي تعتزم طرحها في السوق العراقي ونحدد المتطلبات القانونية والتنظيمية المرتبطة بنشاطها وننظم العلاقة بينها وبين الوكيل التجاري العراقي بما يتلاءم مع طبيعة أعمالها واستراتيجيتها في السوق.",
+            "ونتولى صياغة ومراجعة عقود الوكالة التجارية وتنظيم نطاقها ومدتها والحقوق والالتزامات المترتبة عليها وآليات التسويق والتوزيع وتقديم الخدمات وحماية العلامة التجارية والسرية والضمانات وحالات الإخلال والإنهاء بما يوفر للشركة الأجنبية إطاراً تعاقدياً واضحاً يحمي مصالحها وينظم علاقتها مع وكيلها في العراق.",
+            "كما نتولى استكمال إجراءات تسجيل الوكالة التجارية وإعداد وتدقيق الوثائق والمستندات الأجنبية ومتابعة متطلبات التصديق والترجمة والتسجيل والحصول على الموافقات اللازمة أمام دائرة تسجيل الشركات والجهات المختصة وصولاً إلى استكمال المتطلبات القانونية لممارسة أعمال الوكالة في العراق.",
+            "كما نتولى حماية المصالح التجارية للشركة الأجنبية وحقوقها المتعلقة بالعلامات التجارية والمنتجات وحقوق التوزيع والتمثيل ومراجعة التغييرات التي تطرأ على علاقة الوكالة ومعالجة حالات تعديلها أو تجديدها أو إنهائها وما يترتب عليها من آثار قانونية وتجارية.",
+          ],
+        },
+        {
+          title: "الإقامة وإجازات العمل وسمات الدخول للكوادر الأجنبية",
+          imageAlt: "مسافر ينتظر في مطار يرمز إلى خدمات الإقامة وإجازات العمل للكوادر الأجنبية",
+          paragraphs: [
+            "نقدم للشركات والمستثمرين والكوادر الأجنبية في العراق إدارة قانونية متكاملة لمتطلبات الإقامة والعمل وسمات الدخول بما يضمن تنظيم وجود العاملين الأجانب وممارسة أعمالهم وفق الأطر القانونية والإجراءات المعتمدة لدى الجهات المختصة.",
+            "نتولى إدارة الملف منذ مرحلة دخول الكادر الأجنبي إلى العراق من خلال تحديد المتطلبات والإجراءات المناسبة لطبيعة الزيارة أو العمل ومتابعة استحصال سمات الدخول والموافقات اللازمة واستكمال إجراءات الإقامة وتجديدها وتنظيم الوضع القانوني للأجانب طوال مدة وجودهم في العراق.",
+            "كما نتولى إجراءات استحصال وتجديد إجازات العمل للعاملين الأجانب ومتابعة المتطلبات والموافقات والمخاطبات المرتبطة بها أمام وزارة العمل والشؤون الاجتماعية والجهات القطاعية والتنظيمية ذات العلاقة مع معالجة المسائل القانونية والإجرائية التي قد تطرأ خلال مدة العمل.",
+            "وبالنسبة إلى الشركات الأجنبية والمشاريع التي تعتمد على كوادر دولية نوفر إدارة مستمرة لملفات العاملين الأجانب تشمل تنظيم ومتابعة مواعيد الإقامات وإجازات العمل وسمات الدخول والتجديدات والمتطلبات القانونية لكل موظف بما يساعد الشركات على ضمان استمرارية عمل كوادرها وتجنب التأخير أو المخالفات المرتبطة بوضعهم القانوني.",
+          ],
+        },
+      ],
+      cta: {
+        title: "هل تخطط لدخول السوق العراقي؟",
+        description:
+          "تواصل مع فريقنا القانوني بخصوص تسجيل فرعك أو منظمتك أو وكالتك التجارية في العراق.",
+        button: "طلب استشارة قانونية",
       },
     },
     // FAQ Page

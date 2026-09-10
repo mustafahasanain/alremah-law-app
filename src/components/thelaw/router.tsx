@@ -53,12 +53,25 @@ export function RouterProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const navigate = useCallback((page: PageName) => {
+    // The hash-routed SPA only lives at "/". When this is called from a real
+    // App Router route (e.g. /foreign-entities-registration), setting the
+    // hash alone would produce a broken URL like
+    // "/foreign-entities-registration#about". Do a real navigation back to
+    // the SPA instead.
+    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+      window.location.href = page === 'home' ? '/' : `/#${page}`;
+      return;
+    }
     setCurrentPage(page);
     window.location.hash = page;
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
   const navigateToSection = useCallback((page: PageName, sectionId: string) => {
+    if (typeof window !== 'undefined' && window.location.pathname !== '/') {
+      window.location.href = `/?section=${sectionId}#${page}`;
+      return;
+    }
     setCurrentPage(page);
     window.location.hash = page;
     scrollToSection(sectionId);
@@ -67,6 +80,21 @@ export function RouterProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (initialized.current) return;
     initialized.current = true;
+
+    // Consume a pending "?section=" left by navigateToSection() when it had
+    // to bounce back here from a real App Router route.
+    const params = new URLSearchParams(window.location.search);
+    const pendingSection = params.get('section');
+    if (pendingSection) {
+      scrollToSection(pendingSection);
+      params.delete('section');
+      const cleanSearch = params.toString();
+      window.history.replaceState(
+        null,
+        '',
+        `${window.location.pathname}${cleanSearch ? `?${cleanSearch}` : ''}${window.location.hash}`
+      );
+    }
 
     const handleHashChange = () => {
       const newHash = window.location.hash.replace('#', '') as PageName;

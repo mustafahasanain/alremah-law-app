@@ -2,26 +2,42 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useRouter, type PageName } from './router';
 import { useLanguage } from '@/lib/i18n/language-context';
-import { Menu, X, Phone, Mail, Facebook } from 'lucide-react';
+import { Menu, X, Phone, Mail, Instagram } from 'lucide-react';
 import { ThemeToggle } from './theme-toggle';
 import { LanguageSwitcher } from './language-switcher';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/remah.lawfirm';
+const FOREIGN_ENTITIES_PATH = '/foreign-entities-registration';
+
+type NavItem =
+  | { kind: "page"; label: string; page: PageName }
+  | { kind: "link"; label: string; href: string };
 
 export function Header() {
   const { currentPage, navigate, navigateToSection } = useRouter();
   const { t, isRTL } = useLanguage();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const NAV_ITEMS: { label: string; page: PageName }[] = [
-    { label: t.header.home, page: 'home' },
-    { label: t.header.about, page: 'about' },
-    { label: t.header.practiceAreas, page: 'practice-areas' },
-    { label: t.header.faq, page: 'faq' },
-    { label: t.header.contact, page: 'contact' },
+  const NAV_ITEMS: NavItem[] = [
+    { kind: 'page', label: t.header.home, page: 'home' },
+    { kind: 'page', label: t.header.about, page: 'about' },
+    { kind: 'page', label: t.header.practiceAreas, page: 'practice-areas' },
+    { kind: 'link', label: t.header.foreignEntities, href: FOREIGN_ENTITIES_PATH },
+    { kind: 'page', label: t.header.faq, page: 'faq' },
+    { kind: 'page', label: t.header.contact, page: 'contact' },
   ];
+
+  const isItemActive = (item: NavItem) =>
+    item.kind === 'link'
+      ? pathname === item.href
+      : currentPage === item.page && pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +85,7 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-2">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-                <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={14} /></a>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer noopener" title="Instagram" className="text-gold hover:text-gold-light transition-colors"><Instagram size={14} /></a>
               <a href="mailto:al-remahLawfirm@outlook.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={14} /></a>
             </div>
             <span className="text-gray-400">|</span>
@@ -107,19 +123,26 @@ export function Header() {
 
           {/* Desktop Nav - hidden on mobile/tablet, shown on lg+ */}
           <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.page}
-                onClick={() => handleNavigate(item.page)}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  currentPage === item.page
-                    ? 'text-gold'
-                    : 'text-[#333333] dark:text-gray-300 hover:text-gold'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const className = `px-3 py-2 text-sm font-medium transition-colors ${
+                isItemActive(item)
+                  ? 'text-gold'
+                  : 'text-[#333333] dark:text-gray-300 hover:text-gold'
+              }`;
+              return item.kind === 'link' ? (
+                <Link key={item.href} href={item.href} className={className}>
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.page}
+                  onClick={() => handleNavigate(item.page)}
+                  className={className}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
             <LanguageSwitcher />
             <ThemeToggle />
           </nav>
@@ -168,13 +191,13 @@ export function Header() {
           }`}
         >
           {/* Menu header */}
-          <div className="flex items-center justify-between px-5 py-4 border-b border-border-gray dark:border-gray-700">
-            <span className="text-lg font-semibold text-charcoal dark:text-white tracking-wider" style={{ fontFamily: isRTL ? 'var(--font-arabic), sans-serif' : 'var(--font-playfair), serif' }}>
+          <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-border-gray dark:border-gray-700">
+            <span className="min-w-0 flex-1 break-words text-base font-semibold leading-snug text-charcoal dark:text-white" style={{ fontFamily: isRTL ? 'var(--font-arabic), sans-serif' : 'var(--font-playfair), serif' }}>
               {t.header.logo}
             </span>
             <button
               onClick={closeMobileMenu}
-              className="p-2 text-charcoal dark:text-white hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md hover:bg-light-gray dark:hover:bg-charcoal"
+              className="p-2 text-charcoal dark:text-white hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md hover:bg-light-gray dark:hover:bg-charcoal shrink-0"
               aria-label="Close menu"
             >
               <X size={22} />
@@ -184,7 +207,7 @@ export function Header() {
           {/* Contact info */}
           <div className="px-5 py-3 border-b border-border-gray dark:border-gray-700 bg-light-gray/50 dark:bg-charcoal/30">
             <div className="flex items-center gap-3 py-1.5">
-                <a href="https://www.facebook.com/share/1BNoDoR5sC/?mibextid=wwXIfr" target="_blank" rel="noreferrer noopener" className="text-gold hover:text-gold-light transition-colors"><Facebook size={15} /></a>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer noopener" title="Instagram" className="text-gold hover:text-gold-light transition-colors"><Instagram size={15} /></a>
               <a href="mailto:al-remahLawfirm@outlook.com" className="text-gold hover:text-gold-light transition-colors"><Mail size={15} /></a>
             </div>
             <a href="tel:+964 774 646 4606" className="flex items-center gap-2 text-sm text-charcoal dark:text-gray-300 py-1.5">
@@ -197,17 +220,24 @@ export function Header() {
 
           {/* Navigation links */}
           <nav className="px-5 py-3 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 240px)' }}>
-            {NAV_ITEMS.map((item) => (
-              <button
-                key={item.page}
-                onClick={() => handleNavigate(item.page)}
-                className={`flex w-full items-center py-3 min-h-[44px] text-sm font-medium border-b border-border-gray dark:border-gray-700 ${
-                  currentPage === item.page ? 'text-gold' : 'text-[#333333] dark:text-gray-300'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const className = `flex w-full items-center py-3 min-h-[44px] text-sm font-medium border-b border-border-gray dark:border-gray-700 ${
+                isItemActive(item) ? 'text-gold' : 'text-[#333333] dark:text-gray-300'
+              }`;
+              return item.kind === 'link' ? (
+                <Link key={item.href} href={item.href} className={className} onClick={closeMobileMenu}>
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.page}
+                  onClick={() => handleNavigate(item.page)}
+                  className={className}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </nav>
 
           {/* CTA button */}
