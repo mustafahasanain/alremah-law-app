@@ -122,3 +122,38 @@ export function getFrappeAssetUrl(path: string | null | undefined): string | nul
   const { url } = getFrappeEnv();
   return `${url}${path.startsWith('/') ? '' : '/'}${path}`;
 }
+
+/**
+ * Resolve a Frappe-stored asset path into a same-origin URL served via
+ * `/api/blog-image`, instead of an absolute Frappe URL.
+ *
+ * FRAPPE_URL is plain HTTP only (no TLS), and the site itself is served
+ * over HTTPS, so a browser blocks a direct `http://FRAPPE_URL/files/...`
+ * `<img>` as mixed content. Routing through our own HTTPS origin avoids
+ * that entirely. Only Frappe's public "/files/" path is supported — see
+ * the route for why.
+ *
+ * - null/empty -> null
+ * - absolute Frappe URL -> its pathname is extracted and proxied
+ * - relative ("/files/...") -> proxied as-is
+ */
+export function getFrappeAssetProxyUrl(path: string | null | undefined): string | null {
+  if (!path) return null;
+
+  let pathname = path;
+  if (/^https?:\/\//i.test(path)) {
+    try {
+      pathname = new URL(path).pathname;
+    } catch {
+      return null;
+    }
+  }
+
+  if (!pathname.startsWith('/files/')) {
+    // Not a proxyable asset path (e.g. some other absolute URL) — fall
+    // back to the original value rather than silently dropping it.
+    return path;
+  }
+
+  return `/api/blog-image?path=${encodeURIComponent(pathname)}`;
+}

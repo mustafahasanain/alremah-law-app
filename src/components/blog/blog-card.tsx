@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Clock, FolderOpen } from 'lucide-react';
 import type { BlogPost } from '@/lib/frappe/types';
-import { getFrappeAssetUrl } from '@/lib/frappe/client';
+import { getFrappeAssetProxyUrl } from '@/lib/frappe/client';
 import { formatBlogDate } from '@/lib/blog/format-date';
 
 /**
@@ -12,7 +12,7 @@ import { formatBlogDate } from '@/lib/blog/format-date';
  * see the note in src/app/blog/[slug]/page.tsx for why.
  */
 export function BlogCard({ post }: { post: BlogPost }) {
-  const imageUrl = getFrappeAssetUrl(post.meta_image);
+  const imageUrl = getFrappeAssetProxyUrl(post.meta_image);
   const publishedDate = formatBlogDate(post.published_on);
 
   return (

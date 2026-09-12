@@ -1,6 +1,7 @@
 import 'server-only';
 
 import sanitizeHtml from 'sanitize-html';
+import { getFrappeAssetProxyUrl } from '@/lib/frappe/client';
 
 /**
  * Sanitizes Blog Post HTML content (Rich Text / HTML content types) before
@@ -85,6 +86,19 @@ export function sanitizeBlogHtml(rawHtml: string): string {
     // used for a reverse-tabnabbing attack.
     transformTags: {
       a: sanitizeHtml.simpleTransform('a', { rel: 'noopener noreferrer nofollow' }),
+      // Editor-authored content stores images as bare Frappe file paths
+      // (e.g. "/files/foo.png") with no host at all, so left as-is they'd
+      // resolve against this site's own origin (404) instead of Frappe's.
+      // Route them through the same-origin image proxy — this also avoids
+      // the mixed-content block that a direct http://FRAPPE_URL src would
+      // hit on this HTTPS site (see getFrappeAssetProxyUrl).
+      img: (tagName, attribs) => {
+        const proxied = getFrappeAssetProxyUrl(attribs.src);
+        return {
+          tagName,
+          attribs: proxied ? { ...attribs, src: proxied } : attribs,
+        };
+      },
     },
   });
 }

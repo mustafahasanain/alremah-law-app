@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User } from 'lucide-react';
 import { getBlogPostByName, getBlogger } from '@/lib/frappe/blog';
-import { getFrappeAssetUrl } from '@/lib/frappe/client';
+import { getFrappeAssetProxyUrl } from '@/lib/frappe/client';
 import { formatBlogDate } from '@/lib/blog/format-date';
 import { ArticleContent } from '@/components/blog/article-content';
 
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
 
   const title = post.meta_title ?? post.title;
   const description = post.meta_description ?? post.blog_intro ?? undefined;
-  const imageUrl = getFrappeAssetUrl(post.meta_image);
+  const imageUrl = getFrappeAssetProxyUrl(post.meta_image);
 
   return {
     title,
@@ -77,8 +77,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     ? await getBlogger(post.blogger).catch(() => null)
     : null;
 
-  const imageUrl = getFrappeAssetUrl(post.meta_image);
-  const avatarUrl = getFrappeAssetUrl(blogger?.avatar);
+  const imageUrl = getFrappeAssetProxyUrl(post.meta_image);
+  const avatarUrl = getFrappeAssetProxyUrl(blogger?.avatar);
   const publishedDate = formatBlogDate(post.published_on);
   const authorName = blogger?.full_name ?? post.blogger;
 
