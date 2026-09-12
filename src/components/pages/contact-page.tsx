@@ -55,14 +55,14 @@ export function ContactPage() {
 
   const OFFICE_LOCATIONS = [
     {
-      name: "الكرادة",
-      address: "الكرادة عرصات الهدية",
+      name: t.contactPage.addressCard.main,
+      address: t.contactPage.info.address.full,
       phone: "+964 774 646 4606",
       email: "al-remahLawfirm@outlook.com",
       hours: "Mon-Fri: 9:00 - 16:30",
-      mapQuery: "Baghdad+Al+Mansour+مطعم+الساعة",
-      lat: "34.0407",
-      lng: "-118.2468",
+      mapQuery: "Baghdad+Karrada+Arasat+Al-Hindiya",
+      lat: "33.2959157",
+      lng: "44.4334548",
     },
   ];
 
@@ -346,14 +346,6 @@ export function ContactPage() {
                       </p>
                       <p className="text-medium-gray dark:text-gray-400 text-sm">
                         {t.contactPage.addressCard.mainAddress}
-                      </p>
-                    </div>
-                    <div className="border-l-2 border-gold pl-4">
-                      <p className="text-charcoal dark:text-white font-medium text-sm">
-                        {t.contactPage.addressCard.branch}
-                      </p>
-                      <p className="text-medium-gray dark:text-gray-400 text-sm">
-                        {t.contactPage.addressCard.branchAddress}
                       </p>
                     </div>
                   </div>

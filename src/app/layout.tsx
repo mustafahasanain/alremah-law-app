@@ -29,44 +29,42 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const SITE_TITLE = "شركة الرماح للمحاماة والاستشارات القانونية | Alremah Law Firm";
+const SITE_DESCRIPTION =
+  "شركة الرماح لتقديم الخدمات والاستشارات القانونية المتخصصة في شؤون الشركات والاستثمار الأجنبي والعقود والصفقات التجارية وتسوية المنازعات في العراق.";
+
 export const metadata: Metadata = {
   title: {
-    default: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
-    template: "%s | Alremah Company for Legal Services and Consultancy",
+    default: SITE_TITLE,
+    template: `%s | ${SITE_TITLE}`,
   },
-  description:
-    "Alremah Company for Legal Services and Consultancy - Experienced Criminal Justice Attorney providing aggressive legal representation in criminal defense, personal injury, family law, business disputes, and more. Over 25 years of dedicated service with a 98% success rate. Legal Consultation available 24/7.",
+  description: SITE_DESCRIPTION,
   keywords: [
-    "law firm",
-    "criminal defense attorney",
-    "personal injury lawyer",
-    "family law",
-    "business disputes",
-    "DUI defense",
-    "legal representation",
-    "Legal Consultation",
-    "24/7 emergency lawyer",
-    "الكرادة عرصات الهدية",
-    "litigation",
-    "civil rights",
+    "شركة الرماح للمحاماة",
+    "استشارات قانونية",
+    "تأسيس الشركات",
+    "الاستثمار الأجنبي",
+    "العقود والصفقات التجارية",
+    "تسوية المنازعات",
+    "بغداد الكرادة عرصات الهندية",
+    "Alremah Law Firm",
+    "Iraq law firm",
   ],
-  authors: [{ name: "Alremah Company for Legal Services and Consultancy" }],
-  creator: "Alremah Company for Legal Services and Consultancy",
-  publisher: "Alremah Company for Legal Services and Consultancy",
+  authors: [{ name: "Alremah Law Firm" }],
+  creator: "Alremah Law Firm",
+  publisher: "Alremah Law Firm",
   metadataBase: new URL("https://thelawfirm.com"),
   openGraph: {
-    title: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
-    description:
-      "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate. Legal Consultation available 24/7.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: "website",
-    siteName: "Alremah Company for Legal Services and Consultancy",
-    locale: "en_US",
+    siteName: "Alremah Law Firm",
+    locale: "ar_IQ",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alremah Company for Legal Services and Consultancy - Criminal Justice Attorney",
-    description:
-      "Experienced Criminal Justice Attorneys. Over 25 years of dedicated legal representation with a 98% success rate.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   robots: {
     index: true,

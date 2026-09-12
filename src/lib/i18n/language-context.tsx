@@ -24,15 +24,25 @@ export function useLanguage() {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('thelaw-language') as Language | null;
-      if (saved && (saved === 'en' || saved === 'ar')) {
-        return saved;
-      }
+  // Always start at "en" so the client's first render matches the
+  // server-rendered HTML (which has no access to localStorage). Reading the
+  // saved language directly in the useState initializer caused a hydration
+  // mismatch — the client's very first render already differed from the
+  // server's, producing React "Hydration failed" errors on any direct load
+  // or refresh once a visitor had previously selected Arabic. The persisted
+  // language is restored right after mount instead, in the effect below.
+  const [language, setLanguageState] = useState<Language>('en');
+
+  // Restore the visitor's saved language once mounted (client-only). This
+  // syncs React state from an external store (localStorage) right after
+  // hydration completes, so it intentionally runs once on mount.
+  useEffect(() => {
+    const saved = localStorage.getItem('thelaw-language') as Language | null;
+    if (saved && (saved === 'en' || saved === 'ar') && saved !== language) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- restoring persisted state post-hydration, not a render-phase side effect
+      setLanguageState(saved);
     }
-    return 'en';
-  });
+  }, [language]);
 
   // Update document dir and lang attributes
   useEffect(() => {

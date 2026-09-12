@@ -237,10 +237,10 @@ export const translations = {
       subtitle: "Case Studies",
       title: "Case Like Yours",
       items: [
-        { title: "Money Laundering", category: "Criminal Law" },
-        { title: "Property Disputes", category: "Civil Law" },
-        { title: "Criminal Lawsuit", category: "Criminal Cases" },
-        { title: "Integrity Cases", category: "Integrity Law" },
+        { title: "Foreign Branch Registration", category: "Corporate Registration" },
+        { title: "Cross-Border Investment Structuring", category: "Foreign Investment" },
+        { title: "Commercial Contract Dispute", category: "Dispute Resolution" },
+        { title: "Trademark Protection", category: "Intellectual Property" },
         {
           title: "Legal Representation of Companies Before Courts",
           category: "Corporate Law",
@@ -783,7 +783,7 @@ export const translations = {
       },
       contact: {
         title: "Contact Info",
-        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        address: "Baghdad - Karrada - Arasat Al-Hindiya",
         phone: "+964 774 646 4606",
         email: "al-remahLawfirm@outlook.com",
       },
@@ -935,7 +935,24 @@ export const translations = {
       legal: {
         subtitle: "Legal",
         title: "Legal Questions",
-        items: [],
+        items: [
+          {
+            q: "How long does it take to register a foreign company's branch in Iraq, and what are the basic requirements?",
+            a: "Registration procedures typically take between 4 to 8 weeks, depending on how complete the parent company's documents are and whether they have been certified by the Iraqi embassy, the Ministry of Foreign Affairs, and an accredited official translation.\n\nThe basic requirements include: the parent company's articles of incorporation and bylaws, its official certificate of registration, the financial statements for the last fiscal year, and a board resolution to open the branch in Iraq naming the authorized manager and granting them the powers needed to deal with the companies registration department and other official authorities.",
+          },
+          {
+            q: "Does Iraqi law require foreign companies to have a local Iraqi partner to do business?",
+            a: "The Iraqi Companies Law and the Investment Law allow foreign companies to open branches and representative offices that are 100% owned by the parent company, with no need for an Iraqi partner.\n\nHowever, when establishing a local joint-stock or limited liability company outside the framework of the Investment Law, some sectors may require a specific percentage of national ownership.\n\nAlremah's team guides the investor toward the legal structure that secures full control and flexibility according to the nature of their activity.",
+          },
+          {
+            q: "How do you protect your company from the risk of estimated tax assessments and sudden tax reckonings in Iraq?",
+            a: "Tax protection begins from the moment commercial contracts are drafted, by clearly determining who bears the withholding and tax deductions, followed by keeping official accounting books in order, opening a tax file, and filing returns by their legally prescribed deadlines.\n\nFollowing up on the periodic tax reckoning and obtaining annual tax clearance certificates protects the company from financial arrears, late penalties, and arbitrary estimated-assessment decisions that arise in the absence of regular documentation.",
+          },
+          {
+            q: "What is the legal percentage of local labor required when employing foreign staff in Iraq?",
+            a: "Iraqi Labor Law No. 37 of 2015 and the applicable ministerial instructions set a minimum of 50% national workforce for projects operating in Iraq, rising to higher percentages in some oil-sector and special-license activities.\n\nWe help our clients manage the file for employing foreign staff and obtain their official work permits while fully complying with national workforce percentages, to avoid any regulatory violations or penalties.",
+          },
+        ],
       },
       search: {
         placeholder: "Search questions...",
@@ -1051,7 +1068,7 @@ export const translations = {
         email: { title: "Email", address: "al-remahLawfirm@outlook.com" },
         address: {
           title: "Address",
-          full: "Baghdad, Al-Mansour, Clock Restaurant Street",
+          full: "Baghdad - Karrada - Arasat Al-Hindiya",
         },
       },
       form: {
@@ -1086,9 +1103,7 @@ export const translations = {
       addressCard: {
         title: "Our Offices",
         main: "Main Office",
-        mainAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
-        branch: "Branch Office",
-        branchAddress: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        mainAddress: "Baghdad - Karrada - Arasat Al-Hindiya",
       },
       appointment: {
         title: "Book an Appointment",
@@ -1117,12 +1132,12 @@ export const translations = {
           "4:00 PM",
         ],
         areas: [
-          "Criminal Defense",
-          "Personal Injury",
-          "Family Law",
-          "Business Law",
-          "Immigration",
-          "Real Estate",
+          "Legal Consultations",
+          "Companies and Commercial Business",
+          "Foreign Investment and Cross-Border Business",
+          "Contracts and Commercial Deals",
+          "Litigation and Dispute Resolution",
+          "Foreign Entities Registration",
         ],
       },
     },
@@ -1150,7 +1165,7 @@ export const translations = {
       contact: {
         title: "Contact",
         addressLabel: "Address:",
-        address: "Baghdad, Al-Mansour, Clock Restaurant Street",
+        address: "Baghdad - Karrada - Arasat Al-Hindiya",
         telLabel: "Tel:",
         phone: "+964 774 646 4606",
         emailLabel: "Email:",
@@ -1410,10 +1425,10 @@ export const translations = {
       subtitle: "دراسات الحالة",
       title: "قضايا مثل قضيتك",
       items: [
-        { title: "غسيل الأموال", category: "قانون جنائي" },
-        { title: "نزاعات الملكية", category: "القانون المدني" },
-        { title: "دعوى جنائية", category: "قضايا جنائية" },
-        { title: "قضايا النزاهة", category: "قانون النزاهة" },
+        { title: "تسجيل فرع شركة أجنبية", category: "تسجيل الشركات" },
+        { title: "هيكلة استثمار عابر للحدود", category: "الاستثمار الأجنبي" },
+        { title: "نزاع عقد تجاري", category: "تسوية المنازعات" },
+        { title: "حماية العلامة التجارية", category: "الملكية الفكرية" },
         {
           title: "التمثيل القانوني للشركات أمام المحاكم",
           category: "قانون الشركات",
@@ -1912,7 +1927,7 @@ export const translations = {
       },
       contact: {
         title: "معلومات الاتصال",
-        address: "الكرادة عرصات الهدية",
+        address: "بغداد - الكرادة - عرصات الهندية",
         phone: "+964 774 646 4606",
         email: "al-remahLawfirm@outlook.com",
       },
@@ -2062,7 +2077,24 @@ export const translations = {
       legal: {
         subtitle: "قانوني",
         title: "أسئلة قانونية",
-        items: [],
+        items: [
+          {
+            q: "كم يستغرق تسجيل فرع شركة أجنبية في العراق وما هي المتطلبات الأساسية؟",
+            a: "تستغرق إجراءات التسجيل عادة ما بين 4 إلى 8 أسابيع، اعتماداً على اكتمال وثائق الشركة الأم وتصديقها من السفارة العراقية ووزارة الخارجية والترجمة الرسمية المعتمدة.\n\nتتضمن المتطلبات الأساسية: عقد تأسيس الشركة الأم ونظامها الداخلي، شهادة التسجيل الرسمية، الحسابات الختامية لآخر سنة مالية، وقرار مجلس الإدارة بفتح الفرع في العراق وتسمية المدير المفوض ومنحه الصلاحيات اللازمة لمراجعة دائرة تسجيل الشركات والجهات الرسمية.",
+          },
+          {
+            q: "هل يُلزم القانون العراقي الشركات الأجنبية بوجود شريك محلي عراقي لممارسة الأعمال؟",
+            a: "يتيح قانون الشركات العراقي وقانون الاستثمار للشركات الأجنبية فتح فروع ومكاتب تمثيل مملوكة بالكامل 100% للشركة الأم دون الحاجة لشريك عراقي.\n\nأما في حالة تأسيس شركات مساهمة أو محدودة محلية خارج إطار قانون الاستثمار، فقد تشترط بعض القطاعات نسب مساهمة وطنية محددة.\n\nيتولى فريق الرماح توجيه المستثمر نحو الهيكل القانوني الذي يضمن له السيطرة والمرونة الكاملة وفقاً لطبيعة نشاطه.",
+          },
+          {
+            q: "كيف تحمي شركتك من مخاطر التقديرات والتحاسب الضريبي المفاجئ في العراق؟",
+            a: "تبدأ الحماية الضريبية من لحظة صياغة العقود التجارية بتحديد من يتحمل الأمانات والاستقطاعات الضريبية، يتبعها انتظام مسك الدفاتر المحاسبية الرسمية وفتح الملف الضريبي وتقديم الإقرارات في مواعيدها المقررة قانوناً.\n\nمتابعة التحاسب الدوري واستخراج براءات الذمة سنوياً تحمي الشركة من التراكمات المالية والغرامات التأخيرية وقرارات التحاسب التقديري الجزافي التي تصدر في غياب توثيق منتظم.",
+          },
+          {
+            q: "ما هي النسبة القانونية للعمالة المحلية المطلوبة عند تشغيل كوادر أجنبية في العراق؟",
+            a: "يحدد قانون العمل العراقي رقم 37 لسنة 2015 والتعليمات الوزارية النافذة نسبة لا تقل عن 50% من الأيدي العاملة الوطنية في المشاريع العاملة داخل العراق، وتصل في بعض قطاعات النفط والتراخيص الخاصة إلى نسب أعلى.\n\nنساعد عملاءنا على إدارة ملف تشغيل الكوادر الأجنبية واستحصال إجازات العمل الرسمية لهم مع الامتثال التام لنسب العمالة الوطنية لتفادي أي مخالفات أو عقوبات تنظيمية.",
+          },
+        ],
       },
       search: {
         placeholder: "ابحث في الأسئلة...",
@@ -2175,7 +2207,7 @@ export const translations = {
       info: {
         phone: { title: "الهاتف", number: "+964 774 646 4606" },
         email: { title: "البريد الإلكتروني", address: "al-remahLawfirm@outlook.com" },
-        address: { title: "العنوان", full: "الكرادة عرصات الهدية" },
+        address: { title: "العنوان", full: "بغداد - الكرادة - عرصات الهندية" },
       },
       form: {
         title: "أرسل لنا رسالة",
@@ -2209,9 +2241,7 @@ export const translations = {
       addressCard: {
         title: "مكاتبنا",
         main: "المكتب الرئيسي",
-        mainAddress: "الكرادة عرصات الهدية",
-        // branch: "المكتب الفرعي",
-        // branchAddress: "الكرادة عرصات الهدية",
+        mainAddress: "بغداد - الكرادة - عرصات الهندية",
       },
       appointment: {
         title: "احجز موعداً",
@@ -2240,12 +2270,12 @@ export const translations = {
           "4:00 مساءً",
         ],
         areas: [
-          "الدفاع الجنائي",
-          "إصابة شخصية",
-          "قانون الأسرة",
-          "قانون الأعمال",
-          "الهجرة",
-          "العقارات",
+          "الاستشارات القانونية",
+          "الشركات والأعمال التجارية",
+          "الاستثمار الأجنبي والأعمال عبر الحدود",
+          "العقود والصفقات التجارية",
+          "التقاضي وتسوية المنازعات",
+          "تسجيل الكيانات الأجنبية",
         ],
       },
     },
@@ -2273,7 +2303,7 @@ export const translations = {
       contact: {
         title: "اتصل",
         addressLabel: "العنوان:",
-        address: "الكرادة عرصات الهدية",
+        address: "بغداد - الكرادة - عرصات الهندية",
         telLabel: "هاتف:",
         phone: "+964 774 646 4606",
         emailLabel: "بريد إلكتروني:",

@@ -607,7 +607,7 @@ export function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:flex items-center justify-between gap-6 md:gap-0">
             {aboutCounters.map((counter, index) => (
-              <React.Fragment key={counter.label}>
+              <React.Fragment key={index}>
                 <CounterItem
                   icon={counter.icon}
                   value={counter.value}

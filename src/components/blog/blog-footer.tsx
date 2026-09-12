@@ -56,7 +56,7 @@ export function BlogFooter() {
               </a>
               <span className="flex items-center gap-2 text-gray-300">
                 <MapPin size={14} className="text-gold" />
-                بغداد، الكرادة عرصات الهدية
+                بغداد - الكرادة - عرصات الهندية
               </span>
             </div>
           </div>

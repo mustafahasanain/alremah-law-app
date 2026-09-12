@@ -163,8 +163,9 @@ export function Footer() {
             <WhatsAppIcon size={20} />
           </a>
           <a
-            href="#"
+            href="mailto:al-remahLawfirm@outlook.com"
             title="Email"
+            aria-label="Email us"
             className="text-gray-400 dark:text-gray-500 hover:text-gold dark:hover:text-gold transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
             <Mail size={20} />
