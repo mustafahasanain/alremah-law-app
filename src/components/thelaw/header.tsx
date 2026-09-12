@@ -31,6 +31,7 @@ export function Header() {
     { kind: 'page', label: t.header.practiceAreas, page: 'practice-areas' },
     { kind: 'link', label: t.header.foreignEntities, href: FOREIGN_ENTITIES_PATH },
     { kind: 'page', label: t.header.faq, page: 'faq' },
+    { kind: 'link', label: t.header.blog, href: '/blog' },
     { kind: 'page', label: t.header.contact, page: 'contact' },
   ];
 
